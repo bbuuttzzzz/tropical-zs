@@ -1,0 +1,23 @@
+Lightness 1: +10% weight reduction
+Lightness 2: +20% weight reduction
+Lightness 3: +30% weight reduction
+Lightness 4: +40% weight reduction
+
+Scrounger 1: +10% resupply amount
+Scrounger 2: +20% resupply amount
+Scrounger 3: +30% resupply amount
+Scrounger 4: +40% resupply amount
+
+Scrap Hound 1: +10% scrap gain
+Scrap Hound 2: +20% scrap gain
+Scrap Hound 3: +30% scrap gain
+Scrap Hound 4: +40% scrap gain
+
+Healthy 1:
+Healthy 2: +10 max health
+Healthy 3: +15 max health
+Healthy 4: +20 max health
+
+[R] Respite 1: heal 10%(or up to 30%) hp at wave end
+[R] Respite 2: heal 20%(or up to 50%) hp at wave end
+[R] Respite 3: heal 30%(or up to 70%) hp at wave end

@@ -1,0 +1,18 @@
+Classes are prefixed based on what category they fall into.
+these prefixes have NO effect on the actual classes and are only convention
+
+_base:
+  the baseclass for MOST other classes
+n_*: normal
+  normal classes, picked through F3
+  CLASS.Type = ZTYPE_NORMAL
+mb_*: miniboss
+  miniboss classes, picked through F3
+  CLASS.Type = ZTYPE_MINIBOSS
+b_*: boss
+  boss classes, picked through F3
+  CLASS.Type = ZTYPE_BOSS
+s_*: special
+  zombies are forced to become this class through the gamemode
+  CLASS.Hidden = true
+  CLASS.Type should be nil

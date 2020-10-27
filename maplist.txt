@@ -1,0 +1,29 @@
+T Thumbnail: G = gametracker, T = tropical, N = none
+R Rotation: Y = yes, N = no
+M NavMesh: Y = yes, N = no
+T R M
+G Y Y  gm_construct
+T Y Y  zm_4ngry_quaruntine
+N Y Y  zs_pub_v5
+N Y Y  zs_poolside
+N Y Y  zs_insurance_v3
+N Y Y  zs_casualties_v4
+N Y Y  zs_dsb_computer_solutions_v3
+N Y Y  zs_festive_villa_v1
+G Y Y  zs_cityscape_v1b
+N Y Y  zs_crackhouse_v4
+N Y Y  zs_marsh_v5
+N Y Y  zs_legends_v5
+N Y Y  zs_ravenholm_v7
+N Y Y  zs_deus_ex_unatco_v3
+G Y Y  zs_forgotten_town_v3
+G?Y Y  zs_krusty_krab_large_v5
+G Y Y  zs_snowy_castle
+
+N N N zs_insane_asylum_v3
+N N N  highschool
+? N Y  abandoned mall
+N N N  zs_fort
+G N N  zs_nysc_b4a
+? N N  zs_the_pub_v9
+? N N  stormiest

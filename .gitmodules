@@ -1,0 +1,3 @@
+[submodule "gamemode/tropical-core"]
+	path = gamemode/tropical-core
+	url = https://github.com/kklluuttzz/tropical-core.git

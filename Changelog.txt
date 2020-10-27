@@ -1,0 +1,26 @@
+Patch 0.5.0.1 Changelog:
+
+-----------------------------------ADDITIONS------------------------------------
+-meleeing doors with repair weapons now consumes oomph charges to break them
+  off their hinges very quickly.
+------------------------------------CHANGES-------------------------------------
+-AFK zombies players now get auto-controlled by a bot
+--------------------------------BALANCE CHANGES---------------------------------
+
+------------------------------REFACTORS/BUG FIXES-------------------------------
+-Disabling boss zombie in settings now no longer improperly marks you as
+  becoming the next boss zombie
+----------------------------------KNOWN ISSUES----------------------------------
+no translations for:
+-sledgehammer
+-wrench
+-any perks :P
+-confetti gun
+-impact grenades (swep and item)
+-can_redeem
+-press_f2_to_redeem
+-afk bot control text
+
+wrong translatios for:
+-Bulletstorm
+-Owens
