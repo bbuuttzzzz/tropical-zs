@@ -47,8 +47,12 @@ end
 function GM:SetMenuPerksDesired()
 	local perks = self:GetMenuPerks()
 
-	MySelf:SendDesiredActiveSkills(perks)
-	surface.PlaySound("items/suitchargeok1.wav")
+    if MySelf:ValidateSkills(perks) then
+    	MySelf:SendDesiredActiveSkills(perks)
+    	surface.PlaySound("items/suitchargeok1.wav")
+    else
+        surface.PlaySound("ambient/alarms/klaxon1.wav")
+    end
 end
 
 local function FixBrowserEntries(frame)
@@ -367,7 +371,7 @@ function GM:OpenPerkMenu()
 		UpdateTracker(frame)
 	end
 	local activeSkillsAssoc
-	if table.Count(MySelf:GetDesiredActiveSkills()) == 0 then
+	if table.Count(MySelf:GetDesiredActiveSkills()) == 0 or not MySelf:ValidateSkills(MySelf:GetDesiredActiveSkills()) then
 		activeSkillsAssoc = table.ToAssoc(self.DefaultPerks)
 	else
 		activeSkillsAssoc = table.ToAssoc(MySelf:GetDesiredActiveSkills())

@@ -124,29 +124,64 @@ function meta:ResetSkills()
 	self:ApplySkills({},true)
 end
 
+function meta:ValidateSkills(tDesiredSkills)
+
+    local tAllSkills = GAMEMODE.Skills
+    local tacDesiredSkills = table.ToAssoc(tDesiredSkills)
+
+    -- for each skill...
+	local bFailed = false
+    local iCost = 0
+    local iMaxCost = GAMEMODE.PerkSlots
+    local tFamilies = {}
+	for skillid in pairs(tacDesiredSkills) do
+
+        -- Do we even have this skill unlocked?
+		if (not GAMEMODE:GetIsFreeplay() and not self:IsSkillUnlocked(skillid)) or tAllSkills[skillid] and tAllSkills[skillid].Disabled then
+			bFailed = true
+            break
+		end
+
+        -- Do a family check
+        local cFamily = tAllSkills[skillid].Family
+        if ( cFamily ) then
+
+            -- If we have a duplicate family, fail
+            if tFamilies[cFamily] then
+                bFailed = true
+                break
+            end
+
+            -- update family list
+            tFamilies[cFamily] = true
+        end
+
+        -- Add to our running cost total
+        iCost = iCost + tAllSkills[skillid].Weight
+	end
+
+    -- if we have too much cost or failed for some other reason return false
+    return iCost <= iMaxCost or bFailed
+end
+
 -- These are done on human spawn.
 function meta:ApplySkills(override, forceEmpty)
 	if GAMEMODE.ZombieEscape or GAMEMODE.ClassicMode then return end -- Skills not used on these modes
 
 	local allskills = GAMEMODE.Skills
 	local desired = override or self:Alive() and self:Team() == TEAM_HUMAN and self:GetDesiredActiveSkills() or {}
+    print("DEBUG: ")
+    print(desired)
 	local current_active = self:GetActiveSkills()
-	local desired_assoc = table.ToAssoc(desired)
 
-	-- Do we even have these skills unlocked?
-	local failed = false
-	if not override then
-		for skillid in pairs(desired_assoc) do
-			if (not GAMEMODE:GetIsFreeplay() and not self:IsSkillUnlocked(skillid)) or allskills[skillid] and allskills[skillid].Disabled then
-				desired_assoc[skillid] = nil
-				failed = true
-			end
-		end
+    -- double check these perks are allowed in this combination
+	local bValidated = self:ValidateSkills(desired)
+
+	if not bValidated or (not forceEmpty and table.Count(desired) == 0) then
+		desired = GAMEMODE.DefaultPerks
 	end
 
-	if failed or (not forceEmpty and table.Count(desired) == 0) then
-		desired_assoc = table.ToAssoc(GAMEMODE.DefaultPerks)
-	end
+    local desired_assoc = table.ToAssoc(desired)
 
 	self:ApplyAssocModifiers(desired_assoc)
 
