@@ -70,9 +70,6 @@ include("itemstocks/cl_stock.lua")
 
 include("cl_zombieescape.lua")
 
-include("mapvote/cl_mapvote.lua")
-include("mapvote/pmapvote.lua")
-
 
 w, h = ScrW(), ScrH()
 

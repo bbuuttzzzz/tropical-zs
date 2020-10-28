@@ -53,10 +53,6 @@ AddCSLuaFile("skillweb/sh_skillweb.lua")
 AddCSLuaFile("skillweb/cl_skillweb.lua")
 AddCSLuaFile("skillweb/registry.lua")
 
-AddCSLuaFile("mapvote/sh_mapvote.lua")
-AddCSLuaFile("mapvote/cl_mapvote.lua")
-AddCSLuaFile("mapvote/pmapvote.lua")
-
 AddCSLuaFile("obj_vector_extend.lua")
 AddCSLuaFile("obj_entity_extend.lua")
 AddCSLuaFile("obj_entity_extend_cl.lua")
@@ -122,8 +118,6 @@ include("vault/server.lua")
 
 include("skillweb/sv_registry.lua")
 include("skillweb/sv_skillweb.lua")
-
-include("mapvote/sv_mapvote.lua")
 
 include("sv_zombieescape.lua")
 

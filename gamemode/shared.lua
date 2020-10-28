@@ -68,8 +68,6 @@ include("sh_util.lua")
 
 include("skillweb/sh_skillweb.lua")
 
-include("mapvote/sh_mapvote.lua")
-
 include("sh_options.lua")
 include("sh_items.lua")
 include("sh_zombieclasses.lua")
