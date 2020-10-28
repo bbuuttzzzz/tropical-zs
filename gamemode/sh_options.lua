@@ -135,7 +135,7 @@ GM.MaxBrainCells = CreateConVar("zs_max_braincells", "500", FCVAR_REPLICATED + F
 
 GM.RedeemFever = CreateConVar("zs_redeem_fever", "1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "during last human, reduces redeem cost to 2 brains")
 
-GM.FreeplayMode = CreateConVar("zs_freeplay_mode", "0", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Enabling freeplay mode allows players to use they haven't locked yet")
+GM.FreeplayMode = CreateConVar("zs_freeplay_mode", "1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Enabling freeplay mode allows players to use they haven't locked yet")
 
 GM.ManualRedeeming = CreateConVar("zs_manual_redeeming", "1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Zombies with enough brains can hit F2 to redeem, force-redeeming on wave end")
 
@@ -250,13 +250,13 @@ GM.ReinforcementTimes = {
 GM.LastHitPointFraction = 0.25
 
 //infliction rate that is required for doubled ammo generation
-GM.DoubleResupplyInfliction = 0.9
+GM.DoubleResupplyInfliction = 0.90
 
 GM.WeaponSlots = 8
 
 //perk variables
-GM.PerkSlots = 24
-GM.DefaultPerks = {SKILL_CALM_1,SKILL_HEALTHY_1,SKILL_HEALTHY_2,SKILL_PHASER_2,SKILL_MOONWALKER_1,SKILL_RESPITE_3,SKILL_SCRAP_HOUND_4,SKILL_SCROUNGER_4}
+GM.PerkSlots = 12
+GM.DefaultPerks = {SKILL_CALM_2,SKILL_PHASER_1,SKILL_RESPITE_2,SKILL_SCROUNGER_2}
 GM.DefaultCalmThreshold = 40
 GM.DefaultMinCalm = 10
 GM.MaxCalmSlow = 0.4

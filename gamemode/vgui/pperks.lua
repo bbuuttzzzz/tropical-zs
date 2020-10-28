@@ -1,6 +1,6 @@
 PERKS_COLOR_DARK = Color(0,0,0,200)
 PERKS_COLOR_LIGHT = Color(100,100,100,200)
-LOADOUT_DIR = "tropical/loadouts"
+LOADOUT_DIR = "tropical/zsloadouts"
 
 local BASE_W = 1005
 local BASE_H = 800
