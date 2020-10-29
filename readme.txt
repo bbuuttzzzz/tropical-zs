@@ -1,3 +1,8 @@
+#####Tropical Zombie Survival README#####
+
+This is a heavily modified version of zombie
+survival with a focus on the retro 2010 feel.
+
  ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 ZZZ                                  ZZZ
 ZZZ          ZOMBIE SURVIVAL         ZZZ
