@@ -180,7 +180,7 @@ local function OpenLoadoutMenu(self)
 		local savePanel = vgui.Create("DFrame", GAMEMODE.PerkInterface)
 		local x,y = gui.MousePos()
 		savePanel:SetPos(x - 100,y - 25)
-		savePanel:SetTitle("Save as...")
+		savePanel:SetTitle(translate.Get("perks_save_as"))
 		savePanel.btnMinim:SetVisible(false)
 		savePanel.btnMaxim:SetVisible(false)
 		savePanel:SetSize(300,75)
@@ -203,7 +203,7 @@ local function OpenLoadoutMenu(self)
 		end
 
 		local textEnter = vgui.Create( "DButton", savePanel)
-		textEnter:SetText("Save")
+		textEnter:SetText(translate.Get("perks_save_label"))
 		textEnter:SetSize(80, 30)
 		textEnter:AlignRight(5)
 		textEnter:AlignBottom(5)
@@ -230,7 +230,7 @@ local function OpenLoadoutMenu(self)
 		panel:MakePopup()
 
 		local textAccept = vgui.Create( "DButton", panel)
-		textAccept:SetText("Accept")
+		textAccept:SetText(translate.Get("perks_accept_label"))
 		textAccept:SetSize(80, 30)
 		textAccept:AlignLeft(30)
 		textAccept:AlignBottom(5)
@@ -241,7 +241,7 @@ local function OpenLoadoutMenu(self)
 		end
 
 		local textCancel = vgui.Create( "DButton", panel)
-		textCancel:SetText("Cancel")
+		textCancel:SetText(translate.Get("perks_cancel_label"))
 		textCancel:SetSize(80, 30)
 		textCancel:AlignRight(30)
 		textCancel:AlignBottom(5)
@@ -251,28 +251,28 @@ local function OpenLoadoutMenu(self)
 	end
 
 	--CLear perks button - move all perks to the allbrowser
-	menu:AddOption( "Clear Perks", function()
+	menu:AddOption( translate.Get("perks_clear_perks"), function()
 		GAMEMODE:LoadPerkList({})
 	end)
 
 	menu:AddSpacer()
 
-	local saveMenu = menu:AddSubMenu( "Save...", SaveAsPopup )
+	local saveMenu = menu:AddSubMenu( translate.Get("perks_save"), SaveAsPopup )
 
-	saveMenu:AddOption( "Save as New", SaveAsPopup )
+	saveMenu:AddOption( translate.Get("perks_save_new"), SaveAsPopup )
 
 	saveMenu:AddSpacer()
 
-	local loadMenu = menu:AddSubMenu( "Load..." )
+	local loadMenu = menu:AddSubMenu( translate.Get("perks_load") )
 
-	local deleteMenu = menu:AddSubMenu( "Delete... ")
+	local deleteMenu = menu:AddSubMenu( translate.Get("perks_delete"))
 
 	local saves = file.Find( LOADOUT_DIR .. "/*", "DATA" )
 
 	for i, saveName in ipairs(saves) do
 		saveName = string.StripExtension(saveName)
-		saveMenu:AddOption( "as " .. saveName, function()
-			ConfirmPopup("Really Overwrite " .. saveName .. "?", function()
+		saveMenu:AddOption( translate.Format("perks_save_as_x", saveName), function()
+			ConfirmPopup(translate.Format("perks_overwrite_x", saveName), function()
 				SaveLoadout( saveName )
 			end)
 		end)
@@ -282,7 +282,7 @@ local function OpenLoadoutMenu(self)
 		end)
 
 		deleteMenu:AddOption( saveName, function()
-			ConfirmPopup("Really Delete " .. saveName .. "?", function()
+			ConfirmPopup(translate.Format("perks_delete_x", saveName), function()
 				DeleteLoadout(saveName)
 			end)
 		end)
@@ -331,7 +331,7 @@ function GM:OpenPerkMenu()
 	self.PerkInterface = frame
 
 	--create the close button
-	local button = EasyButton(nil, "Close Without Saving", 8, 4)
+	local button = EasyButton(nil, translate.Get("perks_close_label"), 8, 4)
 	button:SetFont("ZSHUDFontSmall")
 	button:SizeToContents()
 	button.DoClick = function()
@@ -344,13 +344,13 @@ function GM:OpenPerkMenu()
   --make all-browser
   local allBrowser = vgui.Create("ZSPerkBrowser",frame)
   allBrowser:AlignLeft(10)
-	allBrowser.Title:SetText("Perk Bank")
+	allBrowser.Title:SetText(translate.Get("perks_bank_label"))
 	allBrowser:AddSortButtons(screenscale)
 
 	--make active-browser
   local activeBrowser = vgui.Create("ZSPerkBrowser",frame)
   activeBrowser:AlignRight(10)
-	activeBrowser.Title:SetText("Loadout")
+	activeBrowser.Title:SetText(translate.Get("perks_loadout_label"))
 
 	allBrowser.EntryClickCallback = function(entryTable)
 		if activeBrowser:CanAddPerkEntry(entryTable) then
@@ -451,7 +451,7 @@ function GM:OpenPerkMenu()
 		draw.RoundedBox(4,2,2,w-4,h-4, tracker.ApplyButton:IsHovered() and COLOR_DARKGREEN or color_black)
 	end
 
-	local setActiveText = EasyLabel(setActiveFrame,"Set Active Loadout","ZSHUDFontSmaller", COLOR_LIMEGREEN)
+	local setActiveText = EasyLabel(setActiveFrame,translate.Get("perks_setact_label"),"ZSHUDFontSmaller", COLOR_LIMEGREEN)
 	setActiveText:SetSize(setActiveFrame:GetWide(),setActiveFrame:GetTall())
 	setActiveText:CenterVertical()
 	setActiveText:CenterHorizontal()

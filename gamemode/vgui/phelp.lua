@@ -28,7 +28,7 @@ function MakepCredits()
 	frame:SetTitle(" ")
 	frame:SetKeyboardInputEnabled(false)
 
-	local label = EasyLabel(frame, GAMEMODE.Name.." Credits", "ZSHUDFontNS", color_white)
+	local label = EasyLabel(frame, translate.Format("gamemode_x_credits", GAMEMODE.Name), "ZSHUDFontNS", color_white)
 	label:AlignTop(y)
 	label:CenterHorizontal()
 	y = y + label:GetTall() + 8
@@ -88,7 +88,7 @@ function MakepHelp()
 	Window:SetCursor("pointer")
 	pHelp = Window
 
-	local label = EasyLabel(Window, "Help", "ZSHUDFont", color_white)
+	local label = EasyLabel(Window, translate.Get("pmainmenu_help"), "ZSHUDFont", color_white)
 	label:CenterHorizontal()
 	label:AlignTop(8)
 
@@ -127,9 +127,9 @@ function MakepHelp()
 	Window:Center()
 	Window:MakePopup()
 
-	local button = EasyButton(Window, "Credits", 8, 4)
+	local button = EasyButton(Window, translate.Get("pmainmenu_credits"), 8, 4)
 	button:SetPos(wide - button:GetWide() - 12, tall - button:GetTall() - 12)
-	button:SetText("Credits")
+	button:SetText(translate.Get("pmainmenu_credits"))
 	button.DoClick = function(btn) MakepCredits() end
 
 	gamemode.Call("BuildHelpMenu", Window, propertysheet)

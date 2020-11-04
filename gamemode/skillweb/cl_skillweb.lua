@@ -1185,7 +1185,7 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 	local rlevel = MySelf:GetZSRemortLevel()
 	local append = ""
 	if rlevel > 0 then
-		append = " // R.Level "..rlevel
+		append = translate.Format("skillweb_rlevel", rlevel)
 	end
 
 	surface.SetDrawColor(0, 0, 0, 220)
@@ -1197,7 +1197,7 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 	surface.DrawRect(x, y + 2, barw * progress, 2)
 
 	if level == GAMEMODE.MaxLevel then
-		draw_SimpleText("Level MAX"..append, "ZSXPBar", xpw / 2, h / 2 + y, COLOR_GREEN, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw_SimpleText(translate.Get("skillweb_maxlevel")..append, "ZSXPBar", xpw / 2, h / 2 + y, COLOR_GREEN, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	else
 		if progress > 0 then
 			local lx = x + barw * progress - 1
@@ -1209,8 +1209,8 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 			surface.DrawLine(lx, y - 1, lx, y + 5)
 		end
 
-		draw_SimpleText("Level "..level..append, "ZSXPBar", x, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-		draw_SimpleText(string.CommaSeparate(xp).." / "..string.CommaSeparate(GAMEMODE:XPForLevel(level + 1)).." XP", "ZSXPBar", x + barw, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+		draw_SimpleText(translate.Format("skillweb_level_x", level)..append, "ZSXPBar", x, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+		draw_SimpleText(translate.Format("skillweb_xp_x", string.CommaSeparate( xp ), string.CommaSeparate(GAMEMODE:XPForLevel(level + 1))), "ZSSHUD3Font_16", x + barw, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
 	end
 end
 
@@ -1266,7 +1266,7 @@ function PANEL:Paint(w, h)
 	local sp = MySelf:GetZSSPRemaining()
 	if sp > 0 then
 		colFlash.a = 90 + math.abs(math.sin(RealTime() * 2)) * 160
-		draw_SimpleText(sp.." SP", "ZSHUDFontSmallest", w - 2, h / 2, colFlash, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+		draw_SimpleText(translate.Format("skillweb_sp_x", sp), "ZSHUDFontSmallest", w - 2, h / 2, colFlash, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
 	end
 end
 

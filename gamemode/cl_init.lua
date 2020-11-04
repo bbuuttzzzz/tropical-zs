@@ -1259,7 +1259,7 @@ function GM:DrawNestIndicators()
 		surface_SetDrawColor(255, 255, 255, alpha)
 		surface_DrawTexturedRect(-128, -128, 256, 256)
 
-		draw_SimpleTextBlurry("Nest " .. string.char(64 + k), "ZS3D2DFont2Big", 0, 128, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry(translate.Format("nest_x", string.char(64 + k)), "ZS3D2DFont2Big", 0, 128, COLOR_GRAY, TEXT_ALIGN_CENTER)
 		k = k + 1
 
 		if distance < 80000 then
@@ -1356,40 +1356,41 @@ function GM:_CachedFearPower()
 	return Current
 end
 
-function surface.CreateLegacyFont(font, size, weight, antialias, additive, name, shadow, outline, blursize)
-	surface.CreateFont(name, {font = font, size = size, weight = weight, antialias = antialias, additive = additive, shadow = shadow, outline = outline, blursize = blursize})
+function surface.CreateLegacyFont(font, size, weight, antialias, additive, name, shadow, outline, blursize, extended)
+	surface.CreateFont(name, {font = font, size = size, weight = weight, antialias = antialias, additive = additive, shadow = shadow, outline = outline, blursize = blursize, extended = extended})
 end
 
-local fontfamily = "Ghoulish Fright AOE"
-local fontfamilysm = "Remington Noiseless"
-local fontfamily3d = "hidden"
+local fontfamily = "Ghoulish Fright AOE_Updated"
+local fontfamilysm = "Remington Noiseless_Updated"
+local fontfamily3d = "hidden_Updated"
 local fontsizeadd = 8
 local fontweight = 0
+local fontextended = true
 
 function GM:Create3DFonts()
 	local fontsizeadd3D = 0
 	local fontweight3D = 0
 
-	surface.CreateLegacyFont(fontfamily3d, 28 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmaller", false, true)
-	surface.CreateLegacyFont(fontfamily3d, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmall", false, true)
-	surface.CreateLegacyFont(fontfamily3d, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont", false, true)
-	surface.CreateLegacyFont(fontfamily3d, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBig", false, true)
-	surface.CreateLegacyFont(fontfamily3d, 28 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmallerBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily3d, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmallBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily3d, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily3d, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBigBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily, 40 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2Smaller", false, true)
-	surface.CreateLegacyFont(fontfamily, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2Small", false, true)
-	surface.CreateLegacyFont(fontfamily, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2", false, true)
-	surface.CreateLegacyFont(fontfamily, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2Big", false, true)
-	surface.CreateLegacyFont(fontfamily, 40 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2SmallerBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2SmallBlur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2Blur", false, false, 16)
-	surface.CreateLegacyFont(fontfamily, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2BigBlur", false, false, 16)
+	surface.CreateLegacyFont(fontfamily3d, 28 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmaller", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily3d, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmall", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily3d, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily3d, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBig", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily3d, 28 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmallerBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily3d, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFontSmallBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily3d, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily3d, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFontBigBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily, 40 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2Smaller", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2Small", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2Big", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, 40 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2SmallerBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily, 48 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DFont2SmallBlur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily, 72 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2Blur", false, false, 16, true)
+	surface.CreateLegacyFont(fontfamily, 128 + fontsizeadd3D, fontweight3D, false, false, "ZS3D2DFont2BigBlur", false, false, 16, true)
 
-	surface.CreateLegacyFont(fontfamilysm, 14 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleTiny", false, true)
-	surface.CreateLegacyFont(fontfamilysm, 24 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleSmallest", false, true)
-	surface.CreateLegacyFont(fontfamilysm, 36 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleSmaller", false, true)
+	surface.CreateLegacyFont(fontfamilysm, 14 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleTiny", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamilysm, 24 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleSmallest", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamilysm, 36 + fontsizeadd3D, fontweight3D, false, false,  "ZS3D2DUnstyleSmaller", false, true, 0, true)
 end
 
 function GM:CreateNonScaleFonts()
@@ -1406,6 +1407,7 @@ function GM:CreateNonScaleFonts()
 	surface.CreateFont("DefaultFontLargeAA", {font = "tahoma", size = 16, weight = 0, antialias = true})
 	surface.CreateFont("DefaultFontLargest", {font = "tahoma", size = 22, weight = 0, antialias = false})
 	surface.CreateFont("DefaultFontLargestAA", {font = "tahoma", size = 22, weight = 0, antialias = true})
+
 end
 
 function GM:CreateScalingFonts()
@@ -1424,44 +1426,44 @@ function GM:CreateScalingFonts()
 	surface.CreateLegacyFont("csd", screenscale * 72, 100, true, false, "zsdeathnoticecspa", false, false)
 	surface.CreateLegacyFont("HL2MP", screenscale * 72, 100, true, false, "zsdeathnoticepa", false, false)
 
-	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTiny", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallest", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmaller", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmall", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFont", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBig", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTinyBlur", false, false, 8)
-	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallerBlur", false, false, 8)
-	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallBlur", false, false, 8)
-	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBlur", false, false, 8)
-	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBigBlur", false, false, 8)
+	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTiny", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallest", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmaller", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmall", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFont", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBig", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTinyBlur", false, false, 8, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallerBlur", false, false, 8, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallBlur", false, false, 8, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBlur", false, false, 8, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBigBlur", false, false, 8, true)
 
-	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd/2), 0, fontaa, false, "ZSAmmoName", false, false)
+	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd/2), 0, fontaa, false, "ZSAmmoName", false, false, fontextended)
 
 	local liscreenscale = math.max(0.95, BetterScreenScale())
 
-	surface.CreateLegacyFont(fontfamily, liscreenscale * (32 + fontsizeadd), fontweight, true, false, "ZSScoreBoardTitle", false, true)
-	surface.CreateLegacyFont(fontfamily, liscreenscale * (22 + fontsizeadd), fontweight, true, false, "ZSScoreBoardSubTitle", false, true)
-	surface.CreateLegacyFont(fontfamily, liscreenscale * (16 + fontsizeadd), fontweight, true, false, "ZSScoreBoardPlayer", false, true)
-	surface.CreateLegacyFont(fontfamily, liscreenscale * (24 + fontsizeadd), fontweight, true, false, "ZSScoreBoardHeading", false, false)
-	surface.CreateLegacyFont("arial", 18 * liscreenscale, 0, true, false, "ZSScoreBoardPlayerSmall", false, true)
-	surface.CreateLegacyFont("arial", 15 * liscreenscale, 0, true, false, "ZSScoreBoardPlayerSmaller", false, true)
+	surface.CreateLegacyFont(fontfamily, liscreenscale * (32 + fontsizeadd), fontweight, true, false, "ZSScoreBoardTitle", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, liscreenscale * (22 + fontsizeadd), fontweight, true, false, "ZSScoreBoardSubTitle", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, liscreenscale * (16 + fontsizeadd), fontweight, true, false, "ZSScoreBoardPlayer", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, liscreenscale * (24 + fontsizeadd), fontweight, true, false, "ZSScoreBoardHeading", false, false, 0, true)
+	surface.CreateLegacyFont("arial", 18 * liscreenscale, 0, true, false, "ZSScoreBoardPlayerSmall", false, true, fontextended)
+	surface.CreateLegacyFont("arial", 15 * liscreenscale, 0, true, false, "ZSScoreBoardPlayerSmaller", false, true, fontextended)
 	surface.CreateLegacyFont("tahoma", 11 * liscreenscale, 0, true, false, "ZSScoreBoardPing")
 
-	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTinyNS", false, false)
-	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallestNS", false, false)
-	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallerNS", false, false)
-	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallNS", false, false)
-	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontNS", false, false)
-	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBigNS", false, false)
+	surface.CreateLegacyFont(fontfamily, screenscale * (16 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontTinyNS", false, false, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallestNS", false, false, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (22 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallerNS", false, false, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (28 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontSmallNS", false, false, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (42 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontNS", false, false, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (72 + fontsizeadd), fontweight, fontaa, false, "ZSHUDFontBigNS", false, false, 0, true)
 
-	surface.CreateLegacyFont(fontfamilysm, screenscale * 13, fontweight, fontaa, false, "ZSBodyTextFontSmall", fontshadow)
+	surface.CreateLegacyFont(fontfamilysm, screenscale * 13, fontweight, fontaa, false, "ZSBodyTextFontSmall", fontshadow, 0, true)
 
-	surface.CreateLegacyFont(fontfamilysm, screenscale * 15, fontweight, fontaa, false, "ZSBodyTextFont", fontshadow, fontoutline)
-	surface.CreateLegacyFont(fontfamilysm, screenscale * 20, fontweight, fontaa, false, "ZSBodyTextFontBig", fontshadow, fontoutline)
+	surface.CreateLegacyFont(fontfamilysm, screenscale * 15, fontweight, fontaa, false, "ZSBodyTextFont", fontshadow, fontoutline, 0, true)
+	surface.CreateLegacyFont(fontfamilysm, screenscale * 20, fontweight, fontaa, false, "ZSBodyTextFontBig", fontshadow, fontoutline, 0, true)
 
-	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), 0, true, false, "ZSDamageResistance", false, true)
-	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), 0, true, false, "ZSDamageResistanceBlur", false, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), 0, true, false, "ZSDamageResistance", false, true, 0, true)
+	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), 0, true, false, "ZSDamageResistanceBlur", false, true, 0, true)
 
 	surface.CreateFont("ZSXPBar", {font = "tahoma", size = screenscale * 14, weight = 500, antialias = false, shadow = true})
 
@@ -1811,18 +1813,18 @@ function GM:HumanMenu()
 
 	local hei = draw_GetFontHeight("ZSHUDFontSmall")
 
-	local selecteditemtitle = EasyLabel(panel, "Selected Item", "ZSHUDFontSmall", color_white)
+	local selecteditemtitle = EasyLabel(panel, translate.Get("inventory_selected"), "ZSHUDFontSmall", color_white)
 	selecteditemtitle:SetContentAlignment(5)
 	panel:AddItem(selecteditemtitle)
 
-	local selecteditemlabel = EasyLabel(panel, "Fists", "ZSHUDFontSmaller", color_white)
+	local selecteditemlabel = EasyLabel(panel, translate.Get("inventory_none"), "ZSHUDFontSmaller", color_white)
 	selecteditemlabel:SetContentAlignment(5)
 	panel:AddItem(selecteditemlabel)
 	panel.SelectedItemLabel = selecteditemlabel
 
 	local gwbtn = vgui.Create("DButton")
 	gwbtn:SetFont("ZSHUDFontSmaller")
-	gwbtn:SetText("Give Item")
+	gwbtn:SetText(translate.Get("inventory_giveitem"))
 	gwbtn:SetSize(panel:GetWide() - 8 * screenscale, hei - 4 * screenscale)
 	gwbtn:CenterHorizontal()
 	gwbtn.DoClick = GiveWeapon
@@ -1830,7 +1832,7 @@ function GM:HumanMenu()
 
 	gwbtn = vgui.Create("DButton")
 	gwbtn:SetFont("ZSHUDFontSmaller")
-	gwbtn:SetText("Give Item and 5 clips")
+	gwbtn:SetText(translate.Get("inventory_giveitemandfive"))
 	gwbtn:SetSize(panel:GetWide() - 8 * screenscale, hei - 4 * screenscale)
 	gwbtn:CenterHorizontal()
 	gwbtn.DoClick = GiveWeaponClip
@@ -1838,7 +1840,7 @@ function GM:HumanMenu()
 
 	gwbtn = vgui.Create("DButton")
 	gwbtn:SetFont("ZSHUDFontSmaller")
-	gwbtn:SetText("Drop Item")
+	gwbtn:SetText(translate.Get("inventory_dropitem"))
 	gwbtn:SetSize(panel:GetWide() - 8 * screenscale, hei - 4 * screenscale)
 	gwbtn:CenterHorizontal()
 	gwbtn.DoClick = DropWeapon
@@ -1846,7 +1848,7 @@ function GM:HumanMenu()
 
 	gwbtn = vgui.Create("DButton")
 	gwbtn:SetFont("ZSHUDFontSmaller")
-	gwbtn:SetText("Empty Weapon Clip")
+	gwbtn:SetText(translate.Get("inventory_empty"))
 	gwbtn:SetSize(panel:GetWide() - 8 * screenscale, hei - 4 * screenscale)
 	gwbtn:CenterHorizontal()
 	gwbtn.DoClick = EmptyClip
@@ -1862,15 +1864,15 @@ function GM:HumanMenu()
 	panel:AddItem(gwbtn)
 	]]
 
-	panel:AddItem(EasyLabel(panel, "Resupply Ammo Selection", "DefaultFont", color_white))
+	panel:AddItem(EasyLabel(panel, translate.Get("inventory_resupply_ammos"), "DefaultFont", color_white))
 	local dropdown = vgui.Create("DComboBox", panel)
 	dropdown:SetMouseInputEnabled(true)
-	dropdown:AddChoice("Resupply Held Weapon")
+	dropdown:AddChoice(translate.Get("inventory_resupply_held"))
 	for k,v in pairs(self.AmmoResupply) do
 		dropdown:AddChoice(self.AmmoNames[k])
 	end
 	dropdown.OnSelect = function(me, index, value, data)
-		if value == "Resupply Held Weapon" then
+		if value == translate.Get("inventory_resupply_held") then
 			MySelf.ResupplyChoice = nil
 			RunConsoleCommand("zs_resupplyammotype", "default")
 			return
@@ -1884,7 +1886,7 @@ function GM:HumanMenu()
 			end
 		end
 	end
-	dropdown:SetText("Resupply Held Weapon")
+	dropdown:SetText(translate.Get("inventory_resupply_held"))
 	dropdown:SetTextColor(color_black)
 	panel:AddItem(dropdown)
 
@@ -2428,7 +2430,7 @@ function GM:DisplayUpgrade( _UpgradeGroup, _Items )
 	self.UpgradeGroup = _UpgradeGroup
 	self:RegenerateUpgradeMenu()
 
-	self:CenterNotify(COLOR_WHITE, "Arsenal Upgrade Unlocked! Press F3 to Choose.")
+	self:CenterNotify(COLOR_WHITE, translate.Get("arsenal_upgrade_unlocked_choose"))
 end
 
 function GM:GuessNextUpgrade()

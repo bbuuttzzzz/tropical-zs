@@ -27,13 +27,13 @@ function PANEL:Init()
 	self.m_DropButton = vgui.Create("DImageButton", self)
 	self.m_DropButton:SetImage("icon16/box.png")
 	self.m_DropButton:SizeToContents()
-	self.m_DropButton:SetTooltip("Drop")
+	self.m_DropButton:SetTooltip(translate.Get("ammocounter_drop"))
 	self.m_DropButton.DoClick = DropDoClick
 
 	self.m_GiveButton = vgui.Create("DImageButton", self)
 	self.m_GiveButton:SetImage("icon16/user_go.png")
 	self.m_GiveButton:SizeToContents()
-	self.m_GiveButton:SetTooltip("Give")
+	self.m_GiveButton:SetTooltip(translate.Get("ammocounter_give"))
 	self.m_GiveButton.DoClick = GiveDoClick
 
 	self:SetAmmoType("pistol")
@@ -82,7 +82,7 @@ end
 function PANEL:SetAmmoType(ammotype)
 	self.m_AmmoType = ammotype
 
-	self.m_AmmoTypeLabel:SetText(GAMEMODE.AmmoNames[ammotype] or ammotype)
+	self.m_AmmoTypeLabel:SetText(translate.Get("ammo_" .. ammotype))
 	self.m_AmmoTypeLabel:SizeToContents()
 
 	self:RefreshContents()
