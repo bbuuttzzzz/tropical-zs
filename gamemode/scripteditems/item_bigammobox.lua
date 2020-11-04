@@ -23,4 +23,6 @@ ITEM.GiveFunction = function(pl)
   pl:GiveAmmo(GAMEMODE.AmmoCache["buckshot"] * 2,"buckshot", true)
   pl:GiveAmmo(GAMEMODE.AmmoCache["gaussenergy"] * 2,"gaussenergy", true)
   pl:GiveAmmo(GAMEMODE.AmmoCache["pulse"] * 2,"pulse", true)
+  net.Start("zs_update_weaponhud")
+  net.Send(pl)
 end

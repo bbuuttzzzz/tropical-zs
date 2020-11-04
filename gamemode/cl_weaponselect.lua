@@ -164,6 +164,13 @@ function GM:UpdateWeaponsByAmmo(ammoType)
   end
 end
 
+function GM:UpdateAllWeapons()
+  --update every weapon
+  for n = 1, self.WeaponSlots do
+    self:UpdateWeaponSlot(n)
+  end
+end
+
 --update all the slots for weapons that use oomph
 --as they should have synced timers
 function GM:UpdateOomphWeapons()

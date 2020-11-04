@@ -579,6 +579,7 @@ function GM:AddNetworkStrings()
 	util.AddNetworkString("zs_reset_weapon_select") --clear clientside weapon select stuff
 	util.AddNetworkString("zs_dropped_ammo")
 	util.AddNetworkString("zs_update_oomph")
+	util.AddNetworkString("zs_update_weaponhud")
 	util.AddNetworkString("zs_can_redeem")
 	util.AddNetworkString("zs_afk_popup")
 	util.AddNetworkString( "RBProjectileCreated" )
