@@ -1210,7 +1210,7 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 		end
 
 		draw_SimpleText(translate.Format("skillweb_level_x", level)..append, "ZSXPBar", x, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-		draw_SimpleText(translate.Format("skillweb_xp_x", string.CommaSeparate( xp ), string.CommaSeparate(GAMEMODE:XPForLevel(level + 1))), "ZSSHUD3Font_16", x + barw, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+		draw_SimpleText(translate.Format("skillweb_xp_x", string.CommaSeparate( xp ), string.CommaSeparate(GAMEMODE:XPForLevel(level + 1))), "ZSXPBar", x + barw, h / 2 + y, COLOR_WHITE, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
 	end
 end
 

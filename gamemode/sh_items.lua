@@ -300,7 +300,12 @@ UPGRADEGROUP_T6 = 7
 
 GM.UpgradeGroups = {}
 function GM:AddUpgradeGroup(_groupkey, _points, _name, _clips)
-	local tab = {points = _points, name = _name, clips = _clips}
+  local _signature = string.lower(_name)
+  _signature = string.gsub(_signature, "%p", "")
+
+  _signature = string.gsub(_signature, "%s", "")
+
+	local tab = {points = _points, name = _name, signature = _signature, clips = _clips}
 
 	self.UpgradeGroups[_groupkey] = tab
 
@@ -308,13 +313,13 @@ function GM:AddUpgradeGroup(_groupkey, _points, _name, _clips)
 end
 
 --maintain ascending order by UPGRADEGROUP key or it will cause problems
-GM:AddUpgradeGroup(UPGRADEGROUP_T1, -1, translate.Get("tier1_guns"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T1_MELEE, -1, translate.Get("tier1_melee"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T2, 25, translate.Get("tier2_pistol"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T3, 75, translate.Get("tier3_smg"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T4, 125, translate.Get("tier4_shotguns"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T5, 200, translate.Get("tier5_assaultweapons"))
-GM:AddUpgradeGroup(UPGRADEGROUP_T6, 300, translate.Get("tier6_pulseweapons"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T1, -1, "Guns")
+GM:AddUpgradeGroup(UPGRADEGROUP_T1_MELEE, -1, "Melee")
+GM:AddUpgradeGroup(UPGRADEGROUP_T2, 25, "Pistol")
+GM:AddUpgradeGroup(UPGRADEGROUP_T3, 75, "SMG")
+GM:AddUpgradeGroup(UPGRADEGROUP_T4, 125, "Shotguns")
+GM:AddUpgradeGroup(UPGRADEGROUP_T5, 200, "Assault Weapons")
+GM:AddUpgradeGroup(UPGRADEGROUP_T6, 300, "Pulse Weapons")
 
 GM.Upgrades = {}
 
