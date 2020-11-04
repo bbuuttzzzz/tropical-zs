@@ -41,11 +41,11 @@ GM.SpeedToText = {
 */
 
 GM.WeightToText = {
-	[WEIGHT_ZERO] = translate.Get("weight_weightless"),
-	[WEIGHT_FEATHER] = translate.Get("weight_feather"),
-	[WEIGHT_LIGHT] = translate.Get("weight_light"),
-	[WEIGHT_MEDIUM] = translate.Get("weight_medium"),
-	[WEIGHT_HEAVY] = translate.Get("weight_heavy")
+	[WEIGHT_ZERO] = "Weightless",
+	[WEIGHT_FEATHER] = "Feather",
+	[WEIGHT_LIGHT] = "Light",
+	[WEIGHT_MEDIUM] = "Medium",
+	[WEIGHT_HEAVY] = "Heavy"
 }
 
 GM.AmmoToPurchaseNames = {
