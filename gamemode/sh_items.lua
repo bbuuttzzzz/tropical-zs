@@ -308,13 +308,13 @@ function GM:AddUpgradeGroup(_groupkey, _points, _name, _clips)
 end
 
 --maintain ascending order by UPGRADEGROUP key or it will cause problems
-GM:AddUpgradeGroup(UPGRADEGROUP_T1, -1, "Tier 1: Starter Pistols")
-GM:AddUpgradeGroup(UPGRADEGROUP_T1_MELEE, -1, "Tier 1: Starter Melee")
-GM:AddUpgradeGroup(UPGRADEGROUP_T2, 25, "Tier 2: Pistols")
-GM:AddUpgradeGroup(UPGRADEGROUP_T3, 75, "Tier 3: SMGs")
-GM:AddUpgradeGroup(UPGRADEGROUP_T4, 125, "Tier 4: Shotguns")
-GM:AddUpgradeGroup(UPGRADEGROUP_T5, 200, "Tier 5: Assault Weapons")
-GM:AddUpgradeGroup(UPGRADEGROUP_T6, 300, "Tier 6: Pulse Weapons")
+GM:AddUpgradeGroup(UPGRADEGROUP_T1, -1, translate.Get("tier1_guns"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T1_MELEE, -1, translate.Get("tier1_melee"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T2, 25, translate.Get("tier2_pistol"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T3, 75, translate.Get("tier3_smg"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T4, 125, translate.Get("tier4_shotguns"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T5, 200, translate.Get("tier5_assaultweapons"))
+GM:AddUpgradeGroup(UPGRADEGROUP_T6, 300, translate.Get("tier6_pulseweapons"))
 
 GM.Upgrades = {}
 

@@ -2,28 +2,28 @@
 
 local function genericcallback(pl, magnitude) return pl:Name(), magnitude end
 GM.HonorableMentions = {}
-GM.HonorableMentions[HM_MOSTZOMBIESKILLED] = {Name = "Most zombies killed", String = "by %s, with %d killed zombies.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_MOSTDAMAGETOUNDEAD] = {Name = "Most damage to undead", String = "goes to %s, with a total of %d damage dealt to the undead.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_MOSTHEADSHOTS] = {Name = "Most headshot kills", String = "goes to %s, with a total of %s headshot kills.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_PACIFIST] = {Name = "Pacifist", String = "goes to %s for not killing a single zombie and still surviving!", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_MOSTHELPFUL] = {Name = "Most helpful", String = "goes to %s for assisting in the disposal of %d zombies.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_LASTHUMAN] = {Name = "Last Human", String = "goes to %s for being the last person alive.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_OUTLANDER] = {Name = "Outlander", String = "goes to %s for getting killed %d feet away from a zombie spawn.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_GOODDOCTOR] = {Name = "Good Doctor", String = "goes to %s for healing their team for %d points of health.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_HANDYMAN] = {Name = "Handy Man", String = "goes to %s for getting %d barricade assistance points.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_SCARECROW] = {Name = "Scarecrow", String = "goes to %s for killing %d poor crows.", Callback = genericcallback, Color = COLOR_WHITE}
-GM.HonorableMentions[HM_MOSTBRAINSEATEN] = {Name = "Most brains eaten", String = "by %s, with %d brains eaten.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
-GM.HonorableMentions[HM_MOSTDAMAGETOHUMANS] = {Name = "Most damage to humans", String = "goes to %s, with a total of %d damage given to living players.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
-GM.HonorableMentions[HM_LASTBITE] = {Name = "Last Bite", String = "goes to %s for ending the round.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
-GM.HonorableMentions[HM_USEFULTOOPPOSITE] = {Name = "Most useful to opposite team", String = "goes to %s for giving up a whopping %d kills!", Callback = genericcallback, Color = COLOR_RED}
-GM.HonorableMentions[HM_STUPID] = {Name = "Stupid", String = "is what %s is for getting killed %d feet away from a zombie spawn.", Callback = genericcallback, Color = COLOR_RED}
-GM.HonorableMentions[HM_SALESMAN] = {Name = "Salesman", String = "is what %s is for having %d points worth of items taken from their arsenal crate.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_WAREHOUSE] = {Name = "Warehouse", String = "describes %s well since they had their resupply boxes used %d times.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_DEFENCEDMG] = {Name = "Defender", String = "goes to %s for protecting humans from %d damage with defence boosts.", Callback = genericcallback, Color = COLOR_WHITE}
-GM.HonorableMentions[HM_STRENGTHDMG] = {Name = "Alchemist", String = "is what %s is for boosting players with an additional %d damage.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_BARRICADEDESTROYER] = {Name = "Barricade Destroyer", String = "goes to %s for doing %d damage to barricades.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
-GM.HonorableMentions[HM_NESTDESTROYER] = {Name = "Nest Destroyer", String = "goes to %s for destroying %d nests.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
-GM.HonorableMentions[HM_NESTMASTER] = {Name = "Nest Master", String = "goes to %s for having %d zombies spawn through their nest.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_MOSTZOMBIESKILLED] = {Name = translate.Get("hm_mostzombieskilled"), String = translate.Get("hm_mostzombieskilled_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTDAMAGETOUNDEAD] = {Name = translate.Get("hm_mostdamagetoundead"), String = translate.Get("hm_mostdamagetoundead_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTHEADSHOTS] = {Name = translate.Get("hm_mostheadshotkills"), String = translate.Get("hm_mostheadshotkills_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_PACIFIST] = {Name = translate.Get("hm_pacifist"), String = translate.Get("hm_pacifist_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTHELPFUL] = {Name = translate.Get("hm_mosthelpful"), String = translate.Get("hm_mosthelpful_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_LASTHUMAN] = {Name = translate.Get("hm_lasthuman"), String = translate.Get("hm_lasthuman_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_OUTLANDER] = {Name = translate.Get("hm_outlander"), String = translate.Get("hm_outlander_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_GOODDOCTOR] = {Name = translate.Get("hm_gooddoc"), String = translate.Get("hm_gooddoc_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_HANDYMAN] = {Name = translate.Get("hm_handyman"), String = translate.Get("hm_handyman_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_SCARECROW] = {Name = translate.Get("hm_scarecrow"), String = translate.Get("hm_scarecrow_desc"), Callback = genericcallback, Color = COLOR_WHITE}
+GM.HonorableMentions[HM_MOSTBRAINSEATEN] = {Name = translate.Get("hm_mostbrainate"), String = translate.Get("hm_mostbrainate_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_MOSTDAMAGETOHUMANS] = {Name = translate.Get("hm_mostdamagetohumans"), String = translate.Get("hm_mostdamagetohumans_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_LASTBITE] = {Name = translate.Get("hm_lastbite"), String = translate.Get("hm_lastbite_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_USEFULTOOPPOSITE] = {Name = translate.Get("hm_mostusefulopposite"), String = translate.Get("hm_mostusefulopposite_desc"), Callback = genericcallback, Color = COLOR_RED}
+GM.HonorableMentions[HM_STUPID] = {Name = translate.Get("hm_stupid"), String = translate.Get("hm_stupid_desc"), Callback = genericcallback, Color = COLOR_RED}
+GM.HonorableMentions[HM_SALESMAN] = {Name = translate.Get("hm_salesman"), String = translate.Get("hm_salesman_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_WAREHOUSE] = {Name = translate.Get("hm_warehouse"), String = translate.Get("hm_warehouse_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_DEFENCEDMG] = {Name = translate.Get("hm_defender"), String = translate.Get("hm_defender_desc"), Callback = genericcallback, Color = COLOR_WHITE}
+GM.HonorableMentions[HM_STRENGTHDMG] = {Name = translate.Get("hm_alchemist"), String = translate.Get("hm_alchemist_desc"), Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_BARRICADEDESTROYER] = {Name = translate.Get("hm_barricadedestroyer"), String = translate.Get("hm_barricadedestroyer_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_NESTDESTROYER] = {Name = translate.Get("hm_nestdestroyer"), String = translate.Get("hm_nestdestroyer_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_NESTMASTER] = {Name = translate.Get("hm_nestmaster"), String = translate.Get("hm_nestmaster_desc"), Callback = genericcallback, Color = COLOR_LIMEGREEN}
 
 -- Don't let humans use these models because they look like undead models. Must be lower case.
 GM.RestrictedModels = {

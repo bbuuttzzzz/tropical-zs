@@ -252,10 +252,10 @@ end
 function GM:AddResources()
     resource.AddWorkshop("1479340077")
 
-	resource.AddFile("resource/fonts/typenoksidi.ttf")
-	resource.AddFile("resource/fonts/hidden.ttf")
-	resource.AddFile("resource/fonts/ghoulfriaoe.ttf")
-	resource.AddFile("resource/fonts/remingtonnoiseless.ttf")
+	resource.AddFile("resource/fonts/typenoksidi_tzs.ttf")
+	resource.AddFile("resource/fonts/hidden_tzs.ttf")
+	resource.AddFile("resource/fonts/ghoulfriaoe_tzs.ttf")
+	resource.AddFile("resource/fonts/remingtonnoiseless_tzs.ttf")
 
 	resource.AddFile("particles/vman_explosion.pcf")
 

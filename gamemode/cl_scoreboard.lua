@@ -64,7 +64,7 @@ function PANEL:Init()
 	self.m_ServerNameLabel:NoClipping(true)
 	self.m_ServerNameLabel.Paint = BlurPaint
 
-	self.m_AuthorLabel = EasyLabel(self, "by "..GAMEMODE.Author.." ("..GAMEMODE.Email..")", "ZSScoreBoardPing", COLOR_GRAY)
+	self.m_AuthorLabel = EasyLabel(self, translate.Format("zs_by_x_x", GAMEMODE.Author, GAMEMODE.Email), "ZSScoreBoardPing", COLOR_GRAY)
 	self.m_ContactLabel = EasyLabel(self, GAMEMODE.Website, "ZSScoreBoardPing", COLOR_GRAY)
 
 	self.m_HumanHeading = vgui.Create("DTeamHeading", self)
@@ -73,11 +73,11 @@ function PANEL:Init()
 	self.m_ZombieHeading = vgui.Create("DTeamHeading", self)
 	self.m_ZombieHeading:SetTeam(TEAM_UNDEAD)
 
-	self.m_PointsLabel = EasyLabel(self, "Score", "ZSScoreBoardPlayer", COLOR_GRAY)
-	self.m_RemortCLabel = EasyLabel(self, "R.LVL", "ZSScoreBoardPlayer", COLOR_GRAY)
+	self.m_PointsLabel = EasyLabel(self, translate.Get("tab_score"), "ZSScoreBoardPlayer", COLOR_GRAY)
+	self.m_RemortCLabel = EasyLabel(self, translate.Get("tab_rlvl"), "ZSScoreBoardPlayer", COLOR_GRAY)
 
-	self.m_BrainsLabel = EasyLabel(self, "Brains", "ZSScoreBoardPlayer", COLOR_GRAY)
-	self.m_RemortCZLabel = EasyLabel(self, "R.LVL", "ZSScoreBoardPlayer", COLOR_GRAY)
+	self.m_BrainsLabel = EasyLabel(self, translate.Get("tab_brains"), "ZSScoreBoardPlayer", COLOR_GRAY)
+	self.m_RemortCZLabel = EasyLabel(self, translate.Get("tab_rlvl"), "ZSScoreBoardPlayer", COLOR_GRAY)
 
 	self.ZombieList = vgui.Create("DScrollPanel", self)
 	self.ZombieList.Team = TEAM_UNDEAD

@@ -91,9 +91,9 @@ local function AmmoThink(self)
 	end
 	local timeLeft = math.max(0, nextSupplyTime - CurTime())
 	if MySelf.MaxStockpiles and MySelf.Stockpiles and MySelf.Stockpiles > 0 then
-		self.Timer:SetText(Format("%ds [%d]",timeLeft,MySelf.Stockpiles))
+		self.Timer:SetText(Format(translate.Get("x_seconds2"),timeLeft,MySelf.Stockpiles))
 	else
-		self.Timer:SetText(Format("%ds",timeLeft))
+		self.Timer:SetText(Format(translate.Get("x_seconds"),timeLeft))
 	end
 end
 

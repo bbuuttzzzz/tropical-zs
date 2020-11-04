@@ -326,7 +326,7 @@ function GM:SetCard( card, scale, item )
 		text = sweptable.Stats
 	elseif sweptable.Base ~= "weapon_zs_basemelee" then
     if(sweptable.Primary.Damage) then
-			text = "DAM: " .. sweptable.Primary.Damage
+			text = translate.Format("stats_dam", sweptable.Primary.Damage)
     	if sweptable.Primary.NumShots and sweptable.Primary.NumShots > 1 then
       	text = text .. "x" .. sweptable.Primary.NumShots .. "\n"
     	else
@@ -335,28 +335,28 @@ function GM:SetCard( card, scale, item )
 		end
 		if(sweptable.Primary.Delay) then
 	    local rof = string.format("%.2f",tostring(1 / sweptable.Primary.Delay))
-	    text = text .. "RATE/s: " .. rof .. "\n"
+	    text = text .. translate.Format("stats_rate", rof) .. "\n"
 		end
 		if(sweptable.Primary.ClipSize) then
-	    text = text .. "CLIP: " .. sweptable.Primary.ClipSize .. "\n"
+	    text = text .. translate.Format("stats_clip", sweptable.Primary.ClipSize) .. "\n"
 		end
 		if(sweptable.ConeMin and sweptable.ConeMax) then
-			text = text .. "CONEm: " .. sweptable.ConeMin .. "\n"
-			text = text .. "CONEM: " .. sweptable.ConeMax .. "\n"
+			text = text .. translate.Format("stats_conem", sweptable.ConeMin) .. "\n"
+			text = text .. translate.Format("stats_conemax", sweptable.ConeMax) .. "\n"
 		end
 		if(sweptable.ReloadSpeed) then
-	    text = text .. "RELOAD:" .. sweptable.ReloadSpeed .. "\n"
+	    text = text .. translate.Format("stats_reload", sweptable.ReloadSpeed) .. "\n"
 		end
 		if(sweptable.WeightClass) then
-    	text = text .. "WEIGHT: " .. self.WeightToText[sweptable.WeightClass] .. "\n"
+    	text = text .. translate.Format("stats_weight", self.WeightToText[sweptable.WeightClass]) .. "\n"
 		end
   else
     --create stats text if it's a melee
-    text = "DAM: " .. sweptable.MeleeDamage
-    text = text .. "\n" .. "RANGE: " .. sweptable.MeleeRange
+    text = translate.Format("stats_dam", sweptable.MeleeDamage)
+    text = text .. "\n" .. translate.Format("stats_range", sweptable.MeleeRange)
     local rof = string.format("%.2f",tostring(1 / sweptable.Primary.Delay))
-    text = text .. "\n" .. "RATE/s: " .. rof
-    text = text .. "\n" .. "WEIGHT: " .. self.WeightToText[sweptable.WeightClass]
+    text = text .. "\n" .. translate.Format("stats_rate", rof)
+    text = text .. "\n" .. translate.Format("stats_weight", self.WeightToText[sweptable.WeightClass])
   end
 
 	card.statsPanel:SetText(text)
@@ -461,7 +461,7 @@ function GM:OpenUpgradeMenu(wasOpen)
 	end
 
 	--add "CHOOSE ONE" text
-	local text = self.UpgradeGroups[self.UpgradeGroup].name .. ": Choose One"
+	local text = translate.Format("choose_one_x", self.UpgradeGroups[self.UpgradeGroup].name)
 	local chooseLabel = EasyLabel(topSpace, text, "ZSHUDFontSmall", COLOR_WHITE)
 	chooseLabel:CenterHorizontal()
 	chooseLabel:CenterVertical()

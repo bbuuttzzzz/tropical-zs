@@ -74,9 +74,9 @@ function GM:OpenClassSelect()
 
 	self.ClassInterface = frame
 
-	frame.Normal = {Description = "Choose Normal Class"}
-	frame.Miniboss = {Description = "Choose Miniboss"}
-	frame.Boss = {Description = "Choose Boss"}
+	frame.Normal = {Description = translate.Get("class_selection_normal")}
+	frame.Miniboss = {Description = translate.Get("class_selection_miniboss")}
+	frame.Boss = {Description = translate.Get("class_selection_boss")}
 
 	--add all the classes
 	for _, tab in pairs({frame.Normal, frame.Miniboss, frame.Boss}) do
@@ -97,7 +97,7 @@ function GM:OpenClassSelect()
 		tab.Text = text
 	end
 
-	local button = EasyButton(frame, "Close", 8, 4)
+	local button = EasyButton(frame, translate.Get("class_selection_close"), 8, 4)
 	button:SetFont("ZSHUDFontSmall")
 	button:SizeToContents()
 	button.DoClick = function() frame:Remove() end
