@@ -58,7 +58,7 @@ function PANEL:Init()
   for n = 1, GAMEMODE.WeaponSlots do
     local slot = vgui.Create("ZSWeaponSlot", self)
     slot.Slot = n
-    slot:AlignLeft((slotWidth + slotSpacing) * (n-1))
+    slot:AlignLeft((slotWidth + slotSpacing) * (n-1) * screenscale)
 
     self.Slots[n] = slot
   end

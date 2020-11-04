@@ -1406,11 +1406,6 @@ function GM:CreateNonScaleFonts()
 	surface.CreateFont("DefaultFontLargeAA", {font = "tahoma", size = 16, weight = 0, antialias = true})
 	surface.CreateFont("DefaultFontLargest", {font = "tahoma", size = 22, weight = 0, antialias = false})
 	surface.CreateFont("DefaultFontLargestAA", {font = "tahoma", size = 22, weight = 0, antialias = true})
-
-	surface.CreateFont("SpeedometerFont", {font = "Unispace", size = 30, weight = 0, antialias = true, shadow = true})
-	surface.CreateFont("SlotFont", {font = fontfamilysm, size = 32, weight = 0, antialias = true, shadow = true})
-	surface.CreateFont("AmmoFont", {font = fontfamilysm, size = 19, weight = 0, antialias = true, shadow = true})
-
 end
 
 function GM:CreateScalingFonts()
@@ -1469,6 +1464,10 @@ function GM:CreateScalingFonts()
 	surface.CreateLegacyFont(fontfamily, screenscale * (20 + fontsizeadd), 0, true, false, "ZSDamageResistanceBlur", false, true)
 
 	surface.CreateFont("ZSXPBar", {font = "tahoma", size = screenscale * 14, weight = 500, antialias = false, shadow = true})
+
+  surface.CreateFont("SpeedometerFont", {font = "Unispace", size = screenscale * 30, weight = 0, antialias = true, shadow = true})
+  surface.CreateFont("SlotFont", {font = fontfamilysm, size = screenscale * 32, weight = 0, antialias = true, shadow = true})
+  surface.CreateFont("AmmoFont", {font = fontfamilysm, size = screenscale * 19, weight = 0, antialias = true, shadow = true})
 end
 
 function GM:CreateFonts()

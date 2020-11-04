@@ -170,8 +170,6 @@ function meta:ApplySkills(override, forceEmpty)
 
 	local allskills = GAMEMODE.Skills
 	local desired = override or self:Alive() and self:Team() == TEAM_HUMAN and self:GetDesiredActiveSkills() or {}
-    print("DEBUG: ")
-    print(desired)
 	local current_active = self:GetActiveSkills()
 
     -- double check these perks are allowed in this combination

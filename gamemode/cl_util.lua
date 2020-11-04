@@ -38,7 +38,7 @@ end
 
 -- Scales the screen based around 1080p but doesn't make things TOO tiny on low resolutions.
 function BetterScreenScale()
-	return math.max(ScrH() / 1080, 0.851) * GAMEMODE.InterfaceSize
+	return math.max(ScrH() / 1080, 0.7) * GAMEMODE.InterfaceSize
 end
 
 function render.GetLightRGB(pos)
