@@ -262,13 +262,13 @@ LANGUAGE.targetid_sigil_press  = "Press E to teleport"
 LANGUAGE.cade_owner_dead       = "(DEAD) %s"
 LANGUAGE.arsenal_upgrade_unlocked_choose = "Arsenal Upgrade Unlocked! Press F3 to Choose."
 LANGUAGE.choose_one_x          = "%s: Choose One"
-LANGUAGE.tier1_guns            = "Tier 1: Starter Pistols" --W.I.P.
-LANGUAGE.tier1_melee           = "Tier 1: Starter Melee"
-LANGUAGE.tier2_pistol          = "Tier 2: Pistols"
-LANGUAGE.tier3_smg             = "Tier 3: SMGs"
-LANGUAGE.tier4_shotguns        = "Tier 4: Shotguns"
-LANGUAGE.tier5_assaultweapons  = "Tier 5: Assault Weapons"
-LANGUAGE.tier6_pulseweapons    = "Tier 6: Pulse Weapons"
+LANGUAGE.pupgrade_guns            = "Tier 1: Starter Pistols" --W.I.P.
+LANGUAGE.pupgrade_melee           = "Tier 1: Starter Melee"
+LANGUAGE.pupgrade_pistol          = "Tier 2: Pistols"
+LANGUAGE.pupgrade_smg             = "Tier 3: SMGs"
+LANGUAGE.pupgrade_shotguns        = "Tier 4: Shotguns"
+LANGUAGE.pupgrade_assaultweapons  = "Tier 5: Assault Weapons"
+LANGUAGE.pupgrade_pulseweapons    = "Tier 6: Pulse Weapons"
 
 --weapon stats
 LANGUAGE.stats_dam             = "DAM: %s"

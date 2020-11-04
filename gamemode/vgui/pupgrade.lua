@@ -348,7 +348,7 @@ function GM:SetCard( card, scale, item )
 	    text = text .. translate.Format("stats_reload", sweptable.ReloadSpeed) .. "\n"
 		end
 		if(sweptable.WeightClass) then
-    	text = text .. translate.Format("stats_weight", self.WeightToText[sweptable.WeightClass]) .. "\n"
+    	text = text .. translate.Format("stats_weight", translate.Get("weight_" .. string.lower(self.WeightToText[sweptable.WeightClass]))) .. "\n"
 		end
   else
     --create stats text if it's a melee
@@ -461,7 +461,7 @@ function GM:OpenUpgradeMenu(wasOpen)
 	end
 
 	--add "CHOOSE ONE" text
-	local text = translate.Format("choose_one_x", self.UpgradeGroups[self.UpgradeGroup].name)
+	local text = translate.Format("choose_one_x", translate.Get("pupgrade_" .. self.UpgradeGroups[self.UpgradeGroup].signature))
 	local chooseLabel = EasyLabel(topSpace, text, "ZSHUDFontSmall", COLOR_WHITE)
 	chooseLabel:CenterHorizontal()
 	chooseLabel:CenterVertical()

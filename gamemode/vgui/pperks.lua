@@ -639,7 +639,7 @@ function BROWSER:MakePerkEntry(perkTable, screenscale)
 	familyText:CenterVertical()
 
 	--draw the name
-	local nameText = EasyLabel(topWindow,perkTable.Name, "ZSHUDFontSmall", COLOR_WHITE)
+	local nameText = EasyLabel(topWindow, translate.Get( "skill_" .. perkTable.Signature ), "ZSHUDFontSmall", COLOR_WHITE)
 	nameText:AlignLeft(40 * screenscale)
 	nameText:CenterVertical()
 
