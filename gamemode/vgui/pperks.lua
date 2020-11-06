@@ -669,7 +669,7 @@ function BROWSER:MakePerkEntry(perkTable, screenscale)
 	end
 
 	--add description
-	local descText = EasyLabel(botWindow,perkTable.Description,"ZSBodyTextFont", COLOR_GRAY)
+	local descText = EasyLabel(botWindow, translate.Get("skill_" .. perkTable.Signature .. "_desc"),"ZSBodyTextFont", COLOR_GRAY)
 	descText:SetSize(botWindow:GetWide() - 10 * screenscale, botWindow:GetTall() - 20 * screenscale)
 	descText:AlignLeft(5 * screenscale)
 	descText:AlignTop(10 * screenscale)
