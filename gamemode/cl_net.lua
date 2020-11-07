@@ -588,6 +588,14 @@ net.Receive("zs_update_oomph", function(length)
 	end
 end)
 
+net.Receive("zs_update_weaponhud", function(length)
+	if MySelf:IsValid() then
+    timer.Simple(0.1, function()
+		  GAMEMODE:UpdateAllWeapons()
+    end)
+	end
+end)
+
 net.Receive("zs_afk_popup", function(length)
 	GAMEMODE:MakeAFKPopup()
 end)

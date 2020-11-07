@@ -461,7 +461,8 @@ function GM:OpenUpgradeMenu(wasOpen)
 	end
 
 	--add "CHOOSE ONE" text
-	local text = translate.Format("choose_one_x", translate.Get("pupgrade_" .. self.UpgradeGroups[self.UpgradeGroup].signature))
+  local tUpgradeTable = self.UpgradeGroups[self.UpgradeGroup]
+	local text = translate.Format("choose_one_x", translate.Format("tier_x_y", tUpgradeTable.number, translate.Get(tUpgradeTable.signature)))
 	local chooseLabel = EasyLabel(topSpace, text, "ZSHUDFontSmall", COLOR_WHITE)
 	chooseLabel:CenterHorizontal()
 	chooseLabel:CenterVertical()

@@ -6,7 +6,7 @@ CLASS.TranslationName = "class_blood_bag"
 CLASS.Type = ZTYPE_MINIBOSS
 
 CLASS.SWEP = "weapon_zsz_bloodbag"
-CLASS.Speed = 200
+CLASS.Speed = 170
 CLASS.Health = 1000
 CLASS.Points = 10
 
