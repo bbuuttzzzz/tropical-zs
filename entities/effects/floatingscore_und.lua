@@ -1,11 +1,11 @@
 local messages = {
-	"MUNCH!",
-	"BRAIN GET!",
+	translate.Get("fs_zombie_munch"),
+	translate.Get("fs_zombie_brainget"),
 	"+1!",
-	"JOIN US!",
-	"ONE OF US!",
-	"BUTT MANGLED!",
-	"CHOMP!"
+	translate.Get("fs_zombie_joinus"),
+	translate.Get("fs_zombie_oneofus"),
+	translate.Get("fs_zombie_buttmangle"),
+	translate.Get("fs_zombie_chomp")
 }
 
 EFFECT.LifeTime = 3
@@ -19,7 +19,7 @@ function EFFECT:Init(data)
 
 	local amount = math.Round(data:GetMagnitude())
 	if amount > 1 then
-		self.Message = amount.." BRAINS!"
+		self.Message = translate.Format("fs_zombie_x_brains", amount)
 	else
 		self.Message = messages[math.random(#messages)]
 	end

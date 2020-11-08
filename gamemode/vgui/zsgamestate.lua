@@ -156,7 +156,7 @@ function PANEL:Text3Paint()
 			end
 		else
 			--draw.SimpleText(translate.Format("points_x", MySelf:GetPoints().." / "..MySelf:Frags()), self.Font, 0, 0, COLOR_DARKRED)
-			draw.SimpleText("Scrap: "..MySelf:GetScrap() .. "  Score: "..MySelf:Frags(), self.Font, 0, 0, COLOR_SOFTRED)
+			draw.SimpleText(translate.Format("scrap_x_score_x", MySelf:GetScrap(), MySelf:Frags()), self.Font, 0, 0, COLOR_SOFTRED)
 		end
 	end
 

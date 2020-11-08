@@ -2,11 +2,107 @@
 
 -- Translated for Tropical ZS by Blueberry
 
--- UPDATE DATE: 11.15.18
+-- UPDATE DATE: 11.05.20
 
 translate.AddLanguage("ru", "Russian")
 
 -- TROPICAL STUFF --------------------------------------
+
+--scoreboard
+LANGUAGE.team_3		           = "Нежить"
+LANGUAGE.team_4		           = "Выжившие"
+LANGUAGE.zs_by_x_x             = "Zombie Survival от %s (%s)"
+LANGUAGE.tab_score             = "Счёт"
+LANGUAGE.tab_rlvl              = "Р.УР."
+LANGUAGE.tab_brains            = "Мозгов"
+
+--inventory/ammo tab
+LANGUAGE.ammocounter_drop      = "Выбросить"
+LANGUAGE.ammocounter_give      = "Передать"
+LANGUAGE.inventory_selected    = "Выбранный предмет"
+LANGUAGE.inventory_none        = "Кулаки"
+LANGUAGE.inventory_giveitem    = "Отдать предмет"
+LANGUAGE.inventory_giveitemandfive = "Отдать предмет с 5 магазинами"
+LANGUAGE.inventory_dropitem    = "Выбросить предмет"
+LANGUAGE.inventory_empty       = "Разрядить предмет"
+LANGUAGE.inventory_resupply_ammos = "Боеприпасы пополнения"
+LANGUAGE.inventory_resupply_held = "Пополнение для текущего оружия"
+
+LANGUAGE.ammo_ar2			   = "Штурмовые"
+LANGUAGE.ammo_assault		   = "Штурмовые"
+LANGUAGE.ammo_pistol		   = "Пистолетные"
+LANGUAGE.ammo_smg1 			   = "ПП"
+LANGUAGE.ammo_smg              = "ПП"
+LANGUAGE.ammo_357              = "Винтовочные"
+LANGUAGE.ammo_rifle            = "Винтовочные"
+LANGUAGE.ammo_xbowbolt         = "Болты"
+LANGUAGE.ammo_bolts            = "Болты"
+LANGUAGE.ammo_buckshot         = "Картеч"
+LANGUAGE.ammo_shotgun          = "Картеч"
+LANGUAGE.ammo_sniperround      = "Доски"
+LANGUAGE.ammo_aegis            = "Доски"
+LANGUAGE.ammo_grenade          = "Гранаты"
+LANGUAGE.ammo_grenade_impulse  = "Импульсные гранаты"
+LANGUAGE.ammo_grenade_impact   = "Ударные гранаты"
+LANGUAGE.ammo_thumper          = "Турели"
+LANGUAGE.ammo_battery          = "Медицинская энергия"
+LANGUAGE.ammo_medpower         = "Медицинская энергия"
+LANGUAGE.ammo_gaussenergy      = "Гвозди"
+LANGUAGE.ammo_nails            = "Гвозди"
+LANGUAGE.ammo_airboatgun       = "Арсенальные ящики"
+LANGUAGE.ammo_striderminigun   = "Маяки с сообщением"
+LANGUAGE.ammo_helicoptergun    = "Ящики амуниции"
+LANGUAGE.ammo_slam             = "Силовые поля"
+LANGUAGE.ammo_spotlamp         = "Лампы"
+LANGUAGE.ammo_stone            = "Камни"
+LANGUAGE.ammo_flashbomb        = "Светошумовые гранаты"
+LANGUAGE.ammo_betty            = "Мины"
+LANGUAGE.ammo_molotov          = "Молотовы"
+LANGUAGE.ammo_manhack          = "Манхаки"
+LANGUAGE.ammo_manhack_saw      = "Пилхаки"
+LANGUAGE.ammo_drone            = "Дроны"
+LANGUAGE.ammo_sigilfragment    = "Сигил фрагменты"
+LANGUAGE.sigilseed             = "Семя cигила"
+LANGUAGE.ammo_corruptedfragment = "Испорченные сигил фрагменты"
+LANGUAGE.ammo_mediccloudbomb   = "Медицинские облачные бомбы"
+LANGUAGE.ammo_nanitecloudbomb  = "Нанитные бомбы"
+LANGUAGE.ammo_foodwatermelon   = "Арбузы"
+LANGUAGE.ammo_foodorange       = "Апельсины"
+LANGUAGE.ammo_foodbanana       = "Бананы"
+LANGUAGE.ammo_foodsoda         = "Сода"
+LANGUAGE.ammo_foodmilk         = "Молоко"
+LANGUAGE.ammo_foodtakeout      = "Китайская еда"
+LANGUAGE.ammo_foodwater        = "Вода"
+LANGUAGE.ammo_pulse            = "Импульсные"
+LANGUAGE.ammo_impactmine       = "Взрывчатка"
+LANGUAGE.ammo_chemical         = "Химикаты"
+LANGUAGE.ammo_repairfield      = "Ремонтные устройства"
+LANGUAGE.ammo_zapper           = "Электроловушки"
+LANGUAGE.ammo_zapper_arc       = "Дуговые электроловушки"
+LANGUAGE.ammo_remantler        = "Мастерские"
+LANGUAGE.ammo_turret_buckshot  = "Картченые турели"
+LANGUAGE.ammo_turret_assault   = "Штурмовые турели"
+LANGUAGE.ammo_scrap            = "Металлолом"
+
+--main menu
+LANGUAGE.pmainmenu_help        = "Помощь"
+LANGUAGE.pmainmenu_plmodel     = "Модели игрока"
+LANGUAGE.pmainmenu_plcolor     = "Цвет игрока"
+LANGUAGE.pmainmenu_options     = "Настройки"
+LANGUAGE.pmainmenu_swepdata    = "Хранилище оружий"
+LANGUAGE.pmainmenu_perks       = "Перки"
+LANGUAGE.pmainmenu_credits     = "Авторы"
+LANGUAGE.pmainmenu_close       = "Закрыть"
+LANGUAGE.pm_selection_label    = "Выбор модели игрока"
+LANGUAGE.pm_selection_message  = "Вы сменили желаемую модель игрока на %s"
+LANGUAGE.pc_colors_label       = "Цвет"
+LANGUAGE.pc_player_color       = "Цвет игрока"
+LANGUAGE.pc_weapon_color       = "Цвет оружия"
+
+--scoreboard tags
+LANGUAGE.tag_jetboom           = "JetBoom\nСоздатель Zombie Survival!"
+LANGUAGE.tag_admin             = "Администратор"
+LANGUAGE.tag_supporter         = "Сторонник Nox"
 
 -- weapon names
 -- theres are optional to translate. any gun that has a weird name should be translated, but "airstrike" "bandito" should be left like that
@@ -15,25 +111,25 @@ LANGUAGE.wep_barricadekit      = "Набор досок 'Аегис'"
 LANGUAGE.wep_crossbow          = "Арбалет 'Пронзатель'"
 LANGUAGE.wep_grenade           = "Граната"
 LANGUAGE.wep_hammer            = "Молоток плотника"
-LANGUAGE.wep_sigilseed         = "Семя Сигила"
-LANGUAGE.wep_sigilshard        = "Осколок Сигила"
+LANGUAGE.wep_sigilseed         = "Семя cигила"
+LANGUAGE.wep_sigilshard        = "Осколок cигила"
 LANGUAGE.wep_akbar             = "Штурм. винтовка 'Акбар'"
 LANGUAGE.wep_annabelle         = "Винтовка 'Анабель'"
 LANGUAGE.wep_axe               = "Топор"
 LANGUAGE.wep_bandito           = "Пистолет 'Бандито'"
 LANGUAGE.wep_battleaxe         = "Пистолет 'Боевой топор'"
-LANGUAGE.wep_boomstick         = "The Boomstick"
+LANGUAGE.wep_boomstick         = "Дробовик 'Громовая палка'"
 LANGUAGE.wep_bulletstorm       = "ПП 'Буря из пуль'"
 LANGUAGE.wep_crackler          = "Снайп. Винтовка 'Crackler'"
 LANGUAGE.wep_deagle            = "Desert Eagle 'Зомби Дрель'"
 LANGUAGE.wep_duckbill          = "Дробовик 'Утконос'"
 LANGUAGE.wep_ender             = "Авто. дробовик 'Эндер'"
 LANGUAGE.wep_eraser            = "Тактический пистолет 'Ластик'"
-LANGUAGE.wep_glock             = "Glock 3 'Перекрестный огонь'"
+LANGUAGE.wep_glock             = "Glock 3 'Перекрёстный огонь'"
 LANGUAGE.wep_golfclub          = "Клюшка для гольфа"
-LANGUAGE.wep_gravgun           = "Поврежденная Грав. Пушка"
+LANGUAGE.wep_gravgun           = "Поврежденная грав. пушка"
 LANGUAGE.wep_hermes            = "ПП 'Гермес'"
-LANGUAGE.wep_impulsegrenades   = "Импульсная Граната"
+LANGUAGE.wep_impulsegrenades   = "Импульсная граната"
 LANGUAGE.wep_inferno           = "Штурм. винтовка 'Инферно'"
 LANGUAGE.wep_longsword         = "Длинный меч"
 LANGUAGE.wep_m4                = "M4 'Сталкер'"
@@ -43,7 +139,7 @@ LANGUAGE.wep_owens             = "Пистолет 'Оуэнс'"
 LANGUAGE.wep_peashooter        = "Пистолет 'Игрушечный'"
 LANGUAGE.wep_pulserifle        = "Импульс. винтовка 'Адонис'"
 LANGUAGE.wep_reaper            = "ПП 'Жнец'"
-LANGUAGE.wep_redeemers         = "Двойные Пистолеты 'Спасители'"
+LANGUAGE.wep_redeemers         = "Двойные пистолеты 'Спасители'"
 LANGUAGE.wep_slugrifle         = "Винтовка 'Мини'"
 LANGUAGE.wep_smg               = "ПП 'Шредер'"
 LANGUAGE.wep_stone             = "Камень"
@@ -52,11 +148,11 @@ LANGUAGE.wep_succubus          = "ПП 'Суккуб'"
 LANGUAGE.wep_sweepershotgun    = "Дробовик 'Чистильщик'"
 LANGUAGE.wep_swissarmyknife    = "Армейский Нож"
 LANGUAGE.wep_uzi               = "9мм Узи 'Опрыскиватель'"
-
+LANGUAGE.wep_confetti          = "Пистолет Конфетти"
 
 -- weapon descriptions
 LANGUAGE.wep_d_airstrike       = "Предотвращает урон от падения, наносит дополнительный урон в зависимости от скорости падения. Сброс при перезарядке."
-LANGUAGE.wep_d_barricadekit    = "Прикрепляет деревянные доски к поверхности. ПКМ и ПЕРЕЗАРЯДКА вращать"
+LANGUAGE.wep_d_barricadekit    = "Прикрепляет деревянные доски к поверхности. ПКМ и ПЕРЕЗАРЯДКА, чтобы вращать"
 LANGUAGE.wep_d_crossbow        = "Пронзает целый ряд зомби сразу"
 LANGUAGE.wep_d_grenade         = "Простая осколочная граната с 5 секундным взрывателем. Щелкните правой кнопкой мыши, чтобы вытащить кольцо рано"
 LANGUAGE.wep_d_hammer          = "ПКМ, чтобы пригвоздить проп. Перезарядка для отбития гвоздя"
@@ -67,7 +163,7 @@ LANGUAGE.wep_d_annabelle       = "Пули разрываются в карте�
 LANGUAGE.wep_d_axe             = "Наносит 3х урона в голову"
 LANGUAGE.wep_d_bandito         = "Перезаряжает себя для вас, если он в кобуре"
 LANGUAGE.wep_d_battleaxe       = "Высокий урон, низкая скорострельность"
-LANGUAGE.wep_d_boomstick       = "Выстреливает из всех орудий сразу. Отправляет вас в полет"
+LANGUAGE.wep_d_boomstick       = "Выстреливает из всех стволов сразу. Отправляет вас в полёт"
 LANGUAGE.wep_d_bulletstorm     = "Более мощный при прицеливании"
 LANGUAGE.wep_d_crackler        = "Одиночный Огонь. Очень точный, когда вы держите его ровно"
 LANGUAGE.wep_d_deagle          = "Пуля способна пробить второго зомби"
@@ -81,7 +177,7 @@ LANGUAGE.wep_d_hermes          = "Увеличивает скорость при
 LANGUAGE.wep_d_impulsegrenades = "Взрывается при воздействии, чтобы запустить близлежащих игроков в воздух. Не наносит урона"
 LANGUAGE.wep_d_inferno         = "Стреляет очень очень метко. Быстро сьедает ваши запасы боеприпасов."
 LANGUAGE.wep_d_longsword       = "Может разрезать несколько зомби одним махом."
-LANGUAGE.wep_d_m4              = "Наносит 50% урона со спины. Скрывает вашу ауру от далекой нежити."
+LANGUAGE.wep_d_m4              = "Наносит 50% урона со спины. Скрывает вашу ауру от далеко стоящей нежити."
 LANGUAGE.wep_d_magnum          = "Пули рикошетят для дополнительного урона. Отскок пули всегда делает 1.5 x урона, независимо от того, где он попадает"
 LANGUAGE.wep_d_medicalkit      = "используйте ЛКМ, чтобы лечить других, ПКМ, чтобы лечить себя. может лечить негативные эффекты"
 LANGUAGE.wep_d_owens           = "Два выстрела по цене одного! БОЛЬШОЙ размер магазина"
@@ -99,40 +195,340 @@ LANGUAGE.wep_d_swissarmyknife  = "Вы двигаетесь быстрее с э
 LANGUAGE.wep_d_uzi             = "Держится устойчиво даже при беге. Сжигает зомби и боеприпасы быстро."
 
 --Items
-LANGUAGE.bigammobox_name       = "Большой Ящик С Боеприпасами"
+LANGUAGE.bigammobox_name       = "Большой ящик с боеприпасами"
 LANGUAGE.bigammobox_desc       = "При покупке предоставляет 2 коробки каждого общего типа боеприпасов"
 LANGUAGE.grenades_name         = "Гранаты x5"
 LANGUAGE.grenades_description  = "Набор из 5 гранат. Щелкните правой кнопкой мыши, чтобы приготовить!"
-LANGUAGE.impulses_name         = "Импульсные Гранаты x3"
+LANGUAGE.impulses_name         = "Импульсные гранаты x3"
 LANGUAGE.impulses_description  = "Набор из 3 гранат. Не наносит урона, но отправляет вас в полет! Взрывается при взаимодействии."
 LANGUAGE.stones_name           = "Сумка из 10 камней"
-LANGUAGE.stones_description    = "Дает тебе немного камней. Они больно бьют, когда вы бьете зомби ними"
+LANGUAGE.stones_description    = "Даёт тебе немного камней. Они больно бьют, когда вы бьёте зомби ими"
 
 -- general
-LANGUAGE.miniboss_class_select = "Вы появитесь, как %s в следующий раз как минибосс зомби."
-LANGUAGE.dark_nest_built_by_x	 = "Темное гнездо было построено игроком %s"
+LANGUAGE.miniboss_class_select = "Вы появитесь как %s в следующий раз как минибосс."
+LANGUAGE.dark_nest_built_by_x	 = "Тёмное гнездо было построено игроком %s"
 LANGUAGE.not_enough_hp_to_cast = "Недостаточно здоровья чтобы наложить это"
 LANGUAGE.x_minibosses_soon     = "%d Минибоссов появится"
-LANGUAGE.you_as_x_with_y_others= "вы появитесь, как %s с %d другими минибоссами"
+LANGUAGE.you_as_x_with_y_others= "Вы появитесь как %s с %d другими минибоссами"
 LANGUAGE.one_miniboss_soon     = "Минибосс скоро появится"
-LANGUAGE.you_as_x_soon         = "вы появитесь как %s скоро"
+LANGUAGE.you_as_x_soon         = "Вы появитесь как %s скоро"
 LANGUAGE.nest_x                = "Гнездо %s"
 LANGUAGE.dark_nest_x           = "Гнездо минибоссов %s"
 LANGUAGE.reinforcement_x       = "Свободных минибоссов x%s" //needs to be very short
 LANGUAGE.next_reinforcements_x = "Подкрепление через %s"
 LANGUAGE.no_reinforcements     = "Подкрепление на след. волне"
-LANGUAGE.next_resupply_x       = "След. Пополнение: %s"
+LANGUAGE.next_resupply_x       = "След. пополнение: %s"
 LANGUAGE.x_minibosses_risen    = "%d Минибосс(а/ов) появилось"
-LANGUAGE.press_f3_for_upgrades = "Нажмите F3 чтобы забрать новое оружие!"
+LANGUAGE.press_f3_for_upgrades = "Нажмите F3, чтобы забрать новое оружие!"
+LANGUAGE.ammo_generation_doubled = "Количество боеприпасов увеличено вдвое"
+LANGUAGE.no_upgrade_till_x     = "Нет улучшений, пока вы не наберёте %d очков"
+LANGUAGE.no_more_upgrades      = "Улучшений больше нет"
+LANGUAGE.x_points              = "%d очков"
+LANGUAGE.item_shop             = "Магазин предметов"
+LANGUAGE.press_f3_to_upgrade   = "НАЖМИТЕ F3 ДЛЯ ОБНОВЛЕНИЯ"
+LANGUAGE.x_scrap               = "%d металлолома"
+LANGUAGE.dont_have_enough_scrap= "Не хватает металлолома"
+LANGUAGE.can_redeem            = "Воскрешение разблокировано!"
+LANGUAGE.press_f2_to_redeem    = "НАЖМИТЕ F2, ЧТОБЫ ВОСКРЕСНУТЬ"
+LANGUAGE.boss_cannot_redeem    = "Боссы не могут воскреснуть вручную"
+LANGUAGE.scrap_x_score_x       = "Металлолом: %s  Счёт: %s"
+LANGUAGE.x_seconds             = "%dc"
+LANGUAGE.x_seconds2            = "%dc [%d]"
+LANGUAGE.targetid_hp           = "%s ОЗ"
+LANGUAGE.targetid_poison       = "[ЯД - %s]"
+LANGUAGE.targetid_bleed        = "[КРОВОТЕЧЕНИЕ - %s]"
+LANGUAGE.targetid_carrying     = "Перетаскивает [%s]"
+LANGUAGE.targetid_level_x      = "УР. %d"
+LANGUAGE.targetid_level_x_rlvl_x = "УР. %d Р.УР. %d"
+LANGUAGE.targetid_sigil        = "Сигил"
+LANGUAGE.targetid_sigil_press  = "Нажмите E, чтобы телепортироваться"
+LANGUAGE.cade_owner_dead       = "(МЁРТВ) %s"
+LANGUAGE.arsenal_upgrade_unlocked_choose = "Улучшение арсенала разблокировано! Нажмите F3, чтобы выбрать."
+LANGUAGE.choose_one_x          = "%s: Выберите один"
+LANGUAGE.tier_x_y              = "Уровень %d: %s"
+LANGUAGE.pupgrade_starter      = "Начальные пистолеты"
+LANGUAGE.pupgrade_starter_melee= "Начальное оружие ближнего боя"
+LANGUAGE.pupgrade_pistols      = "Пистолеты"
+LANGUAGE.pupgrade_smgs         = "Пистолеты-пулемёты"
+LANGUAGE.pupgrade_shotguns     = "Дробовики"
+LANGUAGE.pupgrade_assault      = "Штурмовое оружие"
+LANGUAGE.pupgrade_pulse        = "Импульсное оружие"
+
+--weapon stats
+LANGUAGE.stats_dam             = "УРО: %s"
+LANGUAGE.stats_rate            = "СК-СТЬ: %s"
+LANGUAGE.stats_clip            = "МАГ: %s"
+LANGUAGE.stats_conem           = "ТОЧНм: %s"
+LANGUAGE.stats_conemax         = "ТОЧНМ: %s"
+LANGUAGE.stats_reload          = "ПЕРЕЗ:%s"
+LANGUAGE.stats_weight          = "ВЕС: %s"
+LANGUAGE.stats_range           = "ДАЛЬН: %s"
+
+LANGUAGE.weight_weightless     = "Невесомый"
+LANGUAGE.weight_feather        = "Оч.лёгкий"
+LANGUAGE.weight_light          = "Лёгкий"
+LANGUAGE.weight_medium         = "Средний"
+LANGUAGE.weight_heavy          = "Тяжёлый"
+
+--old level system
+LANGUAGE.skillweb_rlevel       = " // Р.Уровень %s"
+LANGUAGE.skillweb_maxlevel     = "Уровень МАКС. "
+LANGUAGE.skillweb_level_x      = "Уровень %s"
+LANGUAGE.skillweb_xp_x         = "%s / %s ОПЫТ"
+LANGUAGE.skillweb_sp_x         = "%s ОН"
+
+--options
+LANGUAGE.poptions_alwaysshownails = "Всегда отображать здоровье гвоздей"
+LANGUAGE.poptions_thirdpersonknockdown = "Всегда нокдаун от третьего лица"
+LANGUAGE.poptions_alwaysvolunteer = "Всегда добровольно начинать как зомби"
+LANGUAGE.poptions_alwaysquickbuy = "Всегда быстрая покупка из Арсенала и Мастерской"
+LANGUAGE.poptions_autosuicidez = "Автоматическое самоубийство при смене классов"
+LANGUAGE.poptions_disableautoredeem = "Отключить автоматическое воскрешение"
+LANGUAGE.poptions_disableusea  = "Отключить нажатие, чтобы положить боеприпасы в развертываемые объекты"
+LANGUAGE.poptions_disableusep  = "Отключить использование, чтобы подбирать предметы (только предметы)"
+LANGUAGE.poptions_disableiron  = "Отключить перевод модели при прицеливании"
+LANGUAGE.poptions_disablecrosshair = "Отключить поворот прицела"
+LANGUAGE.poptions_disableironsi = "Отключить области видимости (Пример: прицел на винтовке)"
+LANGUAGE.poptions_disaplayexp  = "Показать опыт"
+LANGUAGE.poptions_pointfloat   = "Не показывать всплывающее кол-во очков, которое вы получили(с убийства зомби)"
+LANGUAGE.poptions_donthidears  = "Не скрывать арсенал и ящики амуниции"
+LANGUAGE.poptions_donthidef    = "Не скрывать друзей через прозрачность"
+LANGUAGE.poptions_drawcrosshairi = "Показать прицел при прицеливании."
+LANGUAGE.poptions_enableam     = "Включить музыку окружения"
+LANGUAGE.poptions_enablelhm    = "Включить музыку последнего выжившего"
+LANGUAGE.poptions_enablepp     = "Включить постобработку"
+LANGUAGE.poptions_enablefg     = "Включить зернистость плёнки"
+LANGUAGE.poptions_enablecm     = "Включить цветовой режим"
+LANGUAGE.poptions_enablepf     = "Включить вспышки боли"
+LANGUAGE.poptions_enablefe     = "Включить эффекты шрифта"
+LANGUAGE.poptions_enablehha    = "Включить ауру здоровья человека"
+LANGUAGE.poptions_enabledi     = "Включить индикаторы урона"
+LANGUAGE.poptions_enablemvr    = "Включить наклон при движении"
+LANGUAGE.poptions_enablembv    = "Включить видимость маяка сообщения"
+LANGUAGE.poptions_filmmode     = "Режим фильма (отключить большую часть интерфейса)"
+LANGUAGE.poptions_hidevm       = "Скрыть вид моделей"
+LANGUAGE.poptions_preventbpb   = "Не быть боссом за зомби"
+LANGUAGE.poptions_showdiw      = "Показывать индикатор урона через стены"
+LANGUAGE.poptions_weaponhudmode = "Стиль отображения боеприпасов оружия"
+LANGUAGE.poptions_weaponhudmode_label1 = "Отображать в 3D"
+LANGUAGE.poptions_weaponhudmode_label2 = "Отображать в 2D"
+LANGUAGE.poptions_weaponhudmode_label3 = "Отображать оба"
+LANGUAGE.poptions_healthdisplaymode = "Стиль отображения здоровья цели"
+LANGUAGE.poptions_healthdisplaymode_label1 = "% от здоровья"
+LANGUAGE.poptions_healthdisplaymode_label2 = "Кол-во здоровья"
+LANGUAGE.poptions_propsnapangle = "Угол поворота объекта"
+LANGUAGE.poptions_propsnapangle_label1 = "Нет угла"
+LANGUAGE.poptions_propsnapangle_label2 = "15 градусов"
+LANGUAGE.poptions_propsnapangle_label3 = "30 градусов"
+LANGUAGE.poptions_propsnapangle_label4 = "45 градусов"
+LANGUAGE.poptions_humanabs     = "Окружение выживших"
+LANGUAGE.poptions_ambientset_label1 = "нет"
+LANGUAGE.poptions_ambientset_label2 = "по умолчанию"
+LANGUAGE.poptions_zombieabs    = "Окружение зомби"
+LANGUAGE.poptions_crosshairlines = "Линий в прицеле"
+LANGUAGE.poptions_crosshairoffset = "Смещение прицела"
+LANGUAGE.poptions_crosshairthicc = "Толщина прицела"
+LANGUAGE.poptions_damagens     = "Размер цифры индикатора урона"
+LANGUAGE.poptions_damagens     = "Скорость цифры индикатора урона"
+LANGUAGE.poptions_damagenlt    = "Продолжительность цифры индикатора урона"
+LANGUAGE.poptions_fgo          = "Зернистость"
+LANGUAGE.poptions_interfaces   = "Размер интерфейса"
+LANGUAGE.poptions_ironsighzs   = "Увеличение мастшаба прицела"
+LANGUAGE.poptions_musicvol     = "Громкость музыки"
+LANGUAGE.poptions_proprs       = "Чувствительность вращения объекта"
+LANGUAGE.poptions_transparencyr = "Радиус прозрачности"
+LANGUAGE.poptions_transparencyrtp = "Радиус прозрачности от третьего лица"
+LANGUAGE.poptions_crosshairpc  = "Первичный цвет прицела"
+LANGUAGE.poptions_crosshairsc  = "Вторичный цвет прицела"
+LANGUAGE.poptions_healthaurafh = "Цвет ауры здоровья - полное здоровье"
+LANGUAGE.poptions_healthauranh = "Цвет ауры здоровья - нет здоровья"
+
+--endboard(honorable mentions labels)
+LANGUAGE.pendboard_won         = "Вы победили!"
+LANGUAGE.pendboard_lost        = "Вы проиграли."
+LANGUAGE.pendboard_humans      = "Выжившие сумели выжить."
+LANGUAGE.pendboard_zombies     = "Армия нежити оказалась сильнее."
+LANGUAGE.pendboard_mentions    = "Почётные игроки"
+LANGUAGE.pendboard_steam       = "Нажмите сюда, чтобы посмотреть профиль игрока в сообществе Steam."
+
+--honored mentions
+LANGUAGE.hm_mostzombieskilled  = "Большинство убитых зомби"
+LANGUAGE.hm_mostzombieskilled_desc = "%s убил %d зомби."
+LANGUAGE.hm_mostdamagetoundead = "Наибольший урон зомби"
+LANGUAGE.hm_mostdamagetoundead_desc = "%s причинил %d урона по зомби."
+LANGUAGE.hm_mostheadshotkills  = "Набольшее количество убийств в голову"
+LANGUAGE.hm_mostheadshotkills_desc = "%s убил %s зомби в голову."
+LANGUAGE.hm_pacifist           = "Пацифист"
+LANGUAGE.hm_pacifist_desc      = "%s не убил не одного зомби и выжил!"
+LANGUAGE.hm_mosthelpful        = "Самый полезный"
+LANGUAGE.hm_mosthelpful_desc   = "%s оказал помощь в убийстве %d зомби"
+LANGUAGE.hm_lasthuman          = "Последний выживший"
+LANGUAGE.hm_lasthuman_desc     = "%s был последним живым человеком."
+LANGUAGE.hm_outlander          = "Чужой"
+LANGUAGE.hm_outlander_desc     = "%s убил %d зомби на их основной точке возрождения."
+LANGUAGE.hm_gooddoc            = "Хороший врач"
+LANGUAGE.hm_gooddoc_desc       = "%s вылечил свою команду на %d здоровья."
+LANGUAGE.hm_handyman           = "Умелец"
+LANGUAGE.hm_handyman_desc      = "%s починил баррикады на %d единиц."
+LANGUAGE.hm_scarecrow          = "Пугало"
+LANGUAGE.hm_scarecrow_desc     = "%s убил %d бедных ворон."
+LANGUAGE.hm_mostbrainate       = "Большинство съеденных мозгов"
+LANGUAGE.hm_mostbrainate_desc  = "%s сьел %d мозга(-ов)."
+LANGUAGE.hm_mostdamagetohumans = "Наибольший урон людям"
+LANGUAGE.hm_mostdamagetohumans_desc = "%s нанёс %d урона людям."
+LANGUAGE.hm_lastbite           = "Последний укус"
+LANGUAGE.hm_lastbite_desc      = "%s укусил последнего человека."
+LANGUAGE.hm_mostusefulopposite = "Самый полезный для противоположной команды"
+LANGUAGE.hm_mostusefulopposite_desc = "%s помог своим собратам и убил %d людей!"
+LANGUAGE.hm_stupid             = "Дурачок"
+LANGUAGE.hm_stupid_desc        = "%s был убит в %d футах от основной точки возрождения зомби."
+LANGUAGE.hm_salesman           = "Продавец"
+LANGUAGE.hm_salesman_desc      = "%s продал на %d очков из арсенального ящика."
+LANGUAGE.hm_warehouse          = "Склад"
+LANGUAGE.hm_warehouse_desc     = "У %s, использовали ящик амуниции %d раз(-а)."
+LANGUAGE.hm_defender           = "Защитник"
+LANGUAGE.hm_defender_desc      = "%s защитил людей от %d урона усилениями защиты."
+LANGUAGE.hm_alchemist          = "Алхимик"
+LANGUAGE.hm_alchemist_desc     = "%s усилил на %d доп. урона своих товарищей для победы над зомби."
+LANGUAGE.hm_barricadedestroyer = "Разрушитель баррикад"
+LANGUAGE.hm_barricadedestroyer_desc = "%s нанёс %d урона по баррикадам."
+LANGUAGE.hm_nestdestroyer      = "Разрушитель гнёзд"
+LANGUAGE.hm_nestdestroyer_desc = "%s уничтожил %d гнёзд."
+LANGUAGE.hm_nestmaster         = "Мастер гнёзд"
+LANGUAGE.hm_nestmaster_desc    = "У %s, возродилось %d зомби через его гнездо."
+
+--perk menu
+LANGUAGE.perks_close_label     = "Закрыть без сохранения"
+LANGUAGE.perks_bank_label      = "Банк Перков"
+LANGUAGE.perks_loadout_label   = "Снаряжение"
+LANGUAGE.perks_setact_label    = "Принять выбранное"
+LANGUAGE.perks_clear_perks     = "Очистить перки"
+LANGUAGE.perks_save            = "Сохранить..."
+LANGUAGE.perks_save_new        = "Сохранить как новый"
+LANGUAGE.perks_load            = "Загрузить..."
+LANGUAGE.perks_delete          = "Удалить... "
+LANGUAGE.perks_save_as_x       = "как %s"
+LANGUAGE.perks_overwrite_x     = "Действительно перезаписать %s?"
+LANGUAGE.perks_delete_x        = "Действительно удалить %s?"
+LANGUAGE.perks_save_as         = "Сохранить как..."
+LANGUAGE.perks_save_label      = "Сохранить"
+LANGUAGE.perks_accept_label    = "Принять"
+LANGUAGE.perks_cancel_label    = "Отмена"
+
+--perk names
+LANGUAGE.skill_backupplan	=	"Запасной план"
+LANGUAGE.skill_battlecader	=	"Боевой баррикадер"
+LANGUAGE.skill_bigoomph	=		"Большая выносливость"
+LANGUAGE.skill_calm1	=		"Спокойствие: 1"
+LANGUAGE.skill_calm2	=		"Спокойствие: 2"
+LANGUAGE.skill_calm3	=		"Спокойствие: 3"
+LANGUAGE.skill_crackshot	=	"Скорострел"
+LANGUAGE.skill_handoffate	=	"Рука судьбы"
+LANGUAGE.skill_healthy1	=		"Здоровый: 1"
+LANGUAGE.skill_healthy2	=		"Здоровый: 2"
+LANGUAGE.skill_healthy3	=		"Здоровый: 3"
+LANGUAGE.skill_healthy4	=		"Здоровый: 4"
+LANGUAGE.skill_heavylifter	=	"Тяжеловес"
+LANGUAGE.skill_hoarder	=		"Накопитель"
+LANGUAGE.skill_lightness1	=	"Лёгкость: 1"
+LANGUAGE.skill_lightness2	=	"Лёгкость: 2"
+LANGUAGE.skill_lightness3	=	"Лёгкость: 3"
+LANGUAGE.skill_lightness4	=	"Лёгкость: 4"
+LANGUAGE.skill_moonwalker1	=	"Луноход: 1"
+LANGUAGE.skill_moonwalker2	=	"Луноход: 2"
+LANGUAGE.skill_phaser1	=		"Переход: 1"
+LANGUAGE.skill_phaser2	=		"Переход: 2"
+LANGUAGE.skill_picky	=		"Придирчивый"
+LANGUAGE.skill_quickfix	=		"Быстроправ"
+LANGUAGE.skill_respite1	=		"Передышка: 1"
+LANGUAGE.skill_respite2	=		"Передышка: 2"
+LANGUAGE.skill_respite3	=		"Передышка: 3"
+LANGUAGE.skill_scraphound1	=	"Металлоломная гончая: 1"
+LANGUAGE.skill_scraphound2	=	"Металлоломная гончая: 2"
+LANGUAGE.skill_scraphound3	=	"Металлоломная гончая: 3"
+LANGUAGE.skill_scraphound4	=	"Металлоломная гончая: 4"
+LANGUAGE.skill_scrounger1	=	"Попрошайка: 1"
+LANGUAGE.skill_scrounger2	=	"Попрошайка: 2"
+LANGUAGE.skill_scrounger3	=	"Попрошайка: 3"
+LANGUAGE.skill_scrounger4	=	"Попрошайка: 4"
+LANGUAGE.skill_sigilservant	=	"Слуга Сигила"
+LANGUAGE.skill_stockpile1	=	"Запасы: 1"
+LANGUAGE.skill_stockpile2	=	"Запасы: 2"
+LANGUAGE.skill_wooism       =   "Вуизм"
+
+--perk descriptions
+LANGUAGE.skill_backupplan_desc = "Если на карте нет сигила, осколки сигилов всё равно можно использовать для телепортации к самому дальнему из возможных товарищей по команде. Начните игру с осколком сигила."
+LANGUAGE.skill_battlecader_desc = "Убийства восстанавливают 33% (базовой) выносливости"
+LANGUAGE.skill_bigoomph_desc = "Удвоен максимальный ремонтный потенциал, вдвое уменьшена скорость перезарядки выносливости."
+LANGUAGE.skill_calm1_desc   = "Эффект от низкого уровня здоровья немного слабее. Эффект теперь начинается с 30 ОЗ, достигая 100% эффективности при 0 ОЗ."
+LANGUAGE.skill_calm2_desc   = "Эффект от низкого уровня здоровья немного слабее. Эффект теперь начинается с 20 ОЗ, достигая 66% эффективности при 0 ОЗ."
+LANGUAGE.skill_calm3_desc   = "Полностью отсутствует эффект от низкого уровня здоровья."
+LANGUAGE.skill_crackshot_desc = "50% повышение точности при приседании и неподвижности"
+LANGUAGE.skill_handoffate_desc = "На каждом экране улучшения арсенала отображается только 1 вариант (кроме пистолетов Уровня1). +10 макс. здоровье, +10% уменьшение веса, +20% кол-во боеприпасов в пополнениях, +20% прирост металлолома"
+LANGUAGE.skill_healthy1_desc = "+5 макс. здоровье"
+LANGUAGE.skill_healthy2_desc = "+10 макс. здоровье"
+LANGUAGE.skill_healthy3_desc = "+15 макс. здоровье"
+LANGUAGE.skill_healthy4_desc = "+20 макс. здоровье"
+LANGUAGE.skill_heavylifter_desc = "Начните игру в рабочих перчатках."
+LANGUAGE.skill_hoarder_desc = "Набор досок имеет лучший ассортимент. Начните игру с Набором досок."
+LANGUAGE.skill_lightness1_desc = "+5% уменьшение веса"
+LANGUAGE.skill_lightness2_desc = "+10% уменьшение веса"
+LANGUAGE.skill_lightness3_desc = "+15% уменьшение веса"
+LANGUAGE.skill_lightness4_desc = "+20% уменьшение веса"
+LANGUAGE.skill_moonwalker1_desc = "На 25% уменьшен штраф скорости за передвижение назад."
+LANGUAGE.skill_moonwalker2_desc = "На 50% уменьшен штраф скорости за передвижение назад."
+LANGUAGE.skill_phaser1_desc = "Скорость прохождения сквозь баррикады больше не требует секунды для зарядки"
+LANGUAGE.skill_phaser2_desc = "Прохождение сквозь баррикады даёт вам первоначальный прилив скорости"
+LANGUAGE.skill_picky_desc   = "2 доп. варианта оружий на каждом экране улучшений арсенала (кроме пистолетов Уровня1)"
+LANGUAGE.skill_quickfix_desc = "Ремонт между раундами всегда включен"
+LANGUAGE.skill_respite1_desc = "В конце волны, устанавливает здоровье на 30% ОЗ, или исцеляет 10%, если больше этого процента"
+LANGUAGE.skill_respite2_desc = "В конце волны, устанавливает здоровье на 50% ОЗ, или исцеляет 25%, если больше этого процента"
+LANGUAGE.skill_respite3_desc = "В конце волны, устанавливает здоровье на 70% ОЗ, или исцеляет 40%, если больше этого процента"
+LANGUAGE.skill_scraphound1_desc = "+10% прирост металлолома"
+LANGUAGE.skill_scraphound2_desc = "+20% прирост металлолома"
+LANGUAGE.skill_scraphound3_desc = "+30% прирост металлолома"
+LANGUAGE.skill_scraphound4_desc = "+40% прирост металлолома"
+LANGUAGE.skill_scrounger1_desc = "+10% кол-во боеприпасов в пополнениях"
+LANGUAGE.skill_scrounger2_desc = "+20% кол-во боеприпасов в пополнениях"
+LANGUAGE.skill_scrounger3_desc = "+30% кол-во боеприпасов в пополнениях"
+LANGUAGE.skill_scrounger4_desc = "+40% кол-во боеприпасов в пополнениях"
+LANGUAGE.skill_sigilservant_desc = "Тройное исцеление от сигила. Начните игру с семенем сигила."
+LANGUAGE.skill_stockpile1_desc = "Пополнения накапливаются. Удерживая ALT, щёлкните правой кнопкой мыши по слоту оружия для которого нужны боеприпасы. Макс. 1 хранится"
+LANGUAGE.skill_stockpile2_desc = "Пополнения накапливаются. Удерживая ALT, щёлкните правой кнопкой мыши по слоту оружия для которого нужны боеприпасы. Макс. 3 хранится"
+LANGUAGE.skill_wooism_desc  = "На точность оружия больше не влияют движение или прицеливание."
+
+--zombie class selection menu
+LANGUAGE.class_selection_close = "Закрыть"
+LANGUAGE.class_selection_normal = "Выбрать обычный класс"
+LANGUAGE.class_selection_miniboss = "Выбрать минибосса"
+LANGUAGE.class_selection_boss  = "Выбрать босса"
+
+--floating score
+LANGUAGE.fs_assisted           = " (помощь)"
+LANGUAGE.fs_assist             = " (помощь)"
+LANGUAGE.fs_point_x            = "%s очко"--\_combines like: 10 points
+LANGUAGE.fs_point_s            = "в"       --/
+LANGUAGE.fs_points_x           = "%s очков"
+
+LANGUAGE.fs_hp_x               = "%s ОЗ"
+LANGUAGE.fs_hp_cade_x          = "%s ПРОЧНОСТЬ"
+
+LANGUAGE.fs_zombie_munch       = "СЪЕДЕН!"
+LANGUAGE.fs_zombie_brainget    = "МОЗГ ПОЛУЧЕН!"
+LANGUAGE.fs_zombie_joinus      = "ИДИ К НАМ!"
+LANGUAGE.fs_zombie_oneofus     = "ОДИН ИЗ НАС!"
+LANGUAGE.fs_zombie_buttmangle  = "ПОЛУЧИЛ ПО ЗАДНИЦЕ!"
+LANGUAGE.fs_zombie_chomp       = "СОЖРАН!"
+LANGUAGE.fs_zombie_x_brains    = "%s МОЗГ!"
 
 -- zombie descriptions
 LANGUAGE.health_x              = "Здоровье: %d"
 LANGUAGE.speed_x               = "Скорость: %d"
 
-LANGUAGE.attack_claw           = "Когти наносят %d Урона"
-LANGUAGE.attack_leap           = "Прыжок наносит %d Урона"
-LANGUAGE.attack_leap_long      = "Длинный прыжок наносит %d Урона"
-LANGUAGE.attack_leap_short     = "Короткий прыжок наносит %d Урона"
+LANGUAGE.attack_claw           = "Когти наносят %d урона"
+LANGUAGE.attack_leap           = "Прыжок наносит %d урона"
+LANGUAGE.attack_leap_long      = "Длинный прыжок наносит %d урона"
+LANGUAGE.attack_leap_short     = "Короткий прыжок наносит %d урона"
 LANGUAGE.can_change_direction  = "Может менять направление в воздухе"
 LANGUAGE.can_attack_leaping    = "Может атаковать во время прыжка"
 LANGUAGE.attack_ranged         = "Выстреливает %s"
@@ -142,7 +538,7 @@ LANGUAGE.speed_very_fast       = "Движется намного быстрее
 LANGUAGE.speed_fast            = "Движется быстрее"
 LANGUAGE.speed_very_slow       = "Движется гораздо медленнее"
 LANGUAGE.speed_slow            = "Движется медленнее"
-LANGUAGE.regenerates           = "Регенерирует %d ЗД/с"
+LANGUAGE.regenerates           = "Регенерирует %d ОЗ/с"
 
 LANGUAGE.damage_taken_much_more= "Получает гораздо больше урона"
 LANGUAGE.damage_taken_more     = "Получает больше урона"
@@ -154,19 +550,19 @@ LANGUAGE.damage_dealt_more     = "Наносит больше урона"
 LANGUAGE.damage_dealt_much_less= "Наносит гораздо меньше урона"
 LANGUAGE.damage_dealt_less     = "Наносит меньше урона"
 
-LANGUAGE.can_attack            = "(Может Атаковать)"
-LANGUAGE.can_climb             = "Может Лазать(по стенам)"
-LANGUAGE.heals_teammates       = "Лечит Напарников"
+LANGUAGE.can_attack            = "(Может атаковать)"
+LANGUAGE.can_climb             = "Может лазать(по стенам)"
+LANGUAGE.heals_teammates       = "Лечит напарников"
 LANGUAGE.kills_in_one_swing    = "Убивает людей одним ударом"
 LANGUAGE.launches_you_back     = "Отбрасывает вас назад"
 LANGUAGE.launches_them_back    = "Отбрасывает врагов назад"
 
-LANGUAGE.claws_aoe_for_x_to_y  = "Когти в зоне наносят %d-%d Урона"
-LANGUAGE.swings_cleaver_for_x  = "Размахивает тесаком нанося %d Урона"
-LANGUAGE.blood_bag_explodes    = "В случае смерти, Взрывается."
+LANGUAGE.claws_aoe_for_x_to_y  = "Когти в зоне наносят %d-%d урона"
+LANGUAGE.swings_cleaver_for_x  = "Размахивает тесаком нанося %d урона"
+LANGUAGE.blood_bag_explodes    = "В случае смерти, взрывается."
 LANGUAGE.fat_man_explodes      = "В случае смерти, ВЗРЫВАЕТСЯ!!!"
 LANGUAGE.dies_to_build_nest    = "Умирает, чтобы построить гнездо"
-LANGUAGE.destroys_nearby_nests = "Уничтожает близлежащие гнезда"
+LANGUAGE.destroys_nearby_nests = "Уничтожает близлежащие гнёзда"
 LANGUAGE.necro_ray             = "Стреляет лучом смерти нанося %d Урона"
 LANGUAGE.necro_ray_heal        = "При попадании восстанавливает %d Здоровья"
 LANGUAGE.builds_dark_nest      = "Строит темное гнездо"
@@ -176,19 +572,19 @@ LANGUAGE.completely_invisible  = "Делает вас полностью нев�
 LANGUAGE.delayed_transition    = "Занимает немного времени чтобы включить или выключить"
 LANGUAGE.hard_to_see           = "Трудно увидеть, даже при движении"
 
-LANGUAGE.deals_x_damage        = "Наносит %d Урона"
-LANGUAGE.applies_x_bleed       = "Наносит %d Кровотечения"
-LANGUAGE.applies_x_poison      = "Наносит %d Яда"
-LANGUAGE.applies_x_cripple     = "Наносит %d Слобости"
-LANGUAGE.applies_x_radiation   = "Наносит %d Радиации"
+LANGUAGE.deals_x_damage        = "Наносит %d урона"
+LANGUAGE.applies_x_bleed       = "Наносит %d кровотечения"
+LANGUAGE.applies_x_poison      = "Наносит %d яда"
+LANGUAGE.applies_x_cripple     = "Наносит %d слабости"
+LANGUAGE.applies_x_radiation   = "Наносит %d радиации"
 
-LANGUAGE.deals_x_to_y_damage   = "Наносит %d-%d Урона"
-LANGUAGE.applies_x_to_y_bleed  = "Наносит %d-%d Кровотечения"
-LANGUAGE.applies_x_to_y_poison = "Наносит %d-%d Яда"
-LANGUAGE.applies_x_to_y_cripple= "Наносит %d-%d Слобости"
-LANGUAGE.applies_x_to_y_radiation= "Наносит %d-%d Радиации"
+LANGUAGE.deals_x_to_y_damage   = "Наносит %d-%d урона"
+LANGUAGE.applies_x_to_y_bleed  = "Наносит %d-%d кровотечения"
+LANGUAGE.applies_x_to_y_poison = "Наносит %d-%d яда"
+LANGUAGE.applies_x_to_y_cripple= "Наносит %d-%d слабости"
+LANGUAGE.applies_x_to_y_radiation= "Наносит %d-%d радиации"
 
-LANGUAGE.deals_x_to_props      = "Наносит %d урона пропам"
+LANGUAGE.deals_x_to_props      = "Наносит %d урона объектам"
 LANGUAGE.takes_x_self_damage   = "Наносит %d урона себе"
 
 
@@ -200,14 +596,14 @@ LANGUAGE.projectile_tar        = "Брызгами смолы"
 
 
 --Classes
-LANGUAGE.class_blood_bag       = "Мешок Крови"
-LANGUAGE.class_tar_zombie      = "Смолистый Зомби"
+LANGUAGE.class_blood_bag       = "Мешок крови"
+LANGUAGE.class_tar_zombie      = "Смолистый зомби"
 LANGUAGE.class_hunter          = "Охотник"
 LANGUAGE.class_fat_man         = "Толстяк" --named for https://en.wikipedia.org/wiki/Fat_Man translate how that does
 LANGUAGE.class_demonic_gorilla = "Демоническая Горилла"
 LANGUAGE.class_burnt_brisket   = "Сгоревшая Грудинка"
 LANGUAGE.class_necromancer     = "Некромант"
-
+LANGUAGE.class_flesh_crab      = "Хэдкраб плоти"
 
 
 
@@ -237,16 +633,17 @@ LANGUAGE.x_brains_eaten								= "%d мозгов съедено"
 
 LANGUAGE.press_jump_to_free_roam					= "Нажмите ПРЫЖОК для свободного полёта"
 LANGUAGE.press_rmb_to_cycle_targets					= "Нажмите ПКМ для того чтобы сменить цель"
-LANGUAGE.press_lmb_to_spawn_on_them					= "Нажмите ЛКМ чтобы появится в нем"
-LANGUAGE.press_lmb_to_spawn							= "Нажмите ЛКМ чтобы появится случайно"
-LANGUAGE.press_reload_to_spawn_far					= "Нажмите ПЕРЕЗАРЯДКА чтобы появится далеко от выживших"
-LANGUAGE.press_alt_nest_menu						= "Нажмите ALT чтобы открыть меню гнезд/появится за миньена"
-LANGUAGE.press_reload_to_spawn_at_normal_point		= "Нажмите ПЕРЕЗАРЯДКА чтобы появится на нормальной точке появления"
-LANGUAGE.press_walk_to_spawn_as_x					= "Нажмите %s чтобы появится как %s"
-LANGUAGE.press_rmb_to_spawn_close					= "Нажмите ПКМ чтобы появится близко к выжишим"
-LANGUAGE.press_left_and_right_to_cycle_targets		= "Нажмите СТРЕЙФ ВЛЕВО и СТРЕЙФ ВПРАВО чтобы сменить цель"
+LANGUAGE.press_lmb_to_spawn_on_them					= "Нажмите ЛКМ, чтобы появится в нем"
+LANGUAGE.press_lmb_to_spawn							= "Нажмите ЛКМ, чтобы появится случайно"
+LANGUAGE.press_reload_to_spawn_far					= "Нажмите ПЕРЕЗАРЯДКА, чтобы появится далеко от выживших"
+LANGUAGE.press_alt_nest_menu						= "Нажмите ALT, чтобы открыть меню гнезд/появится за миньена"
+LANGUAGE.press_reload_to_spawn_at_normal_point		= "Нажмите ПЕРЕЗАРЯДКА, чтобы появится на нормальной точке появления"
+LANGUAGE.press_walk_to_spawn_as_x					= "Нажмите %s, чтобы появится как %s"
+LANGUAGE.press_rmb_to_spawn_close					= "Нажмите ПКМ, чтобы появится близко к выжишим"
+LANGUAGE.press_left_and_right_to_cycle_targets		= "Нажмите СТРЕЙФ ВЛЕВО и СТРЕЙФ ВПРАВО, чтобы сменить цель"
 
 LANGUAGE.observing_x								= "Вы смотрите на %s (%d)"
+LANGUAGE.observing_x_simple							= "Вы смотрите на %s"
 LANGUAGE.waiting_for_next_wave						= "Ожидание начала следующей волны..."
 LANGUAGE.impossible									= "Это невозможно."
 LANGUAGE.trying_to_put_nails_in_glass				= "Это очень умно стараться вбить гвозди в стекло."
@@ -267,18 +664,18 @@ LANGUAGE.x_redeemed									= "%s воскрес!"
 LANGUAGE.kill_the_last_human						= "Убейте последнего выжившего!"
 LANGUAGE.kick_the_last_human						= "Кикните последнего выжившего!"
 LANGUAGE.you_are_the_last_human						= "ВЫ ПОСЛЕДНИЙ ВЫЖИВШИЙ!"
-LANGUAGE.x_zombies_out_to_get_you					= "%d ЗАРАЖЕННЫХ ИДУТ ЗА ВАМИ!"
+LANGUAGE.x_zombies_out_to_get_you					= "%d ЗАРАЖЁННЫХ ИДУТ ЗА ВАМИ!"
 LANGUAGE.x_pants_out_to_get_you						= "%d НОГ ИДУТ ЗА ВАМИ!"
 LANGUAGE.you_have_died								= "Вы умерли."
 LANGUAGE.you_were_killed_by_x						= "Вы были убиты игроком %s"
 LANGUAGE.you_were_kicked_by_x						= "Вас разорвало в клочья игроком %s"
 LANGUAGE.arsenal_upgraded							= "Взято оружие"
 LANGUAGE.final_wave									= "ПОСЛЕДНЯЯ ВОЛНА НАЧАЛАСЬ!"
-LANGUAGE.final_wave_sub								= "Все классы разблокированы, а возможность на воскрешение иссякло!"
-LANGUAGE.wave_x_has_begun							= "Волна номер %d началась!"
+LANGUAGE.final_wave_sub								= "ВСЕ классы разблокированы, а возможность на воскрешение иссякло!"
+LANGUAGE.wave_x_has_begun							= "Волна %d началась!"
 LANGUAGE.x_unlocked									= "%s разблокирован!"
-LANGUAGE.wave_x_is_over								= "Волна номер %d завершилась!"
-LANGUAGE.wave_x_is_over_sub							= "Зараженные остановили свое возрождение."
+LANGUAGE.wave_x_is_over								= "Волна %d завершилась!"
+LANGUAGE.wave_x_is_over_sub							= "Заражённые остановили своё возрождение."
 LANGUAGE.points_for_surviving						= "Вы получили %d очков за выживание."
 LANGUAGE.scrap_for_surviving						= "Вы получили %d металла за выживание."
 LANGUAGE.you_are_x									= "Вы %s!"
@@ -291,7 +688,7 @@ LANGUAGE.you_are_already_a_x						= "Вы уже %s."
 LANGUAGE.you_will_spawn_as_a_x						= "Вы появитесь, как %s."
 LANGUAGE.crafting_successful						= "Крафт прошел успешно!"
 LANGUAGE.x_crafted_y								= "%s создал %s."
-LANGUAGE.escape_from_the_zombies					= "Убегайте от зараженных!"
+LANGUAGE.escape_from_the_zombies					= "Убегайте от заражённых!"
 LANGUAGE.too_close_to_another_nail					= "Слишком близко к другому гвоздю."
 LANGUAGE.object_too_damaged_to_be_used				= "Этот объект слишком поврежден для дальнейшего использования."
 LANGUAGE.thanks_for_being_a_fan_of_zs				= "Спасибо за то, что бы наш фан Zombie Survival!"
@@ -313,8 +710,8 @@ LANGUAGE.zombie_volunteers							= "Зараженными станут"
 LANGUAGE.x_will_be_y_soon							= "%s станет %s скоро!"
 LANGUAGE.you_will_be_x_soon							= "Вы станете %s скоро!"
 LANGUAGE.x_discount_for_buying_between_waves		= "Скидка в %d%% для покупок в конце каждой волны!"
-LANGUAGE.number_of_initial_zombies_this_game		= "Количество зараженных в этой игре (%d%%): %d"
-LANGUAGE.humans_closest_to_spawns_are_zombies		= "Самые близко стоящие к спауну зараженных станут зараженными."
+LANGUAGE.number_of_initial_zombies_this_game		= "Количество заражённых в этой игре (%d%%): %d"
+LANGUAGE.humans_closest_to_spawns_are_zombies		= "Самые близко стоящие к точке возрождения заражённых станут заражёнными."
 LANGUAGE.waiting_for_players						= "Ожидание игроков..."
 LANGUAGE.requires_x_people							= "Требуется %d игроков"
 LANGUAGE.packing_others_object						= "Складываем объект другого игрока"
@@ -343,7 +740,7 @@ LANGUAGE.nest_built_by_x							= "Гнездо было построено иг�
 LANGUAGE.nest_destroyed								= "Гнездо было разрушено."
 LANGUAGE.wait_x_seconds_before_making_a_new_nest	= "Вы должны подождать %d секунд перед созданием нового гнезда."
 LANGUAGE.too_close_to_a_human						= "Слишком близко к людям!"
-LANGUAGE.too_close_to_a_spawn						= "Слишком близко к спауну зараженных!"
+LANGUAGE.too_close_to_a_spawn						= "Слишком близко к точке возрождения заражённых!"
 LANGUAGE.too_close_to_uncorrupt						= "Слишком близко к чистому сигилу!"
 LANGUAGE.x_has_built_this_nest_and_is_still_around	= "%s построил это гнездо, так что вы не можете его снести."
 LANGUAGE.no_other_nests								= "Вы не сможете уничтожить гнездо, если осталось только одно."
@@ -354,26 +751,26 @@ LANGUAGE.tier_x_items_unlock_at_wave_y				= "Предметы уровня %d р
 LANGUAGE.tier_x_items								= "Предметы уровня %d"
 LANGUAGE.humans_furthest_from_sigils_are_zombies	= "Люди далекие от Сигилов станут зомби."
 LANGUAGE.out_of_stock								= "Этого товара нет в наличии!"
-LANGUAGE.obtained_x_y_ammo							= "Получено %d %s патронов"
-LANGUAGE.gave_x_y_ammo_to_z							= "Передано %d %s патронов игроку %s"
-LANGUAGE.obtained_x_y_ammo_from_z					= "Получено %d %s патронов из %s"
-LANGUAGE.healed_x_by_y								= "%s вылечил вас на %d ЗД"
-LANGUAGE.healed_x_for_y								= "Вы вылечили %s на %d ЗД"
+LANGUAGE.obtained_x_y_ammo							= "Получено +%d %s"
+LANGUAGE.gave_x_y_ammo_to_z							= "Передано %d %s игроку %s"
+LANGUAGE.obtained_x_y_ammo_from_z					= "Получено +%d %s из %s"
+LANGUAGE.healed_x_by_y								= "%s вылечил вас на %d ОЗ"
+LANGUAGE.healed_x_for_y								= "Вы вылечили %s на %d ОЗ"
 LANGUAGE.buffed_x_with_y							= "%s баффнул вас с помощью %s"
 LANGUAGE.buffed_x_with_a_y							= "Вы баффнули %s с помощью %s"
 LANGUAGE.removed_your_nail							= "%s убрал один из ваших гвоздей"
 LANGUAGE.giving_items_to							= "Передача предметов игроку %s"
-LANGUAGE.weapon_remantler							= "Собиратель Оружия"
+LANGUAGE.weapon_remantler							= "Мастерская"
 LANGUAGE.remantle_success							= "Оружие улучшено:"
-LANGUAGE.remantle_used								= "%d металла было создано в вашем remantler."
+LANGUAGE.remantle_used								= "%d металла было создано в вашей мастерской."
 LANGUAGE.remantle_cannot							= "У вас уже есть улучшенное оружие этого типа."
 LANGUAGE.teleporting_to_sigil						= "Телепортация на Сигил %s"
-LANGUAGE.press_shift_to_cancel						= "Нажмите SHIFT чтобы отменить"
+LANGUAGE.press_shift_to_cancel						= "Нажмите SHIFT, чтобы отменить"
 LANGUAGE.point_at_a_sigil_to_choose_destination		= "Наведитесь на другой сигил, чтобы сменить пункт назначения."
 LANGUAGE.frail_healdart_warning						= "Лечение невозможно %s имеет DEBUFF: FRAIL!"
 LANGUAGE.obtained_a_inv								= "%s добавлено в инвентарь"
 LANGUAGE.you_already_have_this_trinket				= "У вас уже есть эта безделушка в инвентаре."
-LANGUAGE.they_already_have_this_trinket				= "У него/ее уже есть эта безделушка в инвентаре."
+LANGUAGE.they_already_have_this_trinket				= "У него/её уже есть эта безделушка в инвентаре."
 LANGUAGE.you_cannot_carry_more_comps				= "Вы не можете нести больше компонентов для крафта."
 LANGUAGE.they_cannot_carry_more_comps				= "Он/она не может нести больше компонентов для крафта."
 LANGUAGE.obtained_inv_item_from_z					= "Получено %s из %s добавлен в инвентарь"
@@ -402,9 +799,9 @@ LANGUAGE.x_sigils_appeared							= "%d Сигилов появилось. Люд
 LANGUAGE.has_survived								= "выжил!"
 
 -- Skill system messages
-LANGUAGE.unspent_skill_points_press_x				= "У вас есть очки умений. Нажмите %q чтобы разблокировать новые навыки."
+LANGUAGE.unspent_skill_points_press_x				= "У вас есть очки умений. Нажмите %q, чтобы разблокировать новые навыки."
 LANGUAGE.x_requires_a_skill_you_dont_have			= "%s требуется навык, которого у вас нет!"
-LANGUAGE.you_ascended_to_level_x					= "Вы поднялись на уровень %d!"
+LANGUAGE.you_ascended_to_level_x					= "Вы поднялись на новый уровень %d!"
 LANGUAGE.you_have_remorted_now_rl_x					= "Вы переродились и поднялись на уровень перерождения %d!"
 LANGUAGE.you_now_have_x_extra_sp					= "У вас есть %d дополнительных очков умений!"
 LANGUAGE.x_has_remorted_to_rl_y						= "%s поднялся на уровень перерождения %d!!"
@@ -418,9 +815,9 @@ LANGUAGE.message_beacon_4							= "Нужны арсенальные ящики 
 LANGUAGE.message_beacon_5							= "Нужны медики здесь"
 LANGUAGE.message_beacon_6							= "Ящик аммуниции здесь"
 LANGUAGE.message_beacon_7							= "Арсенальный ящик здесь"
-LANGUAGE.message_beacon_8							= "Нужны force fields здесь"
+LANGUAGE.message_beacon_8							= "Нужны силовые щиты здесь"
 LANGUAGE.message_beacon_9							= "Нужны взрывоопасные объекты здесь"
-LANGUAGE.message_beacon_10							= "Зараженные могут пройти здесь"
+LANGUAGE.message_beacon_10							= "Заражённые могут пройти здесь"
 LANGUAGE.message_beacon_11							= "Не входить!!"
 LANGUAGE.message_beacon_12							= "Не выходите наружу"
 LANGUAGE.message_beacon_13							= "Защищайте этот район"
@@ -433,8 +830,8 @@ LANGUAGE.message_beacon_19							= "Не давайте зараженным п�
 LANGUAGE.message_beacon_20							= "Это сломается"
 LANGUAGE.message_beacon_21							= "Это место опасно!"
 LANGUAGE.message_beacon_22							= "Избегайте яд!"
-LANGUAGE.message_beacon_23							= "Зараженные проламываются здесь!"
-LANGUAGE.message_beacon_24							= "Зараженные подходят. Баррикадируйтесь здесь!"
+LANGUAGE.message_beacon_23							= "Заражённые проламываются здесь!"
+LANGUAGE.message_beacon_24							= "Заражённые подходят. Баррикадируйтесь здесь!"
 LANGUAGE.message_beacon_25							= "План Б здесь"
 
 -- Class names
@@ -448,7 +845,7 @@ LANGUAGE.class_bloated_zombie						= "Жирный Зомби"
 LANGUAGE.class_vile_bloated_zombie					= "Мерзкий жирный Зомби"
 LANGUAGE.class_classic_zombie						= "Классический Зомби"
 LANGUAGE.class_super_zombie							= "Супер Зомби"
-LANGUAGE.class_fresh_dead							= "Свежий Зараженный"
+LANGUAGE.class_fresh_dead							= "Свежий заражённый"
 LANGUAGE.class_recent_dead							= "Недавний Зараженный"
 LANGUAGE.class_agile_dead							= "Ловкий Зараженный"
 LANGUAGE.class_ghoul								= "Гуль"
@@ -460,7 +857,7 @@ LANGUAGE.class_fast_headcrab						= "Быстрый Хэдкраб"
 LANGUAGE.class_bloodsucker_headcrab					= "Хэдкраб Кровосос"
 LANGUAGE.class_poison_headcrab						= "Ядовитый Хэдкраб"
 LANGUAGE.class_barbed_headcrab						= "Колючий Хедкраб"
-LANGUAGE.class_the_tickle_monster					= "The Tickle Monster"
+LANGUAGE.class_the_tickle_monster					= "Щекоточный монстр"
 LANGUAGE.class_nightmare							= "Ночной Кошмар"
 LANGUAGE.class_ancient_nightmare					= "Древний Ночной Кошмар"
 LANGUAGE.class_devourer								= "Пожиратель"
@@ -491,7 +888,7 @@ LANGUAGE.class_asskicker							= "Ass Kicker"
 LANGUAGE.class_shitslapper							= "Shit Slapper"
 LANGUAGE.class_doomcrab								= "Краб Гибели"
 LANGUAGE.class_red_marrow							= "Red Marrow"
-LANGUAGE.class_skeletal_walker						= "Скелет Ходячий"
+LANGUAGE.class_skeletal_walker						= "Скелет"
 LANGUAGE.class_skeletal_shambler					= "Скелет Шамблер"
 LANGUAGE.class_skeletal_lurker						= "Скелет Ползун"
 LANGUAGE.class_shadow_lurker						= "Теневой Скрытень"
@@ -546,7 +943,7 @@ LANGUAGE.description_shade							= "Создавая вокруг себя си�
 LANGUAGE.description_frostshade						= "Ледяные Тени создают более слабые щиты и снаряды, чем их обычный аналог, но могут поражать людей холодом, когда он разрушен.\nХолод замедлит их действия и заклинит их оружие, заставляя стрелять медленнее."
 LANGUAGE.description_butcher						= "Обезумевший мясник зомби. Он не очень живучий, но любой, кому не повезло быть рядом, скорее всего, будет разорван в клочья."
 LANGUAGE.description_gravedigger					= "Сумасшедший, мертвый могильщик. Он владеет лопатой, сделанной из костей, найденных на кладбище."
-LANGUAGE.description_flesh_creeper					= "Flesh Creepers обладают способностью создавать гнезда.\nИз этих гнезд появляются другие зомбированные существа.\nКак это работает, неизвестно, но необходимо уничтожить любые гнезда или самих fresh creepers."
+LANGUAGE.description_flesh_creeper					= "Flesh Creepers обладают способностью создавать гнёзда.\nИз этих гнезд появляются другие зомбированные существа.\nКак это работает, неизвестно, но необходимо уничтожить любые гнезда или самих fresh creepers."
 LANGUAGE.description_gore_child						= "После зомбирования заражается и нерожденный ребенок.\nНе обладая особыми способностями, их сила исходит от их количества."
 LANGUAGE.description_giga_gore_child				= "Результат Gore Child, которого слишком долго не видели.\nУзрите его ужасное массивное тело, которое является результатом зомбированных стволовых клеток.\nОн также будет хозяином для Gore Childs, которые можно всегда найти в его паклях.."
 LANGUAGE.description_giga_shadow_child				= "Испорченный Gore Child, со способностью затмить человеческое зрение.\nМенее крепкий, чем Giga Gore Child, но с высокой сопротивляемостью к оружию ближнего боя.\nСоздания, которые он создает, одинаково устойчивы и способны затмить зрение."
@@ -627,102 +1024,96 @@ LANGUAGE.help_cat_survival							= "Выживание"
 LANGUAGE.help_cat_barricading						= "Баррикадирование"
 LANGUAGE.help_cat_upgrades							= "Повышения и апгрейды"
 LANGUAGE.help_cat_being_a_zombie					= "Когда я зараженный"
-LANGUAGE.help_cont_introduction						= [[<p>    Добро пожаловать в Zombie Survival,это симулятор (зомби) выживания. ZS позволяет вам отражать аттаки зомби, создавать баррикады, и даже становиться частью армии зараженных. (Перевод: Mr. Darkness)</p>
+LANGUAGE.help_cont_introduction						= [[<p> Добро пожаловать в Zombie Survival, это симулятор (зомби) выживания. ЗВ(ZS) позволяет вам отражать атаки зомби, создавать баррикады, и даже становиться частью армии заражённых. (Оригинальный перевод 2006 года: Mr. Darkness. Перевод для TropicalZS: berry.)</p>
 
-<p>У Вас есть две комманды: выжившие и зараженные. Выжившие выигрывают, если выживут все волны. Некоторые карты имеют особенные задания, выполняя которые можно выиграть (пример: zs_obj_outland, zs_obj_pharmancy).
+<p>В игре есть две комманды: выжившие и заражённые. Выжившие выигрывают, если выживут все волны. Некоторые карты имеют особенные задания, выполняя которые можно выиграть.
 Если выживший умирает, то он становится частью армии зомби, что дает меньше шансов на выигрыш выжившим.</p>
 
-<p>Цель зараженных - убить всех выживших, делая их частью своей армии, и заставляя таким образом сделать гейм овер.
-Однако, зараженный может убить четверо выживших, чтобы возродиться. Это дает ему второй шанс на выживание и победу.
-Помните, единственный способ выиграть раунд - остаться выжившим до конца раунда. Зараженные технически не выигрывают, а наоборот - заставляют остальных проиграть!</p>
+<p>Цель заражённых - убить всех выживших, делая их частью своей армии, и заставляя таким образом проиграть их.
+Однако, заражённый может убить четверо выживших, чтобы возродиться. Это дает ему второй шанс на выживание и победу.
+Помните, единственный способ выиграть раунд - остаться выжившим до конца раунда. Заражённые технически не выигрывают, а наоборот - заставляют остальных проиграть!</p>
 
-<p>Несколько человек будет выбрано (Или желающие) Чтобы стать зараженным в начале раунда. Их кол-во будет изображено внизу вашего экрана до начала раунда.</p>
+<p>Несколько человек будет выбрано (или желающих) которые станут заражёнными в начале раунда. Их кол-во будет изображено внизу вашего экрана до начала раунда.</p>
 
-<p><b>Используйте кнопки "вверх" и "вниз" чтобы узнать более спецефические вещи.</b></p>
+<p><b>Используйте кнопки "вверх" и "вниз" чтобы узнать более вещей.</b></p>
 
-<p>Советы для этой секции:
-<ul><li>Если вы выходите из игры, как выживший, при переподключении вы становитесь зомби.</li>
+<p>Советы:
+<ul><li>Если Вы выходите из игры, как выживший, при переподключении Вы становитесь зомби.</li>
 <li>После того, как некоторое время раунда прошло, подключающиеся к серверу игроки появятся, как зомби.</li>
 <li>Используйте КОМАНДНЫЙ ЧАТ, когда это нужно. Стандартая клавиша - U, позволяет обращаться только к своей команде.</li>
 </ul></p>
 ]]
-LANGUAGE.help_cont_survival							= [[<p>Советы для этой секции:
-<ul><li>Зажмите клавишу ZOOM (стандартно: Z) чтобы проходить сквозь баррикады с медленной скоростью.</li>
-<li>Вы можете покупать предметы, такие как оружие и аммуницию во время перерывов между волнами, но вы также можете собирать оружие, инструменты с умерших выживших.</li>
-<li>Если выживший был убит именно зараженным, то они будут реанимированы, как зомби. Убейте их до того, как они убили Вас!</li>
-<li>Вам дано только некоторое количество очков которыми вы можете купить начальные предметы, обдумайте свои покупки внимательно!</li>
-<li>Мы можете создавать, сохранять, загружать, удалять и помечать, наборы, нажав F2. Таким образом вы можете сохранить тонны времени на баррикадирование или обдумывание планов на игру.</li>
-<li>Какое-либо безопасное местно может казаться таким поначалу, но может стать смертельной ловушкой с зомби вокруг. Всегда ищщите дополнительное пространство и "План Б" если что-то пойдет не так.</li>
-<li>Вы бесполезны для своей команды, если вы ничего не делаете, чтобы помочь. Вы даже более бесполезны для самого себя, поскольку Вы не зарабатываете очков и не получаете крутые оружия!</li>
-<li>Зажмите клавишу БЕГ, в то время, как смотрите на любой вами поставленный объект, чтобы убрать его для дальнейшего использования позже.</li>
-<li>Не принадлежащие никому турели (синий свет) могут стать вашими, нажав кнопку ИСПОЛЬЗОВАТЬ. Ничейные турели не будут стрелять!</li>
+LANGUAGE.help_cont_survival							= [[<p>Советы:
+<ul><li>Зажмите клавишу ZOOM (стандартно: Z), чтобы проходить сквозь баррикады с медленной скоростью.</li>
+<li>Если выживший был убит именно заражённым, то он будет реанимирован, как зомби. Убейте его до того, как он убьет вас!</li>
+<li>Вам дано только некоторое количество Worth-очков которыми Вы можете купить начальные предметы, обдумайте свои покупки внимательно!</li>
+<li>Мы можете создавать, сохранять, загружать, удалять и помечать корзины, нажав F2. Таким образом Вы можете сохранить тонны времени на баррикадирование или обдумывание планов на игру.</li>
+<li>Какое-либо безопасное местно может казаться таким поначалу, но может стать смертельной ловушкой с зомби вокруг. Всегда оставляйте дополнительное пространство для "План Б" если что-то пойдет не так.</li>
+<li>Вы бесполезны для своей команды, если Вы ничего не делаете. Вы даже более бесполезны для самого себя, поскольку Вы не зарабатываете очков и не получаете крутое оружие!</li>
+<li>Зажмите клавишу БЕГ, в то время, как смотрите на любой вами поставленный объект, чтобы сложить его для дальнейшего использования позже.</li>
+<li>Не принадлежащие никому турели (синего света) могут стать вашими, нажав кнопку ИСПОЛЬЗОВАТЬ. Ничейные турели не будут стрелять!</li>
 <li>Вокруг валяющиеся предметы стоит использовать, как баррикаду и стоит их пригвоздить, но не если они слишком тяжелые.</li>
 <li>Нанеся достаточно урона дверям, их можно снести.</li>
-<li>Большинство предметов становятся красного цвета, в зависимости от нанесенного им урона.</li>
-<li>Зомби могут появлятья над друг другом, если выжившие не видят этого.</li>
-<li>Большинство оружий ближнего боя достают дальше, чем когти зараженных. Используйте это, как привелегию в защите оружиями ближнего боя.</li>
-<li>Игроки одной и той же комманды могут стрелять, проходить, бить сквозь друг друга.</li>
-<li>Всегда оставайтесь за своей баррикадой и отойдите на достаточно далекое расстояние от зараженных. У оружий дальнего боя бесконечное расстояние выстрела, у когтей зараженных - нет.</li>
-<li>Жизнь восстанавливается после нанесения вам урона, но его достаточно, чтобы убить любого выжившего.</li>
-<li>Ваша команда не всегда права, не следуйте приказам, как овечка! Зомби любят овечек.</li>
+<li>Большинство предметов становятся красного цвета, в зависимости от нанесённого им урона.</li>
+<li>Зомби могут появиться над друг другом, если выжившие не видят этого.</li>
+<li>Большинство оружий ближнего боя достают дальше, чем когти заражённых. Используйте это, как привелегию в защите оружием ближнего боя.</li>
+<li>Игроки одной и той же команды могут стрелять, проходить, бить сквозь друг друга.</li>
+<li>Всегда оставайтесь за своей баррикадой и отойдите на достаточно далекое расстояние от заражённых. У оружий дальнего боя бесконечное расстояние выстрела, у когтей заражённых - нет.</li>
+<li>Ваша команда не всегда права, не следуйте приказам, как овечка! Зомби любят убивать овечек.</li>
 <li>Зомби видят ваше состояние здоровья, даже сквозь стены. Отходите, если вас ранили, так как зомби будут охотиться именно за раненными.</li>
-<li>Не прячьтесь, зараженные могут видеть вас сквозь стены и даже в темноте.</li>
-<li>Horde Meter (измеритель толпы зомби) внизу экрана говорит о том, сколько вы можете нанести вреда и получить его от выживших, выносливость к толчкам от пуль. Сгруппируйтесь с другими зомби, чтобы получить большую выносливость, уничтожая баррикады выживших!</li>
-<li>Если у вас недостаточно зомби, чтобы уничтожить баррикады, попробуйте пригласить друзей.</li>
-<li>Не стреляйте в зараженных, которые находятся в зеленом газе! Он их быстро исцеляет, а вы только тратите патроны!</li>
+<li>Не прячьтесь, заражённые могут видеть вас сквозь стены и даже в темноте.</li>
+<li>Орд-о-метр (индикатор орды) внизу экрана говорит о том, сколько Вы можете нанести вреда и получить его от выживших, сопротивление к толчкам от пуль. Сгруппируйтесь с другими зомби, чтобы получить большее сопротивление, уничтожая баррикады выживших!</li>
+<li>Если у вас недостаточно зомби, чтобы уничтожить баррикады, попробуйте 'поохотиться' на других выживших.</li>
+<li>Не стреляйте в заражённых, которые находятся в зеленом газе! Зомби в зеленом газе бессмертны!</li>
 <li>Зомби выносливы к урону в грудь, даже больше к конечностям. Старайтесь стрелять в голову, поскольку зомби могут регенирировать себя и достать вас!</li>
-<li>Хотя зомби получают меньше урона в ногу, стрельба в ноги замедлит их на короткое время, достаточно, чтобы позволить вам или члену команды сбежать.</li>
+<li>Хотя зомби получают меньше урона в ногу, стрельба в ноги замедлит их на короткое время, достаточно, чтобы позволить вам или вашему члену команды сбежать.</li>
 </ul></p>
 ]]
 LANGUAGE.help_cont_barricading						= [[<p>Баррикадирование - это очень важная часть выживания. Может показаться так, что зомби не такие опасные в начале игры, но позже они станут достаточно сильными, чтобы убить вашу команду за несколько секунд.</p>
 
 <p>Единственный способ держать дистанцию от зомби - это построить хорошую баррикаду.</p>
 
-<p>Есть несколько инструментов, которые дают Вам возможность сделать это. Самый известный - молоток и гвоздь. Они позволяют прибить предметы к стене/полу, в то время, как гвозди должны быть сломаны, чтобы зомби могли достать вас.
-Раставьте предметы, которые вы хотите прибить гвоздем, нажав кнопку ИСПОЛЬЗОВАТЬ на этот предмет, чтобы поднять его. Вы можете зажать кнопу АЛТ, чтобы крутить его. Потом достаньте молоток, чтобы прибить его гвоздем правой кнопкой мыши. Лучше всего прибивать предметы к стене, чем к другим объектам.
+<p>Есть несколько инструментов, которые дают вам возможность сделать это. Самый известный - молоток и гвозди. Они позволяют прибить предметы к стене/полу, в то время, как гвозди должны быть сломаны, чтобы зомби могли достать вас.
+Раставьте предметы, которые Вы хотите прибить гвоздем, нажав кнопку ИСПОЛЬЗОВАТЬ на этом предмете, чтобы поднять его. Вы можете зажать БЕГ, удерживая предмет, чтобы зафиксировать его на месте. Потом достаньте молоток, чтобы прибить его гвоздем правой кнопкой мыши. Лучше всего прибивать предметы к стене, чем к другим объектам.
 Помните, когда предмет прибит, он будет получать полученный урон в гвозди, прибитые к нему. Вы можете ремонтировать гвозди, ударяя предметы молотком, но это приведет их к тому, что их уже нельзя будет отремонтировать. Зажмите БЕГ, держа молоток в руках, чтобы увидеть все гвозди, прибитые к предметам.
-Если вам кажется, что гвоздь прибит неправильно, или вы хотели бы изменить позицию предмета, вы можете убрать гвозди, нажимая на клавишу ПЕРЕЗАРЯДКА, в то время, как вы смотрите на этот гвоздь. Осторожно, если вы убираете гвоздь, не принадлежащий вам, вам будет штраф в одно очко.
-Запомните еще вот что: гвоздям наносится меньше урона, если они прибиты к более крупным предметам. Чем больше размер предмета, тем меньше урона наносится гвоздям.</p>
+Если вам кажется, что гвоздь прибит неправильно, или Вы хотели бы изменить позицию предмета, Вы можете убрать гвозди, нажимая на клавишу ПЕРЕЗАРЯДКА, в то время, как Вы смотрите на этот гвоздь. Осторожно, если Вы убираете гвоздь, не принадлежащий вам, вам будет штраф в одно очко.</p>
 
-<p>Ещё один инструмент называется 'Aegis' Barricade Kit. Он позволяет вам расставлять деревянные доски на любой поверхности, или расставлять доски между двумя стенами. Он даже не требует посторонних предметов. Чтобы использовать его, ставьте доску в доступном месте. Его спектр превратится из красного в зеленый, говоря о его доступности.
-Ставьте доску, нажимая на кнопку выстрела. Крутите доску с помощью Правой кнопки мыши (стандарт - ПКМ) и кнопкой ПЕРЕЗАРЯДКА. Он использует доски, как аммуницию, так что доски, которые у вас есть в Board Pack могут быть использованы, как дополнительная амуниция! Вы можете также собирать доски, которые вы расставили, нажимая на них кнопку БЕГ, в то время, как вы смотрите на нее.</p>
+<p>Ещё один инструмент называется 'Aegis' Barricade Kit. Он позволяет вам расставлять деревянные доски на любой поверхности, или расставлять доски между двумя стенами. Он даже не требует посторонних предметов. Чтобы использовать его, ставьте доску в доступном месте. Его спектр превратится из красного в зеленый, дав тебе знать, что он готов к использованию.
+Ставьте доску, нажимая на КНОПКУ ВЫСТРЕЛА. Крутите доску с помощью ПРАВОЙ КНОПКОЙ МЫШИ (стандарт - ПКМ) и кнопкой ПЕРЕЗАРЯДКА. Он использует доски, как амуницию, так что доски, которые у вас есть в Board Pack могут быть использованы, как дополнительная амуниция! Вы можете также собирать доски, которые Вы расставили, нажимая на них кнопку БЕГ, в то время, как Вы смотрите на неё.</p>
 
-<p>Ещё один инструмент - Turret (турель). Она стреляет во всех зараженных которые попадаются под ее обзор. Единственное, что турель требует - это аммуниция. Вы можете перезаряжать ее нажав клавишу ИСПОЛЬЗОВАТЬ смотря на нее. Она вам даст дополнительные очки за помощь команде.
-Чтобы поставить турель, поставьте ее так, чтобы ее спектр окрасился в зеленый цвет. Ставьте на землю, но не на предметы. Крутите турель при помощи кнопки Правой кнопки мыши и кнопкой ПЕРЕЗАРЯДКА. Если что-то не так, вы можете запаковать турель обратно, зажав кнопку БЕГ. Помните, турель стреляет лишь в зараженных, пересекших ее лазер.</p>
+<p>Ещё один инструмент - Turret (турель). Она стреляет во всех заражённых которые попадаются под её обзор. Единственное, что турель требует - это амуниция. Вы можете перезаряжать её нажав клавишу ИСПОЛЬЗОВАТЬ смотря на неё. Она вам даст дополнительные очки за помощь команде.
+Чтобы поставить турель, поставьте её так, чтобы её спектр окрасился в зеленый цвет. Ставьте на землю, но не на предметы. Крутите турель при помощи кнопки ПРАВОЙ КНОПКОЙ МЫШИ и кнопкой ПЕРЕЗАРЯДКА. Если что-то не так, Вы можете сложить турель обратно, зажав кнопку БЕГ. Помните, турель стреляет лишь в заражённых, пересекших её лазер.</p>
 
 <p>Советы:
 <ul>
-<li>Вы получаете бонус в 25% очков за убийство зомби, атакующих баррикаду!</li>
-<li>Используйте большие предметы для баррикады. Гвозди получают меньше урона а предметы имеют большой объема для их расставления. А также они служат, как прикрытие от дальних атак.</li>
+<li>Используйте большие предметы для баррикады. Гвозди получают меньше урона а предметы имеют больше объема для их расставления. А также они служат, как прикрытие от дальних атак.</li>
 </ul></p>]]
-LANGUAGE.help_cont_upgrades							= [[<p>Очки можно заработать, убивая зомби, вылечивая раненных, и строя баррикады.
-Вы также можете тратить свои очки в арсенальном ящике на покупки между волнами.
-Старайтесь покупать в арсенальном ящике почаще!</p>
+LANGUAGE.help_cont_upgrades							= [[<p>Очки можно заработать, убивая зомби, вылечивая раненных союзников, и строя баррикады.
+Вы также можете тратить свои очки в Арсенальном ящике на покупки.</p>
 
 <p>Советы:
 <ul>
-<li>Планируйте на несколько шагов вреред. Покупайте аммуницию для пистолетов в меню наборов, чтобы у вас было достаточно аммуниции, как только вы получаете свой первый апгрейд.</li>
-<li>Вы получаете очки за помощь в убийствах. Большая часть очков идет убийце а меньшая часть помощнику.</li>
-<li>Очки - тратьте их с умом!</li>
-<li>Арсенальные ящики очень хрупки и их легко сломать когтями зомби.</li>
+<li>Планируйте на несколько шагов вреред. Покупайте амуницию для пистолетов в Worth меню, чтобы у вас было достаточно патронов, как только Вы получите свое первое оружие.</li>
+<li>Вы получаете очки в зависимости от того, какой урон Вы наносите, и типа зомби, которому Вы нанесли урон.</li>
+<li>Worth и Очки являются отдельными. Убедитесь, что Вы тратите все свои Worth!</li>
 </ul></p>]]
 LANGUAGE.help_cont_being_a_zombie					= [[<p>Советы:
 <ul>
-<li>У Вас бесконечное кол-во жизней, у выживших только лишь одна. Не бойтесь атаковать, атакуйте, и ещё раз атакуйте!</li>
+<li>У вас бесконечное кол-во жизней, у выживших только лишь одна. Не бойтесь атаковать, атакуйте, и ещё раз атакуйте!</li>
 <li>Обычный класс Зомби очень вынослив. Единственный способ убить Вас - стрелять в голову, или быть убитым оружием ближнего боя. Вам не нужны ваши ноги.</li>
-<li>Зомби могут появляться друг над другом, если выжившие не могут это увидеть. Следите за глазами черепа внизу Вашего экрана. Если они зеленые, вы можете появиться над зараженным!</li>
-<li>С достаточной практикой вы можете использовать предметы, чтобы вмазать их в рожу выживших с расстояния.</li>
-<li>Уничтожайте расставленные предметы, такие как турели и, тем более, арсенальные ящики, чтобы ослабить выживших.</li>
-<li>Нанеся достаточно урона, вы можете снести двери.</li>
-<li>Большинство предметов становятся красного цвета, в зависимости от нанесенного им урона.</li>
+<li>Зомби могут возрождаться на любом построеном активном гнезде.</li>
+<li>С достаточной практикой Вы можете использовать предметы, чтобы вмазать их в рожу выживших с расстояния.</li>
+<li>Уничтожайте расставленные предметы, такие как турели и, тем более, Арсенальные ящики, чтобы ослабить выживших.</li>
+<li>Нанеся достаточно урона, Вы можете снести дверь.</li>
+<li>Большинство предметов становятся красного цвета, в зависимости от нанесённого им урона.</li>
 <li>Дух абсолютно невидим, когда стоит смирно или находится на большом расстоянии.</li>
-<li>Атака прыжком (рывок) Быстрого зомби наносит урон, в зависимости от того, сколько вы продержались в воздухе при прыжке. Чем больше времени - тем больше урона. Делайте рывки на большом расстоянии!</li>
-<li>Помимо огромной стойкости и силы, Ядовитый зомби срывает куски своей ядовитой плоти и швыряет ее в выживших, нажимая на Правую кнопку мыши (стандартная клавиша - ПКМ).</li>
-<li>Большинство когтей зомби дает два шанса ударить выжившего. Если вы "ударяете" Вашу цель, в то время, как вы атакуете, вы бьете по цели, если цель на доступном расстоянии.</li>
-<li>Плевок Ядовитого хэдкраба может ослепить выживших, если вы плюнете в голову.</li>
-<li>Охотьтесь за слабыми выжившими! Другие зараженные также будут охотиться за ними, поэтому они становятся легчайшими целями.</li>
-<li>"Индикатор орды" внизу экрана измеряет кол-во вашей выносливости и вреда, который вы можете нанести. Группируйтесь с другими зомби для большей выносливости!</li>
-<li>Если у вас недостаточно зомби, чтобы уничтожить баррикады, попробуйте пригласить друзей.</li>
+<li>Атака прыжком (рывком) Быстрого зомби наносит урон, в зависимости от того, сколько Вы продержались в воздухе при прыжке. Чем больше времени - тем больше урона. Используйте свою атаку когтями, когда находитесь на близком расстоянии!</li>
+<li>Помимо огромной стойкости и силы, Ядовитый зомби срывает куски своей ядовитой плоти и швыряет её в выживших, нажимая на ПРАВУЮ КНОПКУ МЫШИ (стандартная клавиша - ПКМ).</li>
+<li>Большинство когтей зомби дает два шанса ударить выжившего. Если Вы "ударили" свою цель, когда нажмете кнопку мыши, то Вы гарантированно нанесёте удар, пока они остаются в радиусе действия.</li>
+<li>Плевок Ядовитого хэдкраба может ослепить выживших, если Вы плюнете в голову.</li>
+<li>Охотьтесь за слабыми выжившими! Другие заражённые также будут охотиться за ними, поэтому они становятся легчайшими целями.</li>
+<li>Орд-о-метр (индикатор орды) внизу экрана измеряет кол-во вашей сопротивляемости и вреда, который Вы можете нанести. Группируйтесь с другими зомби для большего сопротивления при сносе баррикад!</li>
+<li>Если у вас недостаточно зомби, чтобы уничтожить баррикады, попробуйте 'поохотиться' на других выживших.</li>
 <li>Если в местности слишком темно, нажмите на клавишу ФОНАРИК для режима ночного видения.</li>
 </ul></p>
 ]]

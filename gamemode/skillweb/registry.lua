@@ -16,6 +16,21 @@ function GM:AddSkill(id, name, description, weight, family)
 	end
 
 	skill.Name = name
+
+	local signature = string.lower(name)
+	signature = string.gsub(signature, "%p", "")
+	signature = string.gsub(signature, "%s", "")
+
+	translate.GetTranslations("en")["skill_" .. signature] = name
+	
+	local desctr = string.lower(description)
+	desctr = string.gsub(desctr, "", "%p")
+	desctr = string.gsub(desctr, "", "%s")
+
+	translate.GetTranslations("en")[desctr .. "_desc"] = description
+
+    skill.Desctr = desctr
+	skill.Signature = signature
 	skill.Weight = weight or 1
 	skill.Family = family or nil
 	skill.ID = id
