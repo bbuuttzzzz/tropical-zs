@@ -1742,7 +1742,6 @@ local function RealMap(map)
 	return string.match(map, "(.+)%.bsp")
 end
 function GM:LoadNextMap()
-	print("hi")
 	if true then return end
 	-- Just in case.
 	timer.Simple(10, game.LoadNextMap)
@@ -2058,7 +2057,7 @@ function GM:EndRound(winner)
 		timer.Simple(self.EndGameTime - 3, function() gamemode.Call("PreRestartRound") end)
 		timer.Simple(self.EndGameTime, function() gamemode.Call("RestartRound") end)
 	else
-		timer.Simple(self.EndGameTime - self.MapVoteTime, function() gamemode.Call("LoadNextMap") end)
+		timer.Simple(self.EndGameTime - self.MapVoteTime, function() gamemode.Call("TropicalLoadNextMap") end)
 	end
 
 	-- Get rid of some lag.
