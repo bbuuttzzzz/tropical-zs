@@ -34,7 +34,7 @@ function ENT:Think()
 	if self.HEALTIME <= CurTime() then
 		for x, ent in pairs(ents.FindInBox(self:GetPos()+ Vector(-25,-25,0),self:GetPos() + Vector(25,25,75))) do
 			if ent:IsValidLivingHuman() and gamemode.Call("PlayerCanBeHealed", ent) then
-				self:HealPlayer(ent, self.HEAL * (ent.SigilServant and 3 or 1))
+				self:HealPlayer(ent, self.HEAL * 2)
 			end
 		end
 		self.HEALTIME = CurTime() + 3

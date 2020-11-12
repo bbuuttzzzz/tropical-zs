@@ -1964,17 +1964,12 @@ function meta:ActivateHumanSkills()
 end
 
 function meta:GiveSkillItems()
-	if self.BackupPlan then
-		self:GiveItem(GAMEMODE.Items["sigilshard"])
-	end
 	if self.Hoarder then
 		self:GiveItem(GAMEMODE.Items["junkpack"])
 	end
-	if self.SigilServant then
-		self:GiveItem(GAMEMODE.Items["sigilseed"])
-	end
-	if self.HeavyLifter then
-		self:GiveItem(GAMEMODE.Items["gloves"])
+
+	if self.StartingScrap and self.StartingScrap > 0 then
+		self:AddScrap(self.StartingScrap)
 	end
 end
 

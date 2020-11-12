@@ -45,7 +45,7 @@ function SWEP:Initialize()
 end
 
 function SWEP:CanPrimaryAttack()
-	if self:GetOwner():IsHolding() or self:GetOwner():GetBarricadeGhosting() or (GAMEMODE:NumSigils() <= 0 and not self:GetOwner().BackupPlan) then return false end
+	if self:GetOwner():IsHolding() or self:GetOwner():GetBarricadeGhosting() then return false end
 	if self:GetPrimaryAmmoCount() <= 0 then
 		self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
 		return false
@@ -74,7 +74,7 @@ function SWEP:PrimaryAttack()
 	if SERVER then
 		local status = owner:GiveStatus(self.TeleportStatus)
 		if status:IsValid() then
-			if owner.BackupPlan and GAMEMODE:NumSigils() <= 0 then status.BackupPlan = true end
+			if GAMEMODE:NumSigils() <= 0 then status.BackupPlan = true end
 			status:SetFromSigil(self)
 			status:SetEndTime(CurTime() + self.ChannelTime)
 		end
