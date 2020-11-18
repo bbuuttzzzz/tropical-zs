@@ -256,7 +256,7 @@ GM.WeaponSlots = 8
 
 //perk variables
 GM.PerkSlots = 12
-GM.DefaultPerks = {SKILL_CALM_2,SKILL_PHASER_1,SKILL_RESPITE_2,SKILL_SCROUNGER_2}
+GM.DefaultPerks = {SKILL_CALM_3,SKILL_PHASER_1,SKILL_RESPITE_2,SKILL_SCROUNGER_2,SKILL_QUICK_FIX}
 GM.DefaultCalmThreshold = 40
 GM.DefaultMinCalm = 10
 GM.MaxCalmSlow = 0.4

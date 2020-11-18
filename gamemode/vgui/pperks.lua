@@ -1,6 +1,6 @@
 PERKS_COLOR_DARK = Color(0,0,0,200)
 PERKS_COLOR_LIGHT = Color(100,100,100,200)
-LOADOUT_DIR = "tropical/zsloadouts"
+LOADOUT_DIR = "tropical/zsloadouts/v02"
 
 local BASE_W = 1005
 local BASE_H = 800
@@ -669,7 +669,9 @@ function BROWSER:MakePerkEntry(perkTable, screenscale)
 	end
 
 	--add description
-	local descText = EasyLabel(botWindow, translate.Get("skill_" .. perkTable.Signature .. "_desc"),"ZSBodyTextFont", COLOR_GRAY)
+  print("working on " .. perkTable.Signature .. ". here's the Values table:")
+  print(perkTable.Values)
+	local descText = EasyLabel(botWindow, translate.Format("skill_" .. perkTable.Signature .. "_desc", unpack(perkTable.Values or {})),"ZSBodyTextFont", COLOR_GRAY)
 	descText:SetSize(botWindow:GetWide() - 10 * screenscale, botWindow:GetTall() - 20 * screenscale)
 	descText:AlignLeft(5 * screenscale)
 	descText:AlignTop(10 * screenscale)

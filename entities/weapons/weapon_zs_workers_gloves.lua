@@ -4,6 +4,9 @@ DEFINE_BASECLASS("weapon_zs_basemelee")
 SWEP.PrintName = "Worker's Gloves"
 SWEP.Description = "Pick up and hold up to 3 objects at once. Left click: grab. Right click: drop."
 
+SWEP.TranslationName = "wep_workers_gloves"
+SWEP.TranslationDesc = "wep_d_workers_gloves"
+
 SWEP.MinWeightClass = WEIGHT_FEATHER
 SWEP.MaxWeightClass = 125
 

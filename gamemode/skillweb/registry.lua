@@ -3,34 +3,16 @@ GM.SkillModifiers = {}
 GM.SkillFunctions = {}
 GM.SkillModifierFunctions = {}
 
-function GM:AddSkill(id, name, description, weight, family)
+function GM:AddSkill(id, signature, valueTable, weight, family)
 	local skill = {}
 
 	if CLIENT then
 		skill.Description = description
 	end
 
-	if #name == 0 then
-		name = "Skill "..id
-		skill.Disabled = true
-	end
-
-	skill.Name = name
-
-	local signature = string.lower(name)
-	signature = string.gsub(signature, "%p", "")
-	signature = string.gsub(signature, "%s", "")
-
-	translate.GetTranslations("en")["skill_" .. signature] = name
-
-	local desctr = string.lower(description)
-	desctr = string.gsub(desctr, "", "%p")
-	desctr = string.gsub(desctr, "", "%s")
-
-	translate.GetTranslations("en")[desctr .. "_desc"] = description
-
-    skill.Desctr = desctr
+  skill.Name = translate.Get(signature)
 	skill.Signature = signature
+  skill.Values = valueTable
 	skill.Weight = weight or 1
 	skill.Family = family or nil
 	skill.ID = id
@@ -191,87 +173,87 @@ GM:SetSkillModifierFunction(SKILLMOD_STARTING_SCRAP, function(pl, amount)
 end)
 
 // * pieces
-GM:AddSkill(SKILL_LIGHTNESS_1, "Lightness: 1", "+50% weight reduction", 3, "L")
-GM:AddSkill(SKILL_LIGHTNESS_2, "Lightness: 2", "+100% weight reduction", 6, "L")
+GM:AddSkill(SKILL_LIGHTNESS_1, "lightness1", {50}, 3, "L")
+GM:AddSkill(SKILL_LIGHTNESS_2, "lightness2", {100}, 6, "L")
 GM:AddSkillModifier(SKILL_LIGHTNESS_1, SKILLMOD_WEIGHT_REDUCTION, 0.5)
 GM:AddSkillModifier(SKILL_LIGHTNESS_2, SKILLMOD_WEIGHT_REDUCTION, 1)
 
-GM:AddSkill(SKILL_SCROUNGER_1, "Scrounger: 1", "+30% Resupply Amount", 2, "A")
-GM:AddSkill(SKILL_SCROUNGER_2, "Scrounger: 2", "+50% Resupply Amount", 4, "A")
+GM:AddSkill(SKILL_SCROUNGER_1, "scrounger1", {30}, 2, "A")
+GM:AddSkill(SKILL_SCROUNGER_2, "scrounger2", {50}, 4, "A")
 GM:AddSkillModifier(SKILL_SCROUNGER_1, SKILLMOD_RESUPPLY_MUL, 0.3)
 GM:AddSkillModifier(SKILL_SCROUNGER_2, SKILLMOD_RESUPPLY_MUL, 0.5)
 
-GM:AddSkill(SKILL_SCRAP_HOUND_1, "Scrap Hound: 1", "+30% Scrap Gain", 2, "A")
-GM:AddSkill(SKILL_SCRAP_HOUND_2, "Scrap Hound: 2", "+50% Scrap Gain", 4, "A")
+GM:AddSkill(SKILL_SCRAP_HOUND_1, "scraphound1",{30}, 2, "A")
+GM:AddSkill(SKILL_SCRAP_HOUND_2, "scraphound2",{50}, 4, "A")
 GM:AddSkillModifier(SKILL_SCRAP_HOUND_1, SKILLMOD_SCRAP_MUL, 0.3)
 GM:AddSkillModifier(SKILL_SCRAP_HOUND_2, SKILLMOD_SCRAP_MUL, 0.5)
 
-GM:AddSkill(SKILL_HEALTHY_1, "Healthy: 1", "+10 Max Health", 1)
-GM:AddSkill(SKILL_HEALTHY_2, "Healthy: 2", "+25 Max Health", 2)
+GM:AddSkill(SKILL_HEALTHY_1, "healthy1", {10}, 1)
+GM:AddSkill(SKILL_HEALTHY_2, "healthy2", {25}, 2)
 GM:AddSkillModifier(SKILL_HEALTHY_1, SKILLMOD_HEALTH, 10)
 GM:AddSkillModifier(SKILL_HEALTHY_2, SKILLMOD_HEALTH, 25)
 
-GM:AddSkill(SKILL_RESPITE_2, "Respite", "At the end of the wave, set health to 50% HP, or heal 25% if that’s more", 2, "R")
+GM:AddSkill(SKILL_RESPITE_2, "respite", {50, 25}, 2, "R")
 GM:AddSkillModifier(SKILL_RESPITE_2, SKILLMOD_RESPITE_MIN,0.25)
 GM:AddSkillModifier(SKILL_RESPITE_2, SKILLMOD_RESPITE_THRESHOLD,0.5)
 
-GM:AddSkill(SKILL_CALM_3, "Calm", "Effects of low HP are completely removed.",3)
+GM:AddSkill(SKILL_CALM_3, "calm", nil, 3)
 GM:AddSkillModifier(SKILL_CALM_3, SKILLMOD_CALM_THRESHOLD, 40)
 
-GM:AddSkill(SKILL_MOONWALKER_1, "Moonwalker", "25% reduced backpedaling penalty.",2,"M")
+GM:AddSkill(SKILL_MOONWALKER_1, "moonwalker", {25},2,"M")
 GM:AddSkillModifier(SKILL_MOONWALKER_1, SKILLMOD_BACKPEDAL_PENALTY_MUL, 0.25)
 
-GM:AddSkill(SKILL_WOOISM, "Wooism", "Accuracy no longer affected by movement or aiming.",3,"W")
+GM:AddSkill(SKILL_WOOISM, "wooism", nil, 3,"W")
 GM:AddSkillFunction(SKILL_WOOISM, function(pl, active)
 	pl.Wooism = active
 end)
 
-GM:AddSkill(SKILL_CRACKSHOT, "Crackshot", "50% Increased accuracy while crouched and motionless",3,"W")
+GM:AddSkill(SKILL_CRACKSHOT, "crackshot", nil,3,"W")
 GM:AddSkillFunction(SKILL_CRACKSHOT, function(pl, active)
 	pl.Crackshot = active
 end)
 
-GM:AddSkill(SKILL_HOARDER, "Hoarder", "Better drops from junkpacks. Start the game with a junk pack.",1)
+GM:AddSkill(SKILL_HOARDER, "hoarder", nil, 1)
 GM:AddSkillFunction(SKILL_HOARDER, function(pl, active)
 	pl.Hoarder = active
 end)
 
-GM:AddSkill(SKILL_STOCKPILE_2, "Stockpile", "Stockpile resupplies. Hold ALT & Right click a weapon slot to claim. Max 3 Stored",3,"S")
+GM:AddSkill(SKILL_STOCKPILE_2, "stockpile", {3}, 3,"S")
 GM:AddSkillModifier(SKILL_STOCKPILE_2, SKILLMOD_STOCKPILE_COUNT, 3)
 
-GM:AddSkill(SKILL_PHASER_1, "Phaser: 1", "Barricade phasing penalty removed",2,"P")
-GM:AddSkill(SKILL_PHASER_2, "Phaser: 2", "Barricade phasing penalty removed, gain an initial burst of speed",4,"P")
+GM:AddSkill(SKILL_PHASER_1, "phaser1", nil,2,"P")
+GM:AddSkill(SKILL_PHASER_2, "phaser2", nil,4,"P")
 GM:AddSkillModifier(SKILL_PHASER_1, SKILLMOD_PHASE_SPEED_INITIAL, 36)
 GM:AddSkillModifier(SKILL_PHASER_2, SKILLMOD_PHASE_SPEED_INITIAL, 150)
 
-GM:AddSkill(SKILL_BATTLE_CADER, "Battle Cader", "Kills recharge 33% of (base) oomph", 2)
+GM:AddSkill(SKILL_BATTLE_CADER, "battlecader", nil, 2)
 GM:AddSkillFunction(SKILL_BATTLE_CADER, function(pl, active)
 	pl.BattleCader = active
 end)
 
-GM:AddSkill(SKILL_BIG_OOMPH, "Big Oomph", "Doubled maximum repair oomph, halved recharge rate.", 1)
+GM:AddSkill(SKILL_BIG_OOMPH, "bigoomph", nil, 1)
 GM:AddSkillModifier(SKILL_BIG_OOMPH, SKILLMOD_OOMPH_MAX_MUL, 1)
 GM:AddSkillModifier(SKILL_BIG_OOMPH, SKILLMOD_OOMPH_CHARGE_TIME_MUL, 3)
 
-GM:AddSkill(SKILL_HEAVY_LIFTER, "Heavy Lifter", "Start the game with worker's gloves.", 1)
+GM:AddSkill(SKILL_HEAVY_LIFTER, "heavylifter", nil, 1)
 GM:AddSkillFunction(SKILL_HEAVY_LIFTER, function(pl, active)
 	pl.HeavyLifter = active
 end)
 
-GM:AddSkill(SKILL_QUICK_FIX, "Quick Fix", "Repairs between rounds are always empowered", 1)
+GM:AddSkill(SKILL_QUICK_FIX, "quickfix", nil, 1)
 GM:AddSkillFunction(SKILL_QUICK_FIX, function(pl, active)
 	pl.QuickFix = active
 end)
 
-GM:AddSkill(SKILL_PICKY, "Picky", "See 2 more options at each upgrade screen (Except T1 Pistols)", 6, "U")
+GM:AddSkill(SKILL_PICKY, "picky", nil, 6, "U")
 GM:AddSkillModifier(SKILL_PICKY, SKILLMOD_UPGRADE_COUNT, 2)
 
-GM:AddSkill(SKILL_HAND_OF_FATE, "Hand of Fate", "Only see 1 option on each upgrade screen (Except T1 Pistols). +10 Max Health, +25% weight reduction, +25% resupply amount, +25% scrap gain", 1, "U")
+GM:AddSkill(SKILL_HAND_OF_FATE, "handoffate", {10, 25, 25, 25}, 1, "U")
 GM:AddSkillModifier(SKILL_HAND_OF_FATE, SKILLMOD_UPGRADE_COUNT, -2)
 GM:AddSkillModifier(SKILL_HAND_OF_FATE, SKILLMOD_HEALTH, 10)
 GM:AddSkillModifier(SKILL_HAND_OF_FATE, SKILLMOD_WEIGHT_REDUCTION, 0.25)
 GM:AddSkillModifier(SKILL_HAND_OF_FATE, SKILLMOD_SCRAP_MUL, 0.25)
 GM:AddSkillModifier(SKILL_HAND_OF_FATE, SKILLMOD_RESUPPLY_MUL, 0.25)
 
-GM:AddSkill(SKILL_SUGAR_DADDY, "Sugar Daddy", "Start the game with 100 scrap", 3)
+GM:AddSkill(SKILL_SUGAR_DADDY, "sugardaddy", {100}, 3)
 GM:AddSkillModifier(SKILL_SUGAR_DADDY, SKILLMOD_STARTING_SCRAP, 100)
