@@ -16,6 +16,7 @@ include("obj_weapon_extend_cl.lua")
 include("loader.lua")
 
 include("shared.lua")
+include("cl_beatmanifests.lua")
 include("cl_draw.lua")
 include("cl_util.lua")
 include("cl_weaponselect.lua")
@@ -766,7 +767,7 @@ end
 
 local cv_ShouldPlayMusic = CreateClientConVar("zs_playmusic", 1, true, false)
 local NextBeat = 0
-local LastBeatLevel = 0
+local LastBeatLevel = 1
 function GM:PlayBeats(teamid, fear)
 	if self.UseNewBeats then return self:PlayNewBeats(teamid, fear) end
 	if RealTime() <= NextBeat or not gamemode.Call("ShouldPlayBeats", teamid, fear) then return end
@@ -793,56 +794,88 @@ function GM:PlayBeats(teamid, fear)
 end
 
 GM.UseNewBeats = true
-local NextSmallBeat = 0
-local NextBigBeat = 0
+
+local LastNewBeat = false
+local ChannelPlayTime = {}
+local BeatLevelCount = 0
 function GM:PlayNewBeats(teamid, fear)
-	local t = RealTime()
-	if (t <= NextSmallBeat and t <= NextBigBeat) or not gamemode.Call("ShouldPlayBeats", teamid, fear) then return end
+  if not gamemode.Call("ShouldPlayBeats", teamid, fear) then return end
+  if LastNewBeat != self.NewBeatSet then
+    LastNewBeat = self.NewBeatSet
+    ChannelPlayTime = {}
+    BeatLevelCount = self.NewBeats[self.NewBeatSet].Levels
+    for k, v in ipairs(self.NewBeats[self.NewBeatSet].Channels) do
+      ChannelPlayTime[k] = 0
+    end
+  end
 
-	if LASTHUMAN and cv_ShouldPlayMusic:GetBool() then
-		MySelf:EmitSound(self.LastHumanSound, 0, 100, self.BeatsVolume)
-		NextSmallBeat = RealTime() + SoundDuration(self.LastHumanSound) - 0.025
-		NextBigBeat = NextSmallBeat
-		return
-	end
+  if LASTHUMAN and cv_ShouldPlayMusic:GetBool() then
+    MySelf:EmitSound(self.LastHumanSound, 0, 100, self.BeatsVolume)
+    NextSmallBeat = RealTime() + SoundDuration(self.LastHumanSound) - 0.025
+    NextBigBeat = NextSmallBeat
+    return
+  end
 
-	if not self.BeatsEnabled then return end
+  if not self.BeatsEnabled then return end
+
+
 
 	if fear <= 0 then
-		--we don't want to hit 0 fear for half of a beat and have all the music be out of sinc
-		NextSmallBeat = NextBigBeat
+		--we don't want to hit 0 fear for half of a beat and have all the music be out of sync
+    -- so make sure the next of all beats takes the latest time
+    local last = 0
+    for i, c in ipairs(ChannelPlayTime) do
+      last = math.max(c, last)
+    end
+
+    for i, c in ipairs(ChannelPlayTime) do
+      ChannelPlayTime[i] = last
+    end
 		return
 	end
+
+
+  -- do any of the channels need a new beat?
+  local t = RealTime()
+  local shouldPlay = false
+  for i, c in ipairs(ChannelPlayTime) do
+    if t > c then
+      --print("we need to play channel " .. i)
+      shouldPlay = true
+      break
+    end
+  end
+  if not shouldPlay then return end
 
 	local beats = self.NewBeats[self.NewBeatSet]
 	if not beats then return end
 
+  -- find level from fear
 	local lastBeat = LastBeatLevel
-	LastBeatLevel = math.Approach(LastBeatLevel, math.ceil(fear * 12), 3)
+	LastBeatLevel = math.Approach(LastBeatLevel, math.ceil(fear * BeatLevelCount), 3)
 
 	if lastBeat == LastBeatLevel then
-		if LastBeatLevel == 12 then
-			LastBeatLevel = 9
+		if LastBeatLevel == BeatLevelCount then
+			LastBeatLevel = BeatLevelCount - 1
 		else
 			LastBeatLevel = LastBeatLevel + 1
 		end
 	end
 
-	if t > NextSmallBeat then
-		local snd = beats.small[LastBeatLevel]
-		MySelf:EmitSound(snd, 0, 100, self.BeatsVolume)
-		print("small", RealTime())
-		local guessStart = math.max((RealTime() + NextSmallBeat)/2,RealTime()-0.025)
-		NextSmallBeat = guessStart + (self.SoundDuration[snd] or SoundDuration(snd))// - 0.025
+  for i, channel in ipairs(beats.Channels) do
+    --print("  trying channel " .. i .. " at fear " .. LastBeatLevel)
+    if t <= ChannelPlayTime[i] then break end
 
-		--to keep the time from drifting, ONLY start a big beat when you start a small beat
-		if t > NextBigBeat then
-			local snd = beats.big[LastBeatLevel]
-			MySelf:EmitSound(snd, 0, 100, self.BeatsVolume)
-			print("big", ".", RealTime())
-			NextBigBeat = RealTime() + (self.SoundDuration[snd] or SoundDuration(snd)) - 0.5 --this can be sloppy because we know it will sinc
-		end
-	end
+    local beat = beats.Channels[i][LastBeatLevel]
+    local snd = beat.Sound
+    if not snd then
+      snd = beat.Sounds[ math.random( #beat.Sounds ) ]
+    end
+
+		MySelf:EmitSound(snd, 0, 100, self.BeatsVolume)
+		local guessStart = math.max((RealTime() + ChannelPlayTime[i])/2,RealTime()-0.025)
+		ChannelPlayTime[i] = guessStart + beat.Duration
+  end
 end
 
 local colPackUp = Color(20, 255, 20, 220)
@@ -1644,44 +1677,76 @@ end
 function GM:InitializeNewBeats(v)
 	local _, dirs = file.Find("sound/zombiesurvival/newbeats/*", "GAME")
 	for _, dirname in pairs(dirs) do
-		if v then print("found beats " .. dirname) end
-		if dirname == "none" or dirname == "default" then continue end
+		if v then
+      print("found beats " .. dirname)
+    end
+		if dirname == "none" or dirname == "default" then
+      continue
+    end
 
-		self.NewBeats[dirname] = {
-			small = {},
-			big = {}
-		}
+    -- check for a manifest file
+    local beat = self:LoadNewBeat(dirname)
+    if not beat then
+      continue
+    end
 
-		local lastBig
-		local lastSmall
-		for i=1, 12 do
-			local b = file.Find("sound/zombiesurvival/newbeats/"..dirname.."/b"..i..".*", "GAME")
-			local bigBeat = FirstOfGoodType(b)
-			if bigBeat then
-				if v then print("maybe found a big beat " .. bigBeat) end
-				local filename = "zombiesurvival/newbeats/"..dirname.."/"..bigBeat
-				if file.Exists("sound/"..filename, "GAME") then
-					if v then print("found a new big beat (" .. i .. ")") end
-					lastBig = Sound(filename)
-				end
-			end
-			if v then print("setting big beat " .. i .. " to " .. (lastBig or "nil")) end
-			self.NewBeats[dirname].big[i] = lastBig
+    for i, channel in ipairs(beat.Channels) do
 
-			local s = file.Find("sound/zombiesurvival/newbeats/"..dirname.."/"..i..".*", "GAME")
-			local smallBeat = FirstOfGoodType(s)
-			if smallBeat then
-				if v then print("maybe found a small beat " .. smallBeat) end
-				local filename = "zombiesurvival/newbeats/"..dirname.."/"..smallBeat
-				if file.Exists("sound/"..filename, "GAME") then
-					if v then print("found a new small beat (" .. i .. ")") end
-					lastSmall = Sound(filename)
-				end
-			end
-			if v then print("setting small beat " .. i .. " to " .. (lastSmall or "nil")) end
-			self.NewBeats[dirname].small[i] = lastSmall
-		end
+      -- go from 1->Levels and populate that beat
+      for n = 1, beat.Levels, 1 do
+        local level = channel[n]
+
+        -- If this level doesn't exist in the channel, clone the previous level
+        if not level then
+          channel[n] = channel[n-1]
+        elseif level.Files then
+          level.Sounds = {}
+          for k, file in ipairs(level.Files) do
+            level.Sounds[k] = Sound("zombiesurvival/newbeats/"..dirname.."/"..level.Files[k])
+          end
+        else
+          level.Sound = Sound("zombiesurvival/newbeats/"..dirname.."/"..level.File)
+        end
+      end
+    end
+
+    self.NewBeats[dirname] = beat
 	end
+end
+
+
+function GM:LoadNewBeat(dirname)
+  local path = "sound/zombiesurvival/newbeats/"..dirname.."/manifest.txt"
+  local directory = "GAME"
+
+  if not file.Exists(path, directory) then
+    -- hold on, let's try and find it in the gamemode instead
+    if self.BeatManifests[dirname] then
+      return self.BeatManifests[dirname]
+    end
+
+    print("error: missing NewBeat manifest named " .. dirname)
+    return false
+  end
+
+  local contents = file.Read(path, directory)
+  if not contents or #contents <= 0 then
+    print("error: empty NewBeat manifest named " .. dirname)
+    return false
+  end
+
+  local tcontents = Deserialize(contents)
+  if not tcontents then
+    print("error: bad NewBeat manifest named " .. dirname)
+    return false
+  end
+
+  return tcontents
+end
+
+function GM:SerializeBeat(beatTable)
+  file.CreateDir("tropical/debug")
+  file.Write("tropical/debug/beattable.txt", Serialize(beatTable))
 end
 
 function GM:PlayerDeath(pl, attacker)

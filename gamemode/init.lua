@@ -33,6 +33,7 @@ AddCSLuaFile("sh_RBPRegistry.lua")
 
 AddCSLuaFile("vault/shared.lua")
 
+AddCSLuaFile("cl_beatmanifests.lua")
 AddCSLuaFile("cl_draw.lua")
 AddCSLuaFile("cl_net.lua")
 AddCSLuaFile("cl_util.lua")
