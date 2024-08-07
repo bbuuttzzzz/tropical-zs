@@ -1,4 +1,4 @@
-"zombiesurvival"
+"tropicalzs"
 {
 	"base"				"base"
 	"title"				"Zombie Survival"
