@@ -10,6 +10,7 @@ This was my first ever gamemode. A lot of stuff is from years ago and some stuff
 
 ]]
 
+MAP_TABLE_FILENAME = "maptable_zombiesurvival.txt"
 include("tropical-core/init.lua")
 
 AddCSLuaFile("cl_init.lua")
@@ -742,8 +743,6 @@ function GM:InitPostEntity()
 	self:FixWeaponBase()
 
 	gamemode.Call("InitPostEntityMap")
-
-	RunConsoleCommand("mapcyclefile", "mapcycle_zombiesurvival.txt")
 
 	if string.find(string.lower(GetConVar("hostname"):GetString()), "hellsgamers", 1, true) then
 		self.Think = function() end
