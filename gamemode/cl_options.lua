@@ -1,6 +1,6 @@
 GM.BeatSetHumanDefault = "tropical"--"defaulthuman"
 GM.BeatSetZombieDefault = "tropical"--"defaultzombiev2"
-GM.NewBeatSet = "human"
+GM.NewBeatSet = "beta"
 
 /*
 GM.ItemCategoryIcons = {
