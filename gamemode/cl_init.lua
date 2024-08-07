@@ -802,8 +802,8 @@ function GM:PlayNewBeats(teamid, fear)
   if not self.BeatsEnabled 
     or not gamemode.Call("ShouldPlayBeats", teamid, fear)
   	or not self.NewBeatSet
-	  not self.NewBeats[self.NewBeatSet] then return end
-	  
+	or not self.NewBeats[self.NewBeatSet] then return end
+
   if LastNewBeat != self.NewBeatSet then
     LastNewBeat = self.NewBeatSet
     ChannelPlayTime = {}
