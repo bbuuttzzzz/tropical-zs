@@ -799,12 +799,11 @@ local LastNewBeat = false
 local ChannelPlayTime = {}
 local BeatLevelCount = 0
 function GM:PlayNewBeats(teamid, fear)
-  if not gamemode.Call("ShouldPlayBeats", teamid, fear)
-  	or not self.NewBeatSet then return end
-  if not self.NewBeats[self.NewBeatSet] then
-	print("ERROR couldn't find beatset " .. self.NewBeatSet)
-	return
-  end
+  if not self.BeatsEnabled 
+    or not gamemode.Call("ShouldPlayBeats", teamid, fear)
+  	or not self.NewBeatSet
+	  not self.NewBeats[self.NewBeatSet] then return end
+	  
   if LastNewBeat != self.NewBeatSet then
     LastNewBeat = self.NewBeatSet
     ChannelPlayTime = {}
@@ -820,10 +819,6 @@ function GM:PlayNewBeats(teamid, fear)
     NextBigBeat = NextSmallBeat
     return
   end
-
-  if not self.BeatsEnabled then return end
-
-
 
 	if fear <= 0 then
 		--we don't want to hit 0 fear for half of a beat and have all the music be out of sync
