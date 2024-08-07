@@ -802,7 +802,7 @@ function GM:PlayNewBeats(teamid, fear)
   if not gamemode.Call("ShouldPlayBeats", teamid, fear)
   	or not self.NewBeatSet then return end
   if not self.NewBeats[self.NewBeatSet] then
-	print("ERROR couldn't find beatset " + self.NewBeatSet)
+	print("ERROR couldn't find beatset " .. self.NewBeatSet)
 	return
   end
   if LastNewBeat != self.NewBeatSet then
