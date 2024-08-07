@@ -1,4 +1,4 @@
-"tropicalzs"
+"zombiesurvival_modded"
 {
 	"base"				"base"
 	"title"				"Zombie Survival"
