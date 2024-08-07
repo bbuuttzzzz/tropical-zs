@@ -8,6 +8,7 @@
 	"author_name"		"William 'JetBoom' Moodhe"
 	"author_email"		"williammoodhe@gmail.com"
 	"author_url"		"http://www.noxiousnet.com/"
+	"workshopId"        "1479340077"
 
 	"settings"
 	{
