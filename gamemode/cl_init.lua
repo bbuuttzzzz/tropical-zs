@@ -800,6 +800,10 @@ local ChannelPlayTime = {}
 local BeatLevelCount = 0
 function GM:PlayNewBeats(teamid, fear)
   if not gamemode.Call("ShouldPlayBeats", teamid, fear) then return end
+  if !self.NewBeatSet[self.NewBeatSet] then
+	print("ERROR couldn't find beatset " + self.NewBeatSet)
+	return
+  end
   if LastNewBeat != self.NewBeatSet then
     LastNewBeat = self.NewBeatSet
     ChannelPlayTime = {}
