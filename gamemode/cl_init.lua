@@ -801,7 +801,7 @@ local BeatLevelCount = 0
 function GM:PlayNewBeats(teamid, fear)
   if not gamemode.Call("ShouldPlayBeats", teamid, fear)
   	or not self.NewBeatSet then return end
-  if !self.NewBeatSet[self.NewBeatSet] then
+  if !self.NewBeats[self.NewBeatSet] then
 	print("ERROR couldn't find beatset " + self.NewBeatSet)
 	return
   end
