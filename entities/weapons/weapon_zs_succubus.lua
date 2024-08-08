@@ -61,12 +61,12 @@ SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(-7, 3, 2.5)
 
-function SWEP.BulletCallback(attacker, tr, dmginfo)
+function SWEP.BulletCallback(attacker, tr, damageinfo)
 	if not SERVER then return end
 
 	local swep = attacker:GetActiveWeapon()
 	local healthFraction = attacker:Health() / attacker:GetMaxHealth()
 	local bonusDamage = math.min(0, (1 - healthFraction)) * swep.MaxBonusDamage
 
-	dmgInfo:SetDamage(swep.Primary.Damage + bonusDamage)
+	damageinfo:SetDamage(swep.Primary.Damage + bonusDamage)
 end
