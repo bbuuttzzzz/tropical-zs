@@ -306,17 +306,39 @@ function meta:GetResupplyAmmoType()
 	if not self.ResupplyChoice then
 		local wep = self:GetActiveWeapon()
 		if wep:IsValid() then
-			ammotype = wep.GetResupplyAmmoType and wep:GetResupplyAmmoType() or wep.ResupplyAmmoType or wep:GetPrimaryAmmoTypeString()
+			ammotype = wep:SafeGetResupplyAmmoType()
 		end
 	end
 
 	ammotype = ammotype and ammotype:lower() or self.ResupplyChoice
 
+	-- if they have no preference just pull a random resupply type out of their inventory
 	if not ammotype or not GAMEMODE.AmmoResupply[ammotype] then
-		return "smg1"
+		return self:GuessResupplyType()
 	end
 
 	return ammotype
+end
+
+function meta:GuessResupplyType()
+	local weapons = self:GetWeapons()
+	local validTypes = {}
+	local ammotype
+
+	for k, wep in ipairs(weapons) do
+		ammotype = wep:SafeGetResupplyAmmoType()
+		ammotype = ammotype and ammotype:lower()
+
+		if ammotype and GAMEMODE.AmmoResupply[ammotype] then
+			validTypes[#validTypes] = ammotype
+		end
+	end
+
+	if #validTypes == 0 then
+		return "smg1"
+	end
+
+	return validTypes[math.random(#validTypes)]
 end
 
 function meta:SetZombieClassName(classname)

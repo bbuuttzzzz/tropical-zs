@@ -131,6 +131,13 @@ TranslatedAmmo[19] = "helicoptergun"
 TranslatedAmmo[20] = "ar2altfire"
 TranslatedAmmo[21] = "slam"
 
+function meta:SafeGetResupplyAmmoType()
+    return (
+		self.GetResupplyAmmoType and self:GetResupplyAmmoType()
+		or self.ResupplyAmmoType or self:GetPrimaryAmmoTypeString()
+	)
+end
+
 function meta:GetPrimaryAmmoTypeString()
 	if self.Primary and self.Primary.Ammo then return string.lower(self.Primary.Ammo) end
 	return TranslatedAmmo[self:GetPrimaryAmmoType()] or "none"
