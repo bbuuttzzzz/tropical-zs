@@ -222,6 +222,8 @@ LANGUAGE.stones_name           = "Bag of 10 Stones"
 LANGUAGE.stones_description    = "Gives you some rocks. They hurt when you hit people with them"
 LANGUAGE.impacts_name          = "Impact Grenades x3"
 LANGUAGE.impacts_desc          = "A set of 3 Impact grenades. Explodes on impact in a small area, dealing bonus damage on direct hit."
+LANGUAGE.item_medkit_name      = "Medkit"
+LANGUAGE.item_medkit_desc      = "Heal yourself and others for up to 60 HP. Cures status ailments"
 
 -- general
 LANGUAGE.miniboss_class_select = "You will be %s the next time you're a miniboss zombie"

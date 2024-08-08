@@ -281,7 +281,7 @@ GM:AddShopItemSwep("gloves", "weapon_zs_workers_gloves", SHOPCAT_50, 50)
 --100 point category
 GM:AddShopItemItem("bigammobox","item_bigammobox",SHOPCAT_100, 100)
 GM:AddShopItemSwep("aegis","weapon_zs_barricadekit",SHOPCAT_100, 100)
-GM:AddShopItemSwep("medkit","weapon_zs_medicalkit",SHOPCAT_100, 100)
+GM:AddShopItemItem("medkit","item_medkit",SHOPCAT_100, 100)
 
 --150 point category
 

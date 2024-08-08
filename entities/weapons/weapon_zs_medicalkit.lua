@@ -24,11 +24,11 @@ SWEP.WorldModel = "models/weapons/w_medkit.mdl"
 SWEP.ViewModel = "models/weapons/c_medkit.mdl"
 SWEP.UseHands = true
 
-SWEP.Heal = 15
+SWEP.Heal = 30
 SWEP.Primary.Delay = 15
 
 SWEP.Primary.ClipSize = 30
-SWEP.Primary.DefaultClip = 70
+SWEP.Primary.DefaultClip = 60
 SWEP.Primary.Ammo = "Battery"
 
 SWEP.Secondary.ClipSize = 1
