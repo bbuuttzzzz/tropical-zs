@@ -1,6 +1,6 @@
-ITEM.PrintName = "Impulse Grenade"
+ITEM.PrintName = "Impulse Grenades x3"
 ITEM.Signature = "impulses"
-ITEM.Description = "Does no damage, but sends you flying! Explodes on impact."
+ITEM.Description = "A set of 3 Impulse grenades. Do no damage, but send you flying! Explode on impact."
 
 ITEM.TranslationName = "impulses_name"
 ITEM.TranslationDesc = "impulses_desc"
@@ -15,7 +15,7 @@ SPEED: Quite Fast
 
 ITEM.GiveFunction = function(pl)
   local ammo = "grenade_impulse"
-  local amt = 1
+  local amt = 3
 
   if not pl:HasWeapon("weapon_zs_impulsegrenade") then
     pl:Give("weapon_zs_impulsegrenade")
