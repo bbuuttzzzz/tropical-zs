@@ -1457,17 +1457,17 @@ function GM:LastHuman(pl)
 	self.TheLastHuman = pl
 end
 
-function GM:PlayerHealedTeamMember(pl, other, health, wep, pointmul, nobymsg, floater)
-	health = health - other:RemoveUselessDamage(health)
-	if self:GetWave() == 0 or health <= 0 or pl == other then return end
+function GM:PlayerHealedTeamMember(pl, other, healedHealth, healedPoints, wep, pointmul, nobymsg, floater)
+	healedHealth = healedHealth - other:RemoveUselessDamage(healedHealth)
+	if self:GetWave() == 0 or healedHealth <= 0 or pl == other then return end
 
-	pl.HealedThisRound = pl.HealedThisRound + health
+	pl.HealedThisRound = pl.HealedThisRound + healedHealth
 
 	if pointmul ~= 0 then
 		local hpperpoint = self.MedkitPointsPerHealth
 		if hpperpoint <= 0 then return end
 
-		local points = health * hpperpoint * pointmul
+		local points = healedPoints * hpperpoint * pointmul
 
 		pl:AddPoints(points)
 	end
@@ -1475,12 +1475,12 @@ function GM:PlayerHealedTeamMember(pl, other, health, wep, pointmul, nobymsg, fl
 	net.Start("zs_healother")
 		net.WriteBool(not floater)
 		net.WriteEntity(other)
-		net.WriteFloat(health)
+		net.WriteFloat(healedHealth)
 	net.Send(pl)
 
 	if not nobymsg then
 		net.Start("zs_healby")
-			net.WriteFloat(health)
+			net.WriteFloat(healedHealth)
 			net.WriteEntity(pl)
 		net.Send(other)
 	end

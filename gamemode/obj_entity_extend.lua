@@ -771,7 +771,7 @@ end
 
 function meta:HealPlayer(pl, amount, pointmul, nobymsg, overhealFrac, statusCureMul)
 	local originalAmount = amount
-	local healed, rmv = 0, 0
+	local healedPoints, healedHp = 0, 0
 	local overhealFrac = overhealFrac or 1
 	local statusCureMul = statusCureMul or 1
 
@@ -792,10 +792,9 @@ function meta:HealPlayer(pl, amount, pointmul, nobymsg, overhealFrac, statusCure
 
 	--then heal actual health
 	if missing_health > 0 and amount > 0 then
-		rmv = math.min(amount, missing_health)
-		pl:SetHealth(health + rmv)
-		healed = healed + rmv
-		amount = amount - rmv
+		healedHp = math.min(amount, missing_health)
+		pl:SetHealth(health + healedHp)
+		amount = amount - healedHp
 	end
 
 	--do the cure mul again
@@ -808,10 +807,11 @@ function meta:HealPlayer(pl, amount, pointmul, nobymsg, overhealFrac, statusCure
 	amount = amount / statusCureMul
 
 	pointmul = 1
+	healedPoints = originalAmount - amount
 
-	if SERVER and healed > 0 and self:IsPlayer() then
-		gamemode.Call("PlayerHealedTeamMember", self, pl, healed, self:GetActiveWeapon(), pointmul, nobymsg, healed >= 10)
-		pl:SetPhantomHealth(math.max(0, pl:GetPhantomHealth() - healed))
+	if SERVER and healedPoints > 0 and self:IsPlayer() then
+		gamemode.Call("PlayerHealedTeamMember", self, pl, healedHp, healedPoints, self:GetActiveWeapon(), pointmul, nobymsg, healedPoints >= 10)
+		pl:SetPhantomHealth(math.max(0, pl:GetPhantomHealth() - healedHp))
 	end
 
 	return originalAmount - amount
