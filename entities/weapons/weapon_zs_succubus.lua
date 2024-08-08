@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "'Succubus' SMG"
-SWEP.Description =  "Drinks your blood when you reload, fills you up when you fire. Never kills you, Never makes you whole again."
+SWEP.Description =  "Deals more damage the lower HP you are."
 
 SWEP.TranslationName = "wep_succubus"
 SWEP.TranslationDesc = "wep_d_succubus"
@@ -43,7 +43,7 @@ SWEP.Primary.Delay = 0.08
 
 SWEP.Primary.ClipSize = 40
 SWEP.Primary.Automatic = true
-SWEP.Primary.Ammo = "smg1"
+SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -52,8 +52,7 @@ SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ConeMax = 6.5
 SWEP.ConeMin = 3.6
 
-SWEP.ReloadHealthDrain = 0.30 -- frac current health to drink on reload
-SWEP.HealPerBullet = 2 -- frac max hp to fill if you hit every bullet in a clip
+SWEP.MaxBonusDamage = 20
 
 SWEP.ReloadSpeed = 1
 
@@ -62,31 +61,13 @@ SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(-7, 3, 2.5)
 
-function SWEP:FinishReload()
-	if SERVER then
-		local owner = self:GetOwner()
-
-		local dmginfo = DamageInfo()
-      dmginfo:SetAttacker(owner)
-			--assigning an inflictor here will cause a damage force to occur
-      dmginfo:SetDamageType(DMG_GENERIC)
-      dmginfo:SetDamage(owner:Health() * self.ReloadHealthDrain)
-      dmginfo:SetDamageForce(Vector(0,0,0))
-    owner:TakeDamageInfo(dmginfo)
-	end
-
-	self:EmitSound("npc/headcrab_poison/ph_poisonbite" .. math.random(1,3) .. ".wav")
-	--self:EmitSound("npc/headcrab_poison/ph_pain" .. math.random(1,3) .. ".wav")
-
-	BaseClass.FinishReload(self)
-end
-
-function SWEP.BulletCallback(attacker, tr)
+function SWEP.BulletCallback(attacker, tr, dmginfo)
 	if not SERVER then return end
 
-	local hitent = tr.Entity
-	if hitent:IsValidLivingZombie() then
-		local swep = attacker:GetActiveWeapon()
-		attacker:HealPlayer(attacker, swep.HealPerBullet, 0)
-	end
+	local owner = self:GetOwner()
+	local swep = attacker:GetActiveWeapon()
+	local healthFraction = owner:Health() / owner:GetMaxHealth()
+	local bonusDamage = math.min(0, (1 - healthFraction)) * swep.MaxBonusDamage
+
+	dmgInfo:SetDamage(swep.Primary.Damage + bonusDamage)
 end
