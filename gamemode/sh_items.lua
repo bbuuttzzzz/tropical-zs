@@ -273,7 +273,6 @@ GM.ShopCategories = {
 GM:AddShopItemSwep("confettigun", "weapon_zs_confetti",SHOPCAT_50, 0)
 --GM:AddShopItemItem("grenades","item_grenades",SHOPCAT_50, 50)
 GM:AddShopItemItem("impacts","item_impacts",SHOPCAT_50, 50)
-GM:AddShopItemItem("impulses","item_impulses",SHOPCAT_50, 50)
 GM:AddShopItemSwep("hammer", "weapon_zs_hammer",SHOPCAT_50, 50)
 GM:AddShopItemSwep("sigilshard", "weapon_zs_sigilshard", SHOPCAT_50, 50)
 GM:AddShopItemSwep("sigilseed", "weapon_zs_sigilseed", SHOPCAT_50, 50)
@@ -282,6 +281,7 @@ GM:AddShopItemSwep("gloves", "weapon_zs_workers_gloves", SHOPCAT_50, 50)
 --100 point category
 GM:AddShopItemItem("bigammobox","item_bigammobox",SHOPCAT_100, 100)
 GM:AddShopItemItem("medkit","item_medkit",SHOPCAT_100, 100)
+GM:AddShopItemItem("impulses","item_impulses",SHOPCAT_100, 100)
 
 --150 point category
 GM:AddShopItemSwep("aegis","weapon_zs_barricadekit",SHOPCAT_150, 150)
