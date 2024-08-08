@@ -1005,11 +1005,6 @@ function meta:Resupply(owner, obj)
 	local amount = GAMEMODE.AmmoCache[ammotype]
 
 	for i = 1, stockpiling and not stowage and 2 or 1 do
-		net.Start("zs_ammopickup")
-			net.WriteUInt(amount, 16)
-			net.WriteString(ammotype)
-		net.Send(self)
-
 		self:GiveAmmo(amount, ammotype)
 
 		if self:IsSkillActive(SKILL_FORAGER) and math.random(4) == 1 and #GAMEMODE.Food > 0 then

@@ -4029,11 +4029,6 @@ function GM:DoResupply()
 		local ammotype = pl:GetResupplyAmmoType()
 		local amount = GAMEMODE.AmmoCache[ammotype] * ((pl.ResupplyMul or 1) + (doDouble and 1 or 0))
 
-		net.Start("zs_ammopickup")
-			net.WriteUInt(amount, 16)
-			net.WriteString(ammotype)
-		net.Send(pl)
-
 		pl:GiveAmmo(amount, ammotype)
 	end
 end
