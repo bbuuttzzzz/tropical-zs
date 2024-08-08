@@ -105,9 +105,9 @@ cvars.AddChangeCallback("zs_medkitpointsperhealth", function(cvar, oldvalue, new
 	GAMEMODE.MedkitPointsPerHealth = tonumber(newvalue) or 1
 end)]]
 
-GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "35", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
-cvars.AddChangeCallback("zs_repairpointsperhealth", function(cvar, oldvalue, newvalue)
-	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 1
+GM.PointsPerRepairHealth = CreateConVar("zs_pointsperrepairhealth", ".06", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
+cvars.AddChangeCallback("zs_pointsperrepairhealth", function(cvar, oldvalue, newvalue)
+	GAMEMODE.PointsPerRepairHealth = tonumber(newvalue) or 1
 end)
 
 local function GetMostKey(key, top)
