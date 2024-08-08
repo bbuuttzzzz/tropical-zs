@@ -355,6 +355,9 @@ net.Receive("zs_ammopickup", function(length)
 	ammotype = GAMEMODE.AmmoNames[ammotype] or ammotype
 
 	GAMEMODE:CenterNotify({killicon = ico}, " ", COLOR_GREEN, translate.Format("obtained_x_y_ammo", amount, ammotype))
+	timer.Simple(0.1, function()
+		GAMEMODE:UpdateWeaponsByAmmo(string.lower(ammotype))
+	end)
 end)
 
 net.Receive("zs_stockpile", function(length)
