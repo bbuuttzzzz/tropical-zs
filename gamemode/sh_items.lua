@@ -240,7 +240,7 @@ end
 -- means later guns give you less ammo, so you have to resort to your backup weapons more
 GM.AmmoCache = {}
 GM.AmmoCache["ar2"]							  = 30		-- Assault rifles.
-GM.AmmoCache["pistol"]						= 30		-- Pistols.
+GM.AmmoCache["pistol"]						= 24		-- Pistols.
 GM.AmmoCache["smg1"]						  = 30		-- SMG's
 GM.AmmoCache["357"]							  = 12 		-- Rifles, especially of the sniper variety.
 GM.AmmoCache["xbowbolt"]					= 8			-- Crossbows
