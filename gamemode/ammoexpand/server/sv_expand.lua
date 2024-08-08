@@ -47,10 +47,6 @@ function M_Player:GiveAmmo(amount, id_or_name, suppress_sound)
 		end
 	else
 		old_Player_GiveAmmo(self, amount, id_or_name, suppress_sound)
-		net.Start("zs_ammopickup")
-			net.WriteUInt(amount, 16)
-			net.WriteString(id_or_name)
-		net.Send(self)
 	end
 end
 
