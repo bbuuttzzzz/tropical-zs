@@ -208,7 +208,7 @@ LANGUAGE.wep_d_succubus        = "Drinks your blood when you reload, fills you u
 LANGUAGE.wep_d_sweepershotgun  = "BOOM ch'chick BOOM"
 LANGUAGE.wep_d_swissarmyknife  = "You move faster with this in your hands. Deals 4x damage in the back"
 LANGUAGE.wep_d_uzi             = "Holds steady even when running. Burns through both zombies and ammo quickly."
-LANGUAGE.wep_d_impactgrenades  = "Explodes on impact in a small area, dealing bonus damage on direct hit."
+LANGUAGE.wep_d_impactgrenades  = "Explodes on impact, dealing bonus damage on direct hit."
 LANGUAGE.wep_d_workers_gloves  = "Pick up and hold up to 3 objects at once. Left click: grab. Right click: drop."
 
 --Items
@@ -221,7 +221,7 @@ LANGUAGE.impulses_description  = "A set of 3 grenades. Do no damage, but send yo
 LANGUAGE.stones_name           = "Bag of 10 Stones"
 LANGUAGE.stones_description    = "Gives you some rocks. They hurt when you hit people with them"
 LANGUAGE.impacts_name          = "Impact Grenades x3"
-LANGUAGE.impacts_desc          = "A set of 3 Impact grenades. Explodes on impact in a small area, dealing bonus damage on direct hit."
+LANGUAGE.impacts_desc          = "A set of 3 Impact grenades. Explodes on impact, dealing bonus damage on direct hit."
 LANGUAGE.item_medkit_name      = "Medkit"
 LANGUAGE.item_medkit_desc      = "Heal yourself and others for up to 60 HP. Cures status ailments"
 

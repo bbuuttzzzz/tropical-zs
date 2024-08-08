@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "Impact Grenade"
-SWEP.Description = "Explodes on impact in a small area, dealing bonus damage on direct hit."
+SWEP.Description = "Explodes on impact, dealing bonus damage on direct hit."
 
 SWEP.TranslationName = "wep_impactgrenades"
 SWEP.TranslationDesc = "wep_d_impactgrenades"
@@ -19,9 +19,9 @@ SWEP.Primary.Delay = 1
 SWEP.ThrownProjectile = "projectile_impactgrenade"
 
 SWEP.GrenadeKnockback = 0
-SWEP.GrenadeRadius = 64
-SWEP.DirectDamage = 250
-SWEP.GrenadeDamage = 200
+SWEP.GrenadeRadius = 256
+SWEP.DirectDamage = 450
+SWEP.GrenadeDamage = 500
 SWEP.OwnerDamage = 50
 SWEP.DeploySpeedMultiplier = 3
 
