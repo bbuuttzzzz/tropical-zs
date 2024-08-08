@@ -15,7 +15,6 @@ ITEM.GiveFunction = function(pl)
 
   if not pl:HasWeapon("weapon_zs_junkpack") then
     pl:Give("weapon_zs_junkpack")
-  else
-    pl:GiveAmmo(amt,ammo, true)
   end
+    pl:GiveAmmo(amt,ammo, true)
 end
