@@ -9,8 +9,8 @@ ITEM.TranslationDesc = "item_medkit_desc"
 ITEM.SWEP = "weapon_zs_medicalkit"
 
 ITEM.GiveFunction = function(pl)
-  if not pl:HasWeapon(ITEM.SWEP) then
-    pl:Give(ITEM.SWEP)
+  if not pl:HasWeapon("weapon_zs_medicalkit") then
+    pl:Give("weapon_zs_medicalkit")
   end
 
   pl:GiveAmmo(60,"Battery", true)
