@@ -1467,7 +1467,7 @@ function GM:PlayerHealedTeamMember(pl, other, health, wep, pointmul, nobymsg, fl
 		local hpperpoint = self.MedkitPointsPerHealth
 		if hpperpoint <= 0 then return end
 
-		local points = health / hpperpoint * pointmul
+		local points = health * hpperpoint * pointmul
 
 		pl:AddPoints(points)
 	end

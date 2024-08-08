@@ -807,7 +807,7 @@ function meta:HealPlayer(pl, amount, pointmul, nobymsg, overhealFrac, statusCure
 	--then go back to regular points again
 	amount = amount / statusCureMul
 
-	pointmul = 0 --(pointmul or 1) / (math.max(healed, regamount) / regamount)
+	pointmul = 1
 
 	if SERVER and healed > 0 and self:IsPlayer() then
 		gamemode.Call("PlayerHealedTeamMember", self, pl, healed, self:GetActiveWeapon(), pointmul, nobymsg, healed >= 10)
