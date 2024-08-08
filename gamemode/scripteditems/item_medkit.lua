@@ -11,7 +11,7 @@ ITEM.SWEP = "weapon_zs_medicalkit"
 ITEM.GiveFunction = function(pl)
   if not pl:HasWeapon("weapon_zs_medicalkit") then
     pl:Give("weapon_zs_medicalkit")
+  else
+    pl:GiveAmmo(60,"Battery", true)
   end
-
-  pl:GiveAmmo(60,"Battery", true)
 end
