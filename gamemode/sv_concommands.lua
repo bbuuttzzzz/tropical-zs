@@ -234,6 +234,10 @@ concommand.Add("zs_dismantle", function(sender, command, arguments)
 	end
 
 	local scrap = GAMEMODE:GetDismantleScrap(wtbl or GAMEMODE.ZSInventoryItemData[invitem], invitem)
+	net.Start("zs_ammopickup")
+		net.WriteUInt(scrap, 16)
+		net.WriteString("scrap")
+	net.Send(sender)
 	sender:GiveAmmo(scrap, "scrap")
 
 	if invitem then
@@ -618,6 +622,11 @@ concommand.Add("zs_claimstockpile", function(sender, command, arguments)
 	if not ammotype or not GAMEMODE.AmmoResupply[ammotype] then return end
 
 	local amount = GAMEMODE.AmmoCache[ammotype] * (sender.ResupplyMul + (doDouble and 1 or 0))
+
+	net.Start("zs_ammopickup")
+		net.WriteUInt(amount, 16)
+		net.WriteString(ammotype)
+	net.Send(sender)
 
 	sender.Stockpiles = sender.Stockpiles - 1
 	net.Start("zs_stockpile")

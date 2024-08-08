@@ -72,6 +72,11 @@ function ENT:GiveToActivator(activator, caller)
 
 			activator:GiveAmmo(self:GetAmmo(), self:GetAmmoType())
 
+			net.Start("zs_ammopickup")
+				net.WriteUInt(self:GetAmmo(), 16)
+				net.WriteString(self:GetAmmoType())
+			net.Send(activator)
+
 			if self.PlacedInMap and not self.IgnorePickupCount then
 				activator.AmmoPickups = (activator.AmmoPickups or 0) + 1
 			end

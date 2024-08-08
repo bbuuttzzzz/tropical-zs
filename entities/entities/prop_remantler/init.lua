@@ -110,6 +110,11 @@ function ENT:Use(activator, caller)
 		local amount = self:GetScraps()
 		self:SetScraps(0)
 
+		net.Start("zs_ammopickup")
+			net.WriteUInt(amount, 16)
+			net.WriteString("scrap")
+		net.Send(activator)
+
 		activator:GiveAmmo(amount, "scrap")
 
 		self.NextUse[uid] = CurTime() + 0.05
