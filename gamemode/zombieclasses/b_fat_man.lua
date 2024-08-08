@@ -94,9 +94,10 @@ if SERVER then
 	local function DoExplode(pl, pos, DUMMY_CHEMZOMBIE)
 		if not SERVER then return end
 
-		local radius = 1000
+		local radius = 256
 		local maxFalloffFrac = 1
 		local radiationDamage = 120
+		local physicalPropDamage = 600
 		local invisFrac = 0.5
 
 		local visents, invisents = util.FindVisibleInSphere(DUMMY_CHEMZOMBIE, pl, pos, radius)
@@ -107,7 +108,7 @@ if SERVER then
 			elseif ent:IsValidLivingHuman() then
 				ent:AddRadiationDamage(frac * radiationDamage,pl)
 			else
-				ent:TakeSpecialDamage(frac * 100, DMG_GENERIC, pl)
+				ent:TakeSpecialDamage(frac * physicalPropDamage, DMG_GENERIC, pl)
 			end
 		end
 		for _, ent in pairs(invisents) do
@@ -117,7 +118,7 @@ if SERVER then
 			elseif ent:IsValidLivingHuman() then
 				ent:AddRadiationDamage(frac * radiationDamage * invisFrac,pl)
 			else
-				ent:TakeSpecialDamage(frac * 100, DMG_GENERIC * invisFrac,pl)
+				ent:TakeSpecialDamage(frac * physicalPropDamage, DMG_GENERIC * invisFrac,pl)
 			end
 		end
 
