@@ -123,7 +123,7 @@ cvars.AddChangeCallback("zs_nailhealcooldownmax", function(cvar, oldvalue, newva
 end)
 
 --this is for tropical resupply, not the box. use GM.ResupplyBoxCooldown
-GM.ResupplyTime = CreateConVar("zs_resupply_time", "45", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time between passive resupplies (in seconds).")
+GM.ResupplyTime = CreateConVar("zs_resupply_time", "60", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time between passive resupplies (in seconds).")
 
 GM.DoGlory = CreateConVar("zs_glory_enabled", "0", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Enable healing from point thresholds. disabling this turns on wave end healing")
 
