@@ -6,7 +6,7 @@ CLASS.Type = ZTYPE_NORMAL
 
 CLASS.SWEP = "weapon_zsz_hunter"
 CLASS.Speed = 100
-CLASS.Health = 125
+CLASS.Health = 100
 CLASS.HealthGrowth = 25
 CLASS.Points = 4
 CLASS.Wave = 2

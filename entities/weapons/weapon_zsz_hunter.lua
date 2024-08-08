@@ -37,12 +37,12 @@ SWEP.Attack2 = {
   AnimationMul = 2,
   WindupTime = 0.5,
   SpeedMul = 0,
-  WinddownTime = 0.5,
+  WinddownTime = 0.3,
   Type = ZATTACK_LEAP,
-  LeapSpeed = 600,
-  LeapDamage = 0,
+  LeapSpeed = 700,
+  LeapDamage = 3,
   LeapMinVertical = 0.25,
-  LeapCanAirControl = false,
+  LeapCanAirControl = true,
   LeapCanInterrupt = true,
   PlayAttackSound = function(self)
   	self:EmitSound("npc/fast_zombie/leap1.wav",75,125,0.75)
