@@ -19,5 +19,7 @@ ITEM.GiveFunction = function(pl)
 
   else
     pl:GiveAmmo(amt,ammo, true)
+    net.Start("zs_update_weaponhud")
+    net.Send(pl)
   end
 end

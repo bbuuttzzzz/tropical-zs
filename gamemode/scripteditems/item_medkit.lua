@@ -13,5 +13,7 @@ ITEM.GiveFunction = function(pl)
     pl:Give("weapon_zs_medicalkit")
   else
     pl:GiveAmmo(60,"Battery", true)
+    net.Start("zs_update_weaponhud")
+    net.Send(pl)
   end
 end
