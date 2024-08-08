@@ -270,7 +270,6 @@ GM.ShopCategories = {
 }
 
 --50 point category
-GM:AddShopItemSwep("confettigun", "weapon_zs_confetti",SHOPCAT_50, 0)
 --GM:AddShopItemItem("grenades","item_grenades",SHOPCAT_50, 50)
 GM:AddShopItemSwep("hammer", "weapon_zs_hammer",SHOPCAT_50, 50)
 GM:AddShopItemSwep("sigilshard", "weapon_zs_sigilshard", SHOPCAT_50, 50)
