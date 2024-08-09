@@ -5,7 +5,7 @@ CLASS.TranslationName = "class_tar_zombie"
 CLASS.Type = ZTYPE_MINIBOSS
 
 CLASS.SWEP = "weapon_zsz_tar_zombie"
-CLASS.Speed = 165
+CLASS.Speed = 140
 CLASS.Health = 1000
 CLASS.Points = 15
 
