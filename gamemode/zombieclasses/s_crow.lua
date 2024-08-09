@@ -9,7 +9,7 @@ CLASS.Wave = 0
 CLASS.Threshold = 0
 CLASS.SWEP = "weapon_zs_crow"
 CLASS.Model = Model("models/crow.mdl")
-CLASS.Speed = 90
+CLASS.Speed = 140
 CLASS.JumpPower = 230
 
 CLASS.PainSounds = {"NPC_Crow.Pain"}

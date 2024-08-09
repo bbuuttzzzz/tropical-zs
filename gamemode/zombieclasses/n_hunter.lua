@@ -5,7 +5,7 @@ CLASS.TranslationName = "class_hunter"
 CLASS.Type = ZTYPE_NORMAL
 
 CLASS.SWEP = "weapon_zsz_hunter"
-CLASS.Speed = 100
+CLASS.Speed = 140
 CLASS.Health = 100
 CLASS.HealthGrowth = 25
 CLASS.Points = 4

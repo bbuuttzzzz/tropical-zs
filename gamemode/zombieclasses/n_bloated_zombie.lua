@@ -5,7 +5,7 @@ CLASS.TranslationName = "class_bloated_zombie"
 CLASS.Type = ZTYPE_NORMAL
 
 CLASS.SWEP = "weapon_zsz_bloatedzombie"
-CLASS.Speed = 125
+CLASS.Speed = 140
 CLASS.Health = 250
 CLASS.HealthGrowth = 75
 CLASS.Mass = DEFAULT_MASS * 2
