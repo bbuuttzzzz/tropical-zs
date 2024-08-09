@@ -98,6 +98,7 @@ AddCSLuaFile("vgui/zsgamestate.lua")
 
 include("sh_globals.lua")
 
+include("sv_workshop.lua")
 include("obj_entity_extend_sv.lua")
 include("obj_player_extend_sv.lua")
 include("obj_weapon_extend_sv.lua")
