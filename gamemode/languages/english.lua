@@ -224,6 +224,8 @@ LANGUAGE.impacts_name          = "Impact Grenades x3"
 LANGUAGE.impacts_desc          = "A set of 3 Impact grenades. Explodes on impact, dealing bonus damage on direct hit."
 LANGUAGE.item_medkit_name      = "Medkit"
 LANGUAGE.item_medkit_desc      = "Heal yourself and others for up to 60 HP. Cures status ailments"
+LANGUAGE.junkpack_name         = "Junk Pack"
+LANGUAGE.junkpack_desc         = "5 pieces of junk. Good for a makeshift barricade"
 
 -- general
 LANGUAGE.miniboss_class_select = "You will be %s the next time you're a miniboss zombie"
