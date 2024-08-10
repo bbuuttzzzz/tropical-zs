@@ -1675,7 +1675,7 @@ function GM:InitializeBeats()
 end
 
 function GM:InitializeNewBeats(v)
-	local _, dirs = file.Find("sound/zombiesurvival_modded/newbeats/*", "GAME")
+	local _, dirs = file.Find("sound/zombiesurvival/newbeats/*", "GAME")
 	for _, dirname in pairs(dirs) do
 		if v then
       print("found beats " .. dirname)
@@ -1702,10 +1702,10 @@ function GM:InitializeNewBeats(v)
         elseif level.Files then
           level.Sounds = {}
           for k, file in ipairs(level.Files) do
-            level.Sounds[k] = Sound("zombiesurvival_modded/newbeats/"..dirname.."/"..level.Files[k])
+            level.Sounds[k] = Sound("zombiesurvival/newbeats/"..dirname.."/"..level.Files[k])
           end
         else
-          level.Sound = Sound("zombiesurvival_modded/newbeats/"..dirname.."/"..level.File)
+          level.Sound = Sound("zombiesurvival/newbeats/"..dirname.."/"..level.File)
         end
       end
     end
@@ -1716,7 +1716,7 @@ end
 
 
 function GM:LoadNewBeat(dirname)
-  local path = "sound/zombiesurvival_modded/newbeats/"..dirname.."/manifest.txt"
+  local path = "sound/zombiesurvival/newbeats/"..dirname.."/manifest.txt"
   local directory = "GAME"
 
   if not file.Exists(path, directory) then
