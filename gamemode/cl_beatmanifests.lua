@@ -1,5 +1,75 @@
 GM.BeatManifests = {}
 
+GM.BeatManifests["beta"] = {
+  ["Levels"] = 12,
+  ["Channels"] = {
+    [1] = {
+      [1] = {
+        File = "zombiesurvival/newbeats/beta/1.ogg",
+        Duration = 2
+      },
+      [2] = {
+        File = "zombiesurvival/newbeats/beta/2.ogg",
+        Duration = 2
+      },
+      [3] = {
+        File = "zombiesurvival/newbeats/beta/3.ogg",
+        Duration = 2
+      },
+      [4] = {
+        File = "zombiesurvival/newbeats/beta/4.ogg",
+        Duration = 2
+      },
+      [5] = {
+        File = "zombiesurvival/newbeats/beta/5.ogg",
+        Duration = 2
+      },
+      [6] = {
+        File = "zombiesurvival/newbeats/beta/6.ogg",
+        Duration = 2
+      },
+      [7] = {
+        File = "zombiesurvival/newbeats/beta/7.ogg",
+        Duration = 2
+      },
+      [8] = {
+        File = "zombiesurvival/newbeats/beta/8.ogg",
+        Duration = 2
+      },
+      [9] = {
+        File = "zombiesurvival/newbeats/beta/9.ogg",
+        Duration = 2
+      },
+      [10] = {
+        File = "zombiesurvival/newbeats/beta/10.ogg",
+        Duration = 2
+      },
+      [11] = {
+        File = "zombiesurvival/newbeats/beta/11.ogg",
+        Duration = 2
+      },
+      [12] = {
+        File = "zombiesurvival/newbeats/beta/12.ogg",
+        Duration = 2
+      },
+    },
+    [2] = {
+      [1] = {
+        File = "zombiesurvival/newbeats/beta/b1.ogg",
+        Duration = 8
+      },
+      [5] = {
+        File = "zombiesurvival/newbeats/beta/b5.ogg",
+        Duration = 8
+      },
+      [9] = {
+        File = "zombiesurvival/newbeats/beta/b9.ogg",
+        Duration = 8
+      },
+    }
+  }
+}
+
 GM.BeatManifests["human"] = {
   ["Levels"] = 16,
   ["Channels"] = {
