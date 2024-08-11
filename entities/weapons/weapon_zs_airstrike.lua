@@ -32,7 +32,7 @@ SWEP.UseHands = false
 SWEP.ReloadDelay = 0.45
 
 SWEP.Primary.Sound = Sound("Weapon_Shotgun.NPC_Single")
-SWEP.Primary.Damage = 300
+SWEP.Primary.Damage = 270
 SWEP.Primary.NumShots = BULLETPATTERN_SHOTGUN
 SWEP.Primary.Delay = 0.6
 SWEP.HeadshotMulti = 1.5
@@ -45,7 +45,7 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.ConeMax = 9
 SWEP.ConeMin = 5
 
-SWEP.WeightClass = WEIGHT_LIGHT
+SWEP.WeightClass = WEIGHT_FEATHER
 
 SWEP.LastSound = 0
 SWEP.SoundInterval = .1
