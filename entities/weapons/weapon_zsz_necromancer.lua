@@ -21,7 +21,7 @@ SWEP.HitDecal = "Manhackcut"
 
 SWEP.Secondary.Damage = 2
 SWEP.TracerName = "tracer_necromancer"
-SWEP.Secondary.MaxDistance = 500
+SWEP.Secondary.MaxDistance = 1000
 
 SWEP.NestSelfDamage = 250
 
