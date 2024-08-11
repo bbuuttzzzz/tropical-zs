@@ -38,7 +38,7 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("Weapon_AR2.NPC_Single")
-SWEP.Primary.Damage = 26
+SWEP.Primary.Damage = 23
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.13
 
@@ -54,7 +54,7 @@ SWEP.ReloadSpeed = 0.78
 SWEP.FireAnimSpeed = 0.55
 
 SWEP.ConeMax = 4.5
-SWEP.ConeMin = 2.5
+SWEP.ConeMin = 3
 
 SWEP.IronSightsPos = Vector(-6.425, 5, 1.02)
 
@@ -63,7 +63,7 @@ function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		local hermesStatus = killer:GiveStatus("hermes", 3)
+		local hermesStatus = killer:GiveStatus("hermes", 2)
 		if hermesStatus and hermesStatus:IsValid() then
 			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150, 0.45)
 		end
