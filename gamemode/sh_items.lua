@@ -248,12 +248,12 @@ GM.AmmoCache["buckshot"]					= 8		-- Shotguns
 GM.AmmoCache["grenade"]						= 1			-- Grenades.
 GM.AmmoCache["grenade_impulse"]   = 1	    -- Impulse grenades
 GM.AmmoCache["grenade_impact"]    = 1
-GM.AmmoCache["battery"]						= 30		-- Used with the Medical Kit.
+GM.AmmoCache["battery"]						= 15		-- Used with the Medical Kit.
 GM.AmmoCache["gaussenergy"]				= 2			-- Nails used with the Carpenter's Hammer.
 GM.AmmoCache["pulse"]             = 30
 GM.AmmoCache["scrap"]             = 15
 
-GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "gaussenergy", "pulse"})
+GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "gaussenergy", "pulse", "battery"})
 
 --item shop
 
