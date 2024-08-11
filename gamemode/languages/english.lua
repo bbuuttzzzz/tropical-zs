@@ -166,7 +166,7 @@ LANGUAGE.wep_confetti          = "Confetti Gun"
 LANGUAGE.wep_workers_gloves    = "Worker's Gloves"
 
 -- weapon descriptions
-LANGUAGE.wep_d_airstrike       = "Prevents fall damage, deals extra damage based on how fast you were falling. Resets on reload."
+LANGUAGE.wep_d_airstrike       = "Prevents fall damage, movement speed on kill."
 LANGUAGE.wep_d_barricadekit    = "Attaches wooden boards to a surface. RCLICK and RELOAD rotates"
 LANGUAGE.wep_d_crossbow        = "Skewers a whole row of zombies at once"
 LANGUAGE.wep_d_grenade         = "A Simple Frag Grenade with a 5 second fuse. Right click to pull the pin early"
