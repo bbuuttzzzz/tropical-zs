@@ -330,12 +330,12 @@ function meta:GuessResupplyType()
 		ammotype = ammotype and ammotype:lower()
 
 		if ammotype and GAMEMODE.AmmoResupply[ammotype] then
-			validTypes[#validTypes] = ammotype
+			table.insert(validTypes, ammotype)
 		end
 	end
 
 	if #validTypes == 0 then
-		return "smg1"
+		return "pistol"
 	end
 
 	return validTypes[math.random(#validTypes)]
