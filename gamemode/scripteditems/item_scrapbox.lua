@@ -11,4 +11,8 @@ ITEM.WorldModel = "models/Items/item_item_crate.mdl"
 
 ITEM.GiveFunction = function(pl)
   pl:AddScrap(150)
+  net.Start("zs_ammopickup")
+    net.WriteUInt(150, 16)
+    net.WriteString("scrap")
+    net.Send(pl)
 end
