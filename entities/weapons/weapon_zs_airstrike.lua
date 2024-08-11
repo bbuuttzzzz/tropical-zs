@@ -60,7 +60,7 @@ function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		local hermesStatus = killer:GiveStatus("hermes", 3)
+		local hermesStatus = killer:GiveStatus("hermes", 2)
 		if hermesStatus and hermesStatus:IsValid() then
 			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150, 0.45)
 		end
