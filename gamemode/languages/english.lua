@@ -214,6 +214,8 @@ LANGUAGE.wep_d_workers_gloves  = "Pick up and hold up to 3 objects at once. Left
 --Items
 LANGUAGE.bigammobox_name       = "Big Ammo Box"
 LANGUAGE.bigammobox_desc       = "On Purchase, grants 2 boxes of each common ammo type"
+LANGUAGE.scrapbox_name       = "Scrap Box"
+LANGUAGE.scrapbox_desc       = "Grants 150 Scrap"
 LANGUAGE.grenades_name         = "Grenades x5"
 LANGUAGE.grenades_description  = "A set of 5 grenades. Right click to cook!"
 LANGUAGE.impulses_name         = "Impulse Grenades x3"

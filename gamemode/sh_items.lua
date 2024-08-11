@@ -285,6 +285,7 @@ GM:AddShopItemItem("impacts","item_impacts",SHOPCAT_100, 100)
 
 --150 point category
 GM:AddShopItemSwep("aegis","weapon_zs_barricadekit",SHOPCAT_150, 150)
+GM:AddShopItemSwep("impaler", "weapon_zs_crossbow", SHOPCAT_150, 150)
 
 --Arsenal Upgrades
 
@@ -352,7 +353,7 @@ GM:AddUpgradeItemSwep("crackler", "weapon_zs_crackler",UPGRADEGROUP_T3)
 GM:AddUpgradeItemSwep("reaper", "weapon_zs_reaper",UPGRADEGROUP_T3)
 GM:AddUpgradeItemSwep("bulletstorm", "weapon_zs_bulletstorm",UPGRADEGROUP_T3)
 GM:AddUpgradeItemSwep("hermes", "weapon_zs_hermes",UPGRADEGROUP_T3)
-GM:AddUpgradeItemSwep("impaler", "weapon_zs_crossbow", UPGRADEGROUP_T3)
+GM:AddUpgradeItemItem("scrapbox", "item_scrapbox", UPGRADEGROUP_T3)
 
 -- T4
 GM:AddUpgradeItemSwep("airstrike", "weapon_zs_airstrike", UPGRADEGROUP_T4)

@@ -36,8 +36,8 @@ GM:AddRBPBullet( "RBP_BULLET_EXAMPLE", {
 
 GM:AddRBPBullet( "RBP_CBOLT", {
   lifetime = 35,
-  speed = 1000,
-	acc = Vector(0,0,-600),
+  speed = 2000,
+	acc = Vector(0,0,-100),
   func = {
     started = function(proj, tr)
       return false
@@ -106,8 +106,8 @@ GM:AddRBPBullet( "RBP_CBOLT", {
       local colTrail = Color(255,0,0,255)
       render.SetMaterial(Material("trails/physbeam"))
       table.insert(trailpos, 1, proj.pos)
-      if trailpos[18] then
-        table.remove(trailpos, 18)
+      if trailpos[100] then
+        table.remove(trailpos, 100)
       end
       for i = 1, #trailpos do
         if trailpos[i+1] then
