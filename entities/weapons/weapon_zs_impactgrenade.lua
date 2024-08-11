@@ -20,8 +20,8 @@ SWEP.ThrownProjectile = "projectile_impactgrenade"
 
 SWEP.GrenadeKnockback = 0
 SWEP.GrenadeRadius = 256
-SWEP.DirectDamage = 450
-SWEP.GrenadeDamage = 500
+SWEP.DirectDamage = 250
+SWEP.GrenadeDamage = 400
 SWEP.OwnerDamage = 50
 SWEP.DeploySpeedMultiplier = 3
 
