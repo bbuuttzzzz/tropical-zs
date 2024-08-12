@@ -5,65 +5,65 @@ GM.BeatManifests["beta"] = {
   ["Channels"] = {
     [1] = {
       [1] = {
-        File = "zombiesurvival/newbeats/beta/1.ogg",
+        File = "1.ogg",
         Duration = 2
       },
       [2] = {
-        File = "zombiesurvival/newbeats/beta/2.ogg",
+        File = "2.ogg",
         Duration = 2
       },
       [3] = {
-        File = "zombiesurvival/newbeats/beta/3.ogg",
+        File = "3.ogg",
         Duration = 2
       },
       [4] = {
-        File = "zombiesurvival/newbeats/beta/4.ogg",
+        File = "4.ogg",
         Duration = 2
       },
       [5] = {
-        File = "zombiesurvival/newbeats/beta/5.ogg",
+        File = "5.ogg",
         Duration = 2
       },
       [6] = {
-        File = "zombiesurvival/newbeats/beta/6.ogg",
+        File = "6.ogg",
         Duration = 2
       },
       [7] = {
-        File = "zombiesurvival/newbeats/beta/7.ogg",
+        File = "7.ogg",
         Duration = 2
       },
       [8] = {
-        File = "zombiesurvival/newbeats/beta/8.ogg",
+        File = "8.ogg",
         Duration = 2
       },
       [9] = {
-        File = "zombiesurvival/newbeats/beta/9.ogg",
+        File = "9.ogg",
         Duration = 2
       },
       [10] = {
-        File = "zombiesurvival/newbeats/beta/10.ogg",
+        File = "10.ogg",
         Duration = 2
       },
       [11] = {
-        File = "zombiesurvival/newbeats/beta/11.ogg",
+        File = "11.ogg",
         Duration = 2
       },
       [12] = {
-        File = "zombiesurvival/newbeats/beta/12.ogg",
+        File = "12.ogg",
         Duration = 2
       },
     },
     [2] = {
       [1] = {
-        File = "zombiesurvival/newbeats/beta/b1.ogg",
+        File = "b1.ogg",
         Duration = 8
       },
       [5] = {
-        File = "zombiesurvival/newbeats/beta/b5.ogg",
+        File = "b5.ogg",
         Duration = 8
       },
       [9] = {
-        File = "zombiesurvival/newbeats/beta/b9.ogg",
+        File = "b9.ogg",
         Duration = 8
       },
     }
