@@ -9,8 +9,8 @@ ITEM.TranslationDesc = "impacts_desc"
 ITEM.SWEP = "weapon_zs_impactgrenade"
 ITEM.Stats = [[
 HIT DAM: 250
-AOE DAM: 200
-RADIUS: 64u
+AOE DAM: 400
+RADIUS: 192u
 SPEED: Quite Fast
 ]]
 

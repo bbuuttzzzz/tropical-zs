@@ -19,7 +19,7 @@ SWEP.Primary.Delay = 1
 SWEP.ThrownProjectile = "projectile_impactgrenade"
 
 SWEP.GrenadeKnockback = 0
-SWEP.GrenadeRadius = 256
+SWEP.GrenadeRadius = 192
 SWEP.DirectDamage = 250
 SWEP.GrenadeDamage = 400
 SWEP.OwnerDamage = 50
