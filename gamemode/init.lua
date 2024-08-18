@@ -1499,7 +1499,7 @@ function GM:PlayerRepairedObject(pl, other, health, wep)
 	local hpperpoint = self.PointsPerRepairHealth
 	if hpperpoint <= 0 then return end
 
-	local points = health / hpperpoint
+	local points = health * hpperpoint
 
 	pl:AddPoints(points)
 
