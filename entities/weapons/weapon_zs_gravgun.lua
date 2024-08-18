@@ -29,7 +29,7 @@ SWEP.Primary.ClipSize = -1
 SWEP.Primary.DefaultClip = -1
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "none"
-SWEP.Primary.Delay = 10
+SWEP.Primary.Delay = 5
 SWEP.Primary.Damage = 100
 
 SWEP.Recoil = 6
@@ -101,6 +101,11 @@ function SWEP:DoShoot()
 				continue
 			end
 
+			--throw out other humans
+			if ent:IsPlayer() and ent:Team() == TEAM_HUMAN then
+				continue
+			end
+
 			local nearest = ent:NearestPoint(center)
 			local dist = nearest:Distance(center)/range
 
@@ -127,6 +132,11 @@ function SWEP:DoShoot()
 			if(dist > range) then
 				--cone is actually sqrt(2) times bigger along the diagonal
 				--see ents.FindInCone on wiki
+				continue
+			end
+			
+			--throw out other humans
+			if ent:IsPlayer() and ent:Team() == TEAM_HUMAN then
 				continue
 			end
 
